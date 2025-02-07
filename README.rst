@@ -1,9 +1,11 @@
 Ordotools
 ====================
 
-..  image:: https://img.shields.io/github/repo-size/ordotools/ordotools?style=flat-square
-..  image:: https://img.shields.io/github/languages/top/ordotools/ordotools?style=flat-square
-..  image:: https://img.shields.io/github/commit-activity/m/ordotools/ordotools?style=flat-square
+|size| |language| |activity|
+
+.. |size| image:: https://img.shields.io/github/repo-size/ordotools/ordotools?style=flat-square
+.. |language| image:: https://img.shields.io/github/languages/top/ordotools/ordotools?style=flat-square
+.. |activity| image:: https://img.shields.io/github/commit-activity/m/ordotools/ordotools?style=flat-square
 
 What is ordotools?
     A Traditional Catholic Ordo and Calendar, written in Python.
