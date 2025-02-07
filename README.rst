@@ -1,9 +1,9 @@
 Ordotools
 ====================
 
-.. |repo-size| image:: https://img.shields.io/github/repo-size/corei8/CoreVim?style=flat-square
-.. |top-language| image:: https://img.shields.io/github/languages/top/corei8/CoreVim?style=flat-square
-.. |commit-activity| image:: https://img.shields.io/github/commit-activity/m/corei8/CoreVim?style=flat-square
+..  image:: https://img.shields.io/github/repo-size/corei8/CoreVim?style=flat-square
+..  image:: https://img.shields.io/github/languages/top/corei8/CoreVim?style=flat-square
+..  image:: https://img.shields.io/github/commit-activity/m/corei8/CoreVim?style=flat-square
 
 What is ordotools?
     A Traditional Catholic Ordo and Calendar, written in Python.
