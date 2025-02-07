@@ -27,7 +27,7 @@ class Translations:
 
             100: {
                 "la": "S Hilarii Episcopi ECD",
-                "en": "St. Hilary, Bp.CD",
+                "en": "St. Hilary, BpCD",
                 "fr": "",
             },
 
