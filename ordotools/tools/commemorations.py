@@ -44,7 +44,7 @@ def add_commemorations(feast: Feast, first, second=None, seasonal=False):
     return feast
 
 
-MONTH = []
+MONTH = []  # NOTE: this might not need to be a list
 
 
 def fidelium(feast: Feast, bound) -> Feast:

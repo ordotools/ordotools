@@ -327,7 +327,7 @@ class Translations:
 
             5100: {
                 "la": "S Joannis Damasceni CD",
-                "en": "",
+                "en": "St. John Damascene, CD",
                 "fr": "",
             },
 
@@ -345,31 +345,31 @@ class Translations:
 
             5400: {
                 "la": "S Isidori ECD",
-                "en": "",
+                "en": "St. Isidore, ECD",
                 "fr": "",
             },
 
             5500: {
                 "la": "S Vincentii Ferrerii C",
-                "en": "",
+                "en": "St. Vincent Ferrier, C",
                 "fr": "",
             },
 
             5600: {
                 "la": "S Leonis PCD",
-                "en": "",
+                "en": "St. Leo, PCD",
                 "fr": "",
             },
 
             5700: {
                 "la": "S Hermenegildi M",
-                "en": "",
+                "en": "St. Hermenegild, M",
                 "fr": "",
             },
 
             5800: {
                 "la": "S Justini M",
-                "en": "",
+                "en": "St. Justin, M",
                 "fr": "",
             },
 
@@ -381,7 +381,7 @@ class Translations:
 
             6000: {
                 "la": "S Anselmi ECD",
-                "en": "",
+                "en": "St. Anselm, ECD",
                 "fr": "",
             },
 
@@ -393,7 +393,7 @@ class Translations:
 
             6200: {
                 "la": "S Georgii M",
-                "en": "",
+                "en": "St. George, M",
                 "fr": "",
             },
 
@@ -405,7 +405,7 @@ class Translations:
 
             6400: {
                 "la": "S Marci Ev",
-                "en": "",
+                "en": "St. Mark, Ev",
                 "fr": "",
             },
 
@@ -423,67 +423,67 @@ class Translations:
 
             6700: {
                 "la": "S Pauli a Cruce C",
-                "en": "",
+                "en": "St. Paul of the Cross, C",
                 "fr": "",
             },
 
             6800: {
                 "la": "S Petri M",
-                "en": "",
+                "en": "St. Peter M",
                 "fr": "",
             },
 
             6900: {
-                "la": "S Catharinæ Senensis v",
-                "en": "",
+                "la": "S Catharinæ Senensis V",
+                "en": "St. Catherine of Siena, V",
                 "fr": "",
             },
 
             7000: {
                 "la": "Ss Philippi et Jacobi App",
-                "en": "",
+                "en": "Sts. Philip and Jacob, App",
                 "fr": "",
             },
 
             7100: {
                 "la": "S Athanasii ECD",
-                "en": "",
+                "en": "St. Athanasius, ECD",
                 "fr": "",
             },
 
             7200: {
                 "la": "In Inventione S Crucis",
-                "en": "",
+                "en": "Finding of the Holy Cross",
                 "fr": "",
             },
 
             7300: {
                 "la": "S Monicæ V",
-                "en": "",
+                "en": "St. Monica, V",
                 "fr": "",
             },
 
             7400: {
                 "la": "S Pii V PC",
-                "en": "",
+                "en": "St. Pius V, PC",
                 "fr": "",
             },
 
             7500: {
                 "la": "S Joannis ApEv ante Portam Latinam",
-                "en": "",
+                "en": "St. John ApEv before the Latin Gate",
                 "fr": "",
             },
 
             7600: {
                 "la": "S Stanislai EM",
-                "en": "",
+                "en": "St. Stanislaus, EM",
                 "fr": "",
             },
 
             7700: {
                 "la": "In Apparitione S Michaelis Arch",
-                "en": "",
+                "en": "Apparition of St. Michael Archangel",
                 "fr": "",
             },
 
@@ -495,7 +495,7 @@ class Translations:
 
             7900: {
                 "la": "S Antonini EC",
-                "en": "",
+                "en": "St. Anthony, EC",
                 "fr": "",
             },
 
@@ -507,31 +507,31 @@ class Translations:
 
             8100: {
                 "la": "S Roberti Bellarmino ECD",
-                "en": "",
+                "en": "St. Robert Ballarmine, ECD",
                 "fr": "",
             },
 
             8200: {
                 "la": "S Bonifatii M",
-                "en": "",
+                "en": "St. Boniface, M",
                 "fr": "",
             },
 
             8300: {
                 "la": "S Joannis Baptistæ de la Salle C",
-                "en": "",
+                "en": "St. John Baptist de la Salle, C",
                 "fr": "",
             },
 
             8400: {
                 "la": "S Ubaldi EC",
-                "en": "",
+                "en": "St. Ubald, EC",
                 "fr": "",
             },
 
             8500: {
                 "la": "S Paschalis Baylon C",
-                "en": "",
+                "en": "St. Paschal Baylon, C",
                 "fr": "",
             },
 
@@ -555,43 +555,43 @@ class Translations:
 
             8900: {
                 "la": "S Gregorii VII PC",
-                "en": "",
+                "en": "St. Gregory VII, PC",
                 "fr": "",
             },
 
             9000: {
                 "la": "S Philippi Nerii C",
-                "en": "",
+                "en": "St. Philip Neri, C",
                 "fr": "",
             },
 
             9100: {
                 "la": "S Bedæ Venerabilis CD",
-                "en": "",
+                "en": "St. Bede the Venerable, CD",
                 "fr": "",
             },
 
             9200: {
                 "la": "S Augustini EC",
-                "en": "",
+                "en": "St. Augustine, EC",
                 "fr": "",
             },
 
             9300: {
                 "la": "S Mariæ Magdalenæ de Pazzis V",
-                "en": "",
+                "en": "St. Mary Madgalene de Pazzi, V",
                 "fr": "",
             },
 
             9400: {
                 "la": "S Felix I PM",
-                "en": "",
+                "en": "St. Felix I, PM",
                 "fr": "",
             },
 
             9500: {
                 "la": "B Mariæ Virginis Reginæ",
-                "en": "",
+                "en": "Queenship of the Blessed Virgin Mary",
                 "fr": "",
             },
 
@@ -615,7 +615,7 @@ class Translations:
 
             9900: {
                 "la": "S Bonifatii EM",
-                "en": "",
+                "en": "St. Boniface, EM",
                 "fr": "",
             },
 
@@ -633,13 +633,13 @@ class Translations:
 
             10200: {
                 "la": "S Margaritæ R V",
-                "en": "",
+                "en": "St. Margaret, Queen V",
                 "fr": "",
             },
 
             10300: {
                 "la": "S Barnabæ Ap",
-                "en": "",
+                "en": "St. Barnabas, Ap",
                 "fr": "",
             },
 
@@ -651,13 +651,13 @@ class Translations:
 
             10500: {
                 "la": "S Antonii de Padua CD",
-                "en": "",
+                "en": "St. Anthony of Padua, CD",
                 "fr": "",
             },
 
             10600: {
                 "la": "S Basilii Magni ECD",
-                "en": "",
+                "en": "St. Basil the Great, ECD",
                 "fr": "",
             },
 
@@ -687,19 +687,19 @@ class Translations:
 
             11100: {
                 "la": "S Aloisii Gonzagæ C",
-                "en": "",
+                "en": "St. Aloysius Gonzaga, C",
                 "fr": "",
             },
 
             11200: {
                 "la": "S Paulini EC",
-                "en": "",
+                "en": "St. Paulinus, EC",
                 "fr": "",
             },
 
             11300: {
-                "la": "In Vigilia Natifitatis S Joannis Baptistæ",
-                "en": "",
+                "la": "In Vigilia Nativitatis S Joannis Baptistæ",
+                "en": "Vigil of the Nativity of St. John the Baptist",
                 "fr": "",
             },
 
@@ -722,8 +722,8 @@ class Translations:
             },
 
             11600: {
-                "la": "S Joannis et Pauli Mm",
-                "en": "",
+                "la": "Ss Joannis et Pauli Mm",
+                "en": "Sts. John and Paul, Mm",
                 "fr": "",
             },
 
@@ -747,25 +747,25 @@ class Translations:
 
             12000: {
                 "la": "In Commemoratione S Pauli Apostoli",
-                "en": "",
+                "en": "Commemoration of St. Paul, Ap",
                 "fr": "",
             },
 
             12100: {
                 "la": "In Festo Pretiosissimi Sanguinis DNJC",
-                "en": "",
+                "en": "Feast of the Most Precious Blood",
                 "fr": "",
             },
 
             12200: {
                 "la": "In Visitatione BMV",
-                "en": "",
+                "en": "Visitation of the Blessed Virgin Mary",
                 "fr": "",
             },
 
             12300: {
                 "la": "S Leonis II PC",
-                "en": "",
+                "en": "St. Leo II, PC",
                 "fr": "",
             },
 
@@ -777,13 +777,13 @@ class Translations:
 
             12700: {
                 "la": "Ss Cyrilli et Methodii EeCc",
-                "en": "",
+                "en": "Sts. Cyril and Methodius, BppCc",
                 "fr": "",
             },
 
             12800: {
                 "la": "S Elisabeth R Vid",
-                "en": "",
+                "en": "St. Elizabeth, Queen W",
                 "fr": "",
             },
 
@@ -795,31 +795,31 @@ class Translations:
 
             13000: {
                 "la": "S Pii I PM",
-                "en": "",
+                "en": "St. Pius I, PM",
                 "fr": "",
             },
 
             13100: {
                 "la": "S Joannis Gualberti Abb",
-                "en": "",
+                "en": "St. John Gualbert, Abb",
                 "fr": "",
             },
 
             13200: {
-                "la": "A Anacleti PM",
+                "la": "S Anacleti PM",
                 "en": "",
                 "fr": "",
             },
 
             13300: {
                 "la": "S Bonaventuræ ECD",
-                "en": "",
+                "en": "St. Bonaventure, BpCD",
                 "fr": "",
             },
 
             13400: {
                 "la": "S Henrici Imp C",
-                "en": "",
+                "en": "St. Henry, Emperor C",
                 "fr": "",
             },
 
@@ -837,13 +837,13 @@ class Translations:
 
             13700: {
                 "la": "S Camilli de Lellis C",
-                "en": "",
+                "en": "St. Camillus of Lellis, C",
                 "fr": "",
             },
 
             13800: {
                 "la": "S Vincentii a Paulo C",
-                "en": "",
+                "en": "St. Vincent de Paul, C",
                 "fr": "",
             },
 

@@ -68,7 +68,8 @@ class LiturgicalCalendar:
             else:
                 new_feast.day_in_octave = day
             new_feast.fasting = False
-            new_feast.rank_v = "sd"  # WARN: Verify that this is always the case...
+            # WARN: Verify that this is always the case:
+            new_feast.rank_v = "sd"
             new_feast.rank_n = 18 if day < 6 else 13
             new_feast.reset_commemorations()
             octave += (new_feast,)
@@ -127,7 +128,7 @@ class LiturgicalCalendar:
             else:
                 feast = master_expanded[date]
             if isinstance(feast, list):
-                # NOTE: anticipations
+                # anticipations
                 anticipated = feast[1]
                 new_last_feast = rank(
                     dynamic=anticipated,

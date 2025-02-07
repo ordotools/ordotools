@@ -9,7 +9,6 @@ class Feast:
     If there are too many comments here for your taste, then too bad. I have to
     take so many breaks from this project that I really need the comments so
     that I don't waste time having to remember what everything means again.
-    "Bad code", you say? Then please contribute!
     """
 
     def __init__(self, feast_date: datetime, properties: dict, lang="la"):
@@ -93,7 +92,7 @@ class Feast:
 
     @com_1.setter
     def com_1(self, com: dict):
-        if isinstance(com["id"], str) and  "de_" in com["id"]:
+        if isinstance(com["id"], str) and "de_" in com["id"]:
             com["id"] = 99914
         self._com_3 = self._com_2
         self._com_2 = self._com_1
@@ -105,7 +104,7 @@ class Feast:
 
     @com_2.setter
     def com_2(self, com: dict):
-        if isinstance(com["id"], str) and  "de_" in com["id"]:
+        if isinstance(com["id"], str) and "de_" in com["id"]:
             com["id"] = 99914
         self._com_3 = self._com_2
         self._com_2 = com
@@ -120,6 +119,7 @@ class Feast:
             com["id"] = 99914
         self._com_3 = com
 
+    # NOTE: there might be an issue with this adding blank commemorations...
     def reset_commemorations(self):
         self._com_3 = {"id": None, "name": None, "data": None}
         self._com_2 = {"id": None, "name": None, "data": None}
@@ -150,6 +150,7 @@ class Feast:
     @fasting.setter
     def fasting(self, q: bool):
         self._fasting = q
+
     #
     # @property
     # def date(self):
