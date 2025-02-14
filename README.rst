@@ -19,9 +19,7 @@ When can I use ordotools?
 Install
 -------
 
-.. warning::
-   
-   Be aware that this package is in late alpha, and there are known inaccuracies.
+> **Warning:** This package is in late alpha, and there are known inaccuracies.
 
 .. code-block:: bash
 
