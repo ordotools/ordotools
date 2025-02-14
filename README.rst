@@ -23,16 +23,18 @@ Install
     Be aware that this package is in late alpha, and there are known inaccuracies.
 
 .. code-block:: bash
-    pip install ordotools
+
+   $ pip install ordotools
 
 To see what this program can do, it is recommended to first clone the
 repository, install the requirements and then run the script `run.py`.
 
 .. code-block:: bash
-    $ python3 venv env
-    $ source env/bin/activate
-    $ pip3 install -r requirements.txt
-    $ python3 run.py
+
+   $ python3 venv env
+   $ source env/bin/activate
+   $ pip3 install -r requirements.txt
+   $ python3 run.py
 
 Contributing
 ------------
