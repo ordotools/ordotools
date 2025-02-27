@@ -211,7 +211,7 @@ class LiturgicalCalendar:
             sanctoral = saints.data if leap_year(self.year) is False else saints.leapyear()
         else:
             diocese = import_module(
-                f"sanctoral.diocese.{self.diocese}",
+                f"ordotools.sanctoral.diocese.{self.diocese}",
             )
             sanctoral = diocese.Diocese(self.year).calendar()
         logging.info('Initializing...')

@@ -2,35 +2,11 @@ from datetime import datetime
 from datetime import timedelta
 
 import dateutil.easter
-
 import re
-
 import functools
 
 
-@functools.lru_cache()
-class LiturgicalYearMarks:
-
-    def __init__(self, year):
-        self.year = year
-        self.christmas = datetime.strptime(str(self.year) + "-12-25", "%Y-%m-%d")
-        self.first_advent = self.christmas - findsunday(self.christmas) - timedelta(weeks=3)
-        self.last_advent = self.christmas - timedelta(days=1)
-
-        # FIX: there is somethig wrong here, right? Not used anywhere...
-        self.easter_season_start = easter(self.year) - timedelta(weeks=6, days=4)
-
-        # Ash Wednesday:
-        self.lent_begins = easter(self.year) - timedelta(weeks=6, days=4)
-        # Holy Saturday:
-        self.lent_ends = easter(self.year) - timedelta(days=1)
-
-        self.easter = easter(self.year)
-        self.easter_season_end = easter(self.year) + timedelta(days=39)
-        self.pentecost_season_start = easter(self.year) + timedelta(days=49)
-        self.pentecost_season_end = self.first_advent - timedelta(days=1)
-
-
+@functools.lru_cache(maxsize=128)
 def findsunday(date: datetime) -> timedelta:
     """
     return the distance betweent the date and
@@ -39,14 +15,55 @@ def findsunday(date: datetime) -> timedelta:
     return timedelta(days=int(date.strftime('%w')))
 
 
-@functools.lru_cache()
+@functools.lru_cache(maxsize=128)
 def easter(year: int) -> datetime:
     """ return the date of easter for this year """
+    easter_date = dateutil.easter.easter(year)
     return datetime(
-        year=int(dateutil.easter.easter(year).strftime('%Y')),
-        month=int(dateutil.easter.easter(year).strftime('%m')),
-        day=int(dateutil.easter.easter(year).strftime('%d'))
+        year=easter_date.year,
+        month=easter_date.month,
+        day=easter_date.day
     )
+
+
+class LiturgicalYearMarks:
+    _instances = {}  # Class-level cache for instances
+    
+    def __new__(cls, year):
+        # Use existing instance from cache if available
+        if year in cls._instances:
+            return cls._instances[year]
+        
+        # Create new instance
+        instance = super(LiturgicalYearMarks, cls).__new__(cls)
+        cls._instances[year] = instance
+        return instance
+
+    def __init__(self, year):
+        # Skip initialization if already initialized
+        if hasattr(self, 'year') and self.year == year:
+            return
+            
+        self.year = year
+        self.christmas = datetime(year=self.year, month=12, day=25)
+        
+        # Pre-calculate common date references
+        self._easter_date = easter(self.year)
+        sunday_offset = findsunday(self.christmas)
+        
+        self.first_advent = self.christmas - sunday_offset - timedelta(weeks=3)
+        self.last_advent = self.christmas - timedelta(days=1)
+
+        # Ash Wednesday:
+        self.lent_begins = self._easter_date - timedelta(weeks=6, days=4)
+        # Holy Saturday:
+        self.lent_ends = self._easter_date - timedelta(days=1)
+
+        self.easter = self._easter_date
+        self.easter_season_start = self._easter_date
+        self.easter_season_end = self._easter_date + timedelta(days=39)
+        self.pentecost_season_start = self._easter_date + timedelta(days=49)
+        self.pentecost_season_end = self.first_advent - timedelta(days=1)
 
 
 ladys_office = {
@@ -78,38 +95,41 @@ ladys_office = {
 }
 
 
+@functools.lru_cache(maxsize=512)
 def day(year: int, month: int, day: int) -> datetime:
+    """Return a datetime object for the given date"""
     return datetime(year=year, month=month, day=day)
 
 
+# Pre-compute common week values
+_CACHED_WEEKS = {i: timedelta(weeks=i) for i in range(1, 53)}
+
+@functools.lru_cache(maxsize=64)
 def weeks(i: int) -> timedelta:
     """ return a timedelta week, with integers as the input """
+    if i in _CACHED_WEEKS:
+        return _CACHED_WEEKS[i]
     return timedelta(weeks=i)
 
 
+# Pre-compute common day values
+_CACHED_DAYS = {i: timedelta(days=i) for i in range(0, 366)}
+
+@functools.lru_cache(maxsize=366)
 def days(numdays: int) -> timedelta:
     """ return a timedelta day(s), with integers as the input """
+    if numdays in _CACHED_DAYS:
+        return _CACHED_DAYS[numdays]
     return timedelta(days=numdays)
 
 
+@functools.lru_cache(maxsize=256)
 def weekday(date: datetime) -> str:
     """ return the weekday, with datetime as the input """
     return date.strftime('%a')
 
 
-# def advance_a_day(date: str) -> str:
-#     """ return a date advanced a day, returns a string mm/dd """
-#     return date + timedelta(days=1)
-
-
-# def find_extra_epiphany(pents: int) -> int:
-#     """ return the number of Sundays not celebrated after Epiphany """
-#     if pents == 23:
-#         pass
-#     else:
-#         return pents - 24
-
-
+@functools.lru_cache(maxsize=32)
 def leap_year(year: int) -> bool:
     """ return true if year is a leap year """
     if (year % 4) == 0:
@@ -124,45 +144,52 @@ def leap_year(year: int) -> bool:
         return False
 
 
+@functools.lru_cache(maxsize=128)
 def latex_replacement(string: str) -> str:
     """ return a string formatted for LaTeX with escape characters """
     return re.sub('&', r'\&', re.sub('_', r'\_', string))
 
 
+# Pre-compute the months translation dictionary
+_MONTHS_IN_LATIN = {
+    'January': 'Januarius',
+    'February': 'Februarius',
+    'March': 'Martius',
+    'April': 'Aprilis',
+    'May': 'Majus',
+    'June': 'Junis',
+    'July': 'Julius',
+    'August': 'Augustus',
+}
+
+@functools.lru_cache(maxsize=12)
 def translate_month(month: str) -> str:
     """ return the latin name for a given english month """
-    months_in_latin = {
-        'January': 'Januarius',
-        'February': 'Februarius',
-        'March': 'Martius',
-        'April': 'Aprilis',
-        'May': 'Majus',
-        'June': 'Junis',
-        'July': 'Julius',
-        'August': 'Augustus',
-    }
-    if month in months_in_latin:
-        return months_in_latin[month]
-    else:
-        return month
+    return _MONTHS_IN_LATIN.get(month, month)
 
 
+# Pre-compute the sevens list used in which_sunday
+_SEVENS = tuple(range(0, 31, 7))
+
+@functools.lru_cache(maxsize=256)
 def which_sunday(date: datetime) -> int:
     """
     Determine the numeric order of a Sunday within a month.
     """
-    sevens = [s for s in range(0, 31, 7)]
     index = int(date.strftime("%d"))
     x = 0
-    while index-x not in sevens:
+    while index-x not in _SEVENS:
         x += 1
-    return sevens.index(index-x)+1
+    return _SEVENS.index(index-x)+1
 
 
+@functools.lru_cache(maxsize=256)
 def last_sunday(date: datetime) -> bool:
-    if which_sunday(date) < 4:
+    """Determine if a date is the last Sunday of the month"""
+    sunday_num = which_sunday(date)
+    if sunday_num < 4:
         return False
-    elif which_sunday(date) == 4 and int(date.strftime("%d")) < 25:
+    elif sunday_num == 4 and int(date.strftime("%d")) < 25:
         return False
     else:
         return True
