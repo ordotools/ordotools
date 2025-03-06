@@ -1,6 +1,41 @@
 # Ordotools Documentation
 
-## Commands
+## Quick Start
+
+### Setup
+```bash
+# Clone the repository
+git clone https://github.com/ordotools/ordotools.git
+cd ordotools
+
+# Make CLI script executable (if not already)
+chmod +x ordotools.sh
+
+# Run the setup command
+./ordotools.sh setup
+```
+
+### CLI Tool
+Ordotools includes a convenient command-line interface for common operations:
+
+```bash
+# Show help
+./ordotools.sh help
+
+# Generate calendar for current year
+./ordotools.sh run
+
+# Generate calendar for specific year and show details
+./ordotools.sh run -y 2025 --dump
+
+# Run performance tests
+./ordotools.sh test -p
+
+# Run comprehensive benchmark
+./ordotools.sh benchmark -y 2025,2026 -r 5
+```
+
+### Legacy Commands
 - **Run application**: `python3 run.py`
 - **Run tests**: `pytest`
 - **Run single test**: `pytest tests/test_.py::test_basic`
@@ -142,6 +177,84 @@ Performance testing is built into the test suite to track calendar generation sp
 - **Standard deviation**: Variation between runs (lower is better)
 
 When optimizing, focus on areas identified in the Performance Optimization Notes section.
+
+## CLI Tool Reference
+
+The `ordotools.sh` script provides a user-friendly command line interface for all common Ordotools operations.
+
+### Commands
+
+#### `run` - Generate Liturgical Calendar
+Generate a calendar for a specified year, diocese, and language.
+
+Options:
+- `-y, --year YEAR` - Calendar year (default: current year)
+- `-d, --diocese DIOCESE` - Diocese to use (default: roman)
+- `-l, --lang LANG` - Language for output (default: la)
+- `--dump` - Display detailed calendar output
+
+Examples:
+```bash
+# Generate calendar for current year
+./ordotools.sh run
+
+# Generate calendar for 2025 with Roman diocese in Latin 
+./ordotools.sh run -y 2025 -d roman -l la
+
+# Generate and display detailed calendar
+./ordotools.sh run -y 2026 --dump
+```
+
+#### `test` - Run Tests
+Run various test suites for the codebase.
+
+Options:
+- `-p, --performance` - Run performance tests
+- `-b, --basic` - Run basic functionality tests
+- `-a, --all` - Run all tests
+- `-v, --verbose` - Show verbose test output
+
+Examples:
+```bash
+# Run all tests
+./ordotools.sh test
+
+# Run just performance tests
+./ordotools.sh test -p
+
+# Run basic tests with verbose output
+./ordotools.sh test -b -v
+```
+
+#### `benchmark` - Performance Benchmarking
+Run detailed performance benchmarks with customizable parameters.
+
+Options:
+- `-y, --years YEARS` - Comma-separated list of years to test (default: 2025,2026,2027)
+- `-r, --runs RUNS` - Number of runs per test (default: 5)
+- `-d, --dioceses DIOCESES` - Comma-separated list of dioceses to test (default: roman)
+
+Examples:
+```bash
+# Run default benchmark
+./ordotools.sh benchmark
+
+# Test specific years with more runs
+./ordotools.sh benchmark -y 2025,2030,2035 -r 10
+
+# Test multiple dioceses
+./ordotools.sh benchmark -d "roman,melbournensis"
+```
+
+#### `setup` - Setup Development Environment
+Initialize or update the development environment.
+
+- Creates Python virtual environment if needed
+- Installs required dependencies
+- Installs package in development mode
+
+#### `help` - Display Help Information
+Shows help for all commands and options.
 
 ## Performance Optimization Notes
 
