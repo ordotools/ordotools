@@ -1,8 +1,8 @@
 import csv
 import json
-from ordotools.tools.temporal_data import TemporalData
+from ordotools.sanctoral.diocese import roman
 
-data = TemporalData().data
+data = roman.Sanctoral(2025).data
 
 flattened_data = []
 

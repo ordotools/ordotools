@@ -88,6 +88,8 @@ def rank(dynamic: Feast, static: Feast):
             pass
 
     # distinguish between a major feria and vigil
+    # NOTE: May be we can change the "one" and "two" convention
+    #       to a variable swap with tuple unpacking?
     if d == 19 or s == 19:
         if d == 19:
             if "v" in dynamic.rank_v.lower():

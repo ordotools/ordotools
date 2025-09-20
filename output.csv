@@ -1,745 +1,267 @@
-id,color,com_1,com_2,com_3,compline,lauds,little_hours,matins,nobility,office_type,prime,rank_numeric,rank_verbose,mass_Ad Primam Missam,mass_Ad Secundam Missam,mass_Ad Tertiam Missam,mass_cre,mass_glo,mass_int,mass_pre,mass_seq,vespers_oration,vespers_proper,vespers_propers,vespers_admag_1,vespers_admag_2
-Circumcision,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,3,d II cl,,,,True,True,Puer natus,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-8_Stephen,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,20,s,,,,False,True,Sederunt,de Nativitate,,,False,,firstVespers,secondVespers
-8_John,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,20,s,,,,True,True,Introit,Communis,,,False,,firstVespers,secondVespers
-8_Innocents,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,20,s,,,,True,True,Ex ore infantium,Communis,,,False,,firstVespers,secondVespers
-SNameJesus,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,10,d II cl,,,,True,True,In nomine Jesu,de Nativitate,,,False,,firstVespers,secondVespers
-SNameJesu_8_Ste,white,"{""id"": ""8_Stephen"", ""rank"": [20, ""s""], ""color"": ""white"", ""mass"": {""int"": ""Sederunt"", ""glo"": true, ""cre"": false, ""pre"": ""de Nativitate""}, ""matins"": {}, ""lauds"": {}, ""prime"": {}, ""little_hours"": {}, ""vespers"": {""proper"": false, ""admag"": [""firstVespers"", ""secondVespers""], ""propers"": {}, ""oration"": """"}, ""compline"": {}, ""office_type"": false, ""nobility"": [0, 0, 0, 0, 0, 0]}",,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,10,d II cl,,,,True,True,In nomine Jesu,de Nativitate,,,False,,firstVespers,secondVespers
-V_Epiphany,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,12,sd Vig privil 2 cl,,,,True,True,Dum medium silentium,de Nativitate,,,False,,firstVespers,secondVespers
-Epiphany,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,2,d I cl cum Oct privil 2 ord,,,,True,True,Ecce advenit,de Epiphania,,,False,,firstVespers,secondVespers
-8_Epiphany,white,,,,,,,,"[3, 2, 6, 1, 3, 0]",False,,13,dm,,,,True,True,Ecce advenit,Communis,,,False,,firstVespers,secondVespers
-D_Epiphany,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,13,dm,,,,True,True,Ecce advenit,et Comm de Epiphania,,,False,,firstVespers,secondVespers
-HolyFamily,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,11,dm,,,,True,True,Exultat,et communcantes de Epiphania,,,False,,firstVespers,secondVespers
-D_HolyFamily,white,"{""id"": ""D_Epiphany""}",,,,,,,"[0, 0, 0, 0, 0, 0]",False,,11,dm,,,,True,True,In excelso,et Comm de Epiphania,,,False,,firstVespers,secondVespers
-de_AshWed,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,s I cl,,,,True,True,Misereris,de Quadragesima,,,False,,firstVespers,secondVespers
-AshWed_f5,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,19,s,,,,False,False,Dum clamarem,de Quadragesima,,,False,,firstVespers,secondVespers
-AshWed_f6,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,19,s,,,,False,False,Audivit,de Quadragesima,,,False,,firstVespers,secondVespers
-AshWed_fs,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,19,s,,,,False,False,Audivit,de Quadragesima,,,False,,firstVespers,secondVespers
-D_Lent_1,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,1,sd I cl,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-Ember_Lent_4,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,19,s,,,,False,False,Reminiscere,de Quadragesima,,,False,,firstVespers,secondVespers
-Ember_Lent_6,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,19,s,,,,False,False,De necessitatibus,de Quadragesima,,,False,,firstVespers,secondVespers
-Ember_Lent_s,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,19,s,,,,False,False,Intret,de Quadragesima,,,False,,firstVespers,secondVespers
-SevenSorrows,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,14,dm,,,,True,False,Stabant,de B. Maria Virg.,Stabat Mater,,False,,firstVespers,secondVespers
-de_Palm_f2,purple,,,,,,,,"[9, 2, 6, 13, 1, 0]",False,,3,s,,,,False,False,"Judica, Domine",de Cruce,,,False,,firstVespers,secondVespers
-de_Palm_f3,purple,,,,,,,,"[9, 2, 6, 13, 1, 0]",False,,3,s,,,,False,False,Nos autem,de Cruce,,,False,,firstVespers,secondVespers
-de_Palm_f4,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,3,s,,,,False,False,In nomine Jesu,de Cruce,,,False,,firstVespers,secondVespers
-de_Palm_f5,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,2,d I cl,,,,False,True,Nos autem,de Cruce,,,False,,firstVespers,secondVespers
-de_Palm_f6,black,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,2,d I cl,,,,False,False,Haec dicit,,,,False,,firstVespers,secondVespers
-de_Palm_fs,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,2,d I cl,,,,False,True,In Missa,Te quidem,,,False,,firstVespers,secondVespers
-Easter,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,1,d I cl cum Oct privil I ord,,,,True,True,Ressurexi,Paschalis,Victimae paschali laudes,,False,,firstVespers,secondVespers
-8Easter_f2,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,2,d I cl,,,,True,True,Introduxit,"et Comm et Hanc Igitur, ut in die Paschae",Victimae paschali laudes,,False,,firstVespers,secondVespers
-8Easter_f3,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,2,d I cl,,,,True,True,Aqua sapientiae,"et Comm et Hanc Igitur, ut in die Paschae",Victimae paschali laudes,,False,,firstVespers,secondVespers
-8Easter_f4,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,3,sd,,,,True,True,Venite,"et Comm et Hanc Igitur, ut in die Paschae",Victimae paschali laudes,,False,,firstVespers,secondVespers
-8Easter_f5,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,3,sd,,,,True,True,Victricem,"et Comm et Hang Igitur, ut in die Paschae",Victimae paschali laudes,,False,,firstVespers,secondVespers
-8Easter_f6,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,3,sd,,,,True,True,Eduxit eos,"et Comm et Hanc Igitur, ut in die Paschae",Victimae paschali laudes,,False,,firstVespers,secondVespers
-WhitSaturday,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,3,sd,,,,True,True,Eduxit Dominus,"et Comm et Hanc Igitur, ut in die Paschae",Victimae paschali laudes,,False,,firstVespers,secondVespers
-StJoseph,white,,,,,,,,"[1, 2, 4, 4, 1, 0]",False,,2,d I cl cum Oct Communi,,,,True,True,Justus ut palma,de S Joseph,,,False,,firstVespers,secondVespers
-8_StJoseph,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,13,dm,,,,True,True,Missa,Communis,,,False,,firstVespers,secondVespers
-Rogation_1,purple,,,,,,,,"[0, 0, 0, 13, 0, 0]",feria,,19,feria,,,,True,False,Exaudivit,Paschalis,,,False,,firstVespers,secondVespers
-Rogation_2,purple,,,,,,,,"[0, 0, 0, 13, 0, 0]",feria,,23,feria,,,,True,False,Exaudivit,Paschalis,,,False,,firstVespers,secondVespers
-Rogation_3,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Exaudivit,Paschalis,,,False,,firstVespers,secondVespers
-Ascension,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,2,d I cl cum Oct privil 3 ord,,,,True,True,Viri Galilæi,et Comm de Ascensione,,,False,,firstVespers,secondVespers
-8_Ascension,white,,,,,,,,"[3, 2, 3, 1, 3, 0]",False,,13,dm,,,,True,True,Viri Galilæi,et Comm de Ascensione,,,False,,firstVespers,secondVespers
-p_Ascension_f6,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,13,dm,,,,True,True,Viri Galilæi,et Comm de Ascensione,,,False,,firstVespers,secondVespers
-D_Ascension,white,,,,,,,,"[5, 1, 6, 13, 3, 0]",False,,16,sd,,,,False,True,"Exaudi, Domine",de Ascensione,,,False,,firstVespers,secondVespers
-S_8_Ascension,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,17,sd,,,,False,True,"Exaudi, Domine",de Ascensione,,,False,,firstVespers,secondVespers
-WhitSunday,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,1,dm I cl,,,,True,True,Quasi modo,Paschalis,,,False,,firstVespers,secondVespers
-V_Pentecost,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,3,d I cl Vig privil I cl,,,,False,True,Cum sanctificatus,et Comm et Hanc Igitur de Pentecoste,,,False,,firstVespers,secondVespers
-Pentecost,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,1,d I cl cum Oct privil I ord,,,,True,True,Spiritus Domini,et Comm et Hanc Igitur de Pentecoste,"Veni, Sancte Spiritus",,False,,firstVespers,secondVespers
-8Pent_f2,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,d I cl,,,,True,True,Cibavit eos,et Comm et Hanc Igitur de Pentecoste,"Veni, Sancte Spiritus",,False,,firstVespers,secondVespers
-8Pent_f3,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,d I cl,,,,True,True,Cibavit eos,et Comm et Hanc Igitur de Pentecoste,"Veni, Sancte Spiritus",,False,,firstVespers,secondVespers
-8Pent_f5,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,d I cl,,,,True,True,Accepite jucunditatem,et Comm et Hanc Igitur de Pentecoste,"Veni, Sancte Spiritus",,False,,firstVespers,secondVespers
-Ember_Pent_4,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,sd,,,,True,True,"Deus, dum egredereris",et Comm et Hanc Igitur de Pentecoste,"Veni, Sancte Spiritus",,False,,firstVespers,secondVespers
-Ember_Pent_6,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,sd,,,,True,True,Repleatur os meum,et Comm et Hanc Igitur de Pentecoste,"Veni, Sancte Spiritus",,False,,firstVespers,secondVespers
-Ember_Pent_s,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,sd,,,,True,True,Caritas Dei,et Comm et Hanc Igitur de Pentecoste,"Veni, Sancte Spiritus",,False,,firstVespers,secondVespers
-Trinity,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,2,d I cl,,,,True,True,Benedicta sit,de Ssma Trinitate,,,False,,firstVespers,secondVespers
-D_Pent_2,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,9,sd,,,,True,True,Factus est,"de Nativitate, vel de Ssma Trinitate","Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-D_Pent_3,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Respice in me,de sacratissimo Code Jesu,,,False,,firstVespers,secondVespers
-CorpusChristi,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,2,d I cl cum Oct privil 2 ord,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-8_CorpusChristi,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,4,dm,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-SacredHeart,white,,,,,,,,"[1, 0, 3, 1, 1, 0]",festiva,,2,d I cl cum Oct privil 3 ord,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-8_SacredHeart,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,13,dm,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-Ember_Sept_4,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,19,s,,,,False,False,Exsultate Deo,Communis,,,False,,firstVespers,secondVespers
-Ember_Sept_6,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,19,s,,,,False,False,Laetetur cor,Communis,,,False,,firstVespers,secondVespers
-Ember_Sept_s,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,19,s,,,,False,False,"Venite, adoremus",Communis,,,False,,firstVespers,secondVespers
-ChristKing,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,2,d I cl,,,,True,True,Dignus est,de DNJC Rege,,,False,,firstVespers,secondVespers
-Ember_Advent_4,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,19,feria,,,,False,False,Rorate cæli,Communis,,,False,,firstVespers,secondVespers
-Ember_Advent_6,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,19,feria,,,,False,False,Prope es tu,Communis,,,False,,firstVespers,secondVespers
-Ember_Advent_s,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,19,feria,,,,False,False,"Veni, et ostende",Communis,,,False,,firstVespers,secondVespers
-V_Christmas,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,d I cl Vig privil I cl,,,,False,False,Hodie scietis,Communis,,,False,,firstVespers,secondVespers
-DV_Christmas,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,3,d I cl Vig privil I cl,,,,True,False,Hodie scietis,de Trinitate,,,False,,firstVespers,secondVespers
-Christmas,white,,,,"{""sunday"": true}","{""psalms"": ""sunday""}","{""psalms"": ""sunday""}",,"[1, 1, 3, 1, 1, 0]",festiva,"{""v_r"": ""Qui natus es""}",2,d I cl cum Oct privil 3 ord,"{'int': 'Domine dixit', 'glo': True, 'cre': True, 'pre': 'et Comm (in hac Missa tantum dicitur ""noctem"") de Nativitate'}","{'int': 'Lux fulgebit', 'glo': True, 'cre': True, 'pre': 'et Comm de Nativitate'}","{'int': 'Puer natus', 'glo': True, 'cre': True, 'pre': 'et Comm de Nativitate', 'proper_last_gospel': 'Epiph'}",,,,,,,False,,firstVespers,secondVespers
-D_Christmas_r,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dum medium silentium,de Comm de Nativitate,,,False,,firstVespers,secondVespers
-D_Christmas,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dum medium,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-8_Chritmas_f6,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",feria,,16,sd,,,,True,True,Puer natus est nobis,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-StStephan,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,10,d II cl cum Oct simplici,,,,True,True,Sederunt,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-StJohn,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,10,d II cl cum Oct simplici,,,,True,True,In medio ecclesiæ,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-StsInnocents,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,10,d II cl cum Oct simplici,,,,True,True,Ex ore infantium,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-StThomas,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,15,d,,,,True,True,Gaudeamus omnes,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-StSylvester,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,15,d,,,,True,False,Si diligis me,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-D_StThomas,red,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,15,d,,,,True,True,Gaudeamus omnes,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-D_StSylvester,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",festiva,,15,d,,,,True,False,Si diligis me,et Comm de Nativitate,,,False,,firstVespers,secondVespers
-D_Epiph_1,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Omnis terra,de Ssma Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_1_2,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_1_3,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_1_4,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_1_5,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_1_6,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_1_s,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-D_Epiph_2,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Omnis terra,de Ssma Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_2_2,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_2_3,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_2_4,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_2_5,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_2_6,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_2_s,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-D_Epiph_3,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Omnis terra,de Ssma Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_3_2,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_3_3,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_3_4,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_3_5,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_3_6,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_3_s,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-D_Epiph_4,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Omnis terra,de Ssma Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_4_2,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_4_3,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_4_4,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_4_5,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_4_6,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_4_s,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-D_Epiph_5,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Omnis terra,de Ssma Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_5_2,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_5_3,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_5_4,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_5_5,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_5_6,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_5_s,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-D_Epiph_6,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Omnis terra,de Ssma Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_6_2,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_6_3,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_6_4,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_6_5,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_6_6,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-de_Epiph_6_s,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Omnis terra,Communis,,,False,,firstVespers,secondVespers
-8_Epiph_fs,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,9,feria,,,,True,True,Ecce advenit,Communis,,,False,,firstVespers,secondVespers
-8_Epiph_f2,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,9,feria,,,,True,True,Ecce advenit,Communis,,,False,,firstVespers,secondVespers
-8_Epiph_f3,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,9,feria,,,,True,True,Ecce advenit,Communis,,,False,,firstVespers,secondVespers
-8_Epiph_f4,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,9,feria,,,,True,True,Ecce advenit,Communis,,,False,,firstVespers,secondVespers
-8_Epiph_f5,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,9,feria,,,,True,True,Ecce advenit,Communis,,,False,,firstVespers,secondVespers
-8_Epiph_f6,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,9,feria,,,,True,True,Ecce advenit,Communis,,,False,,firstVespers,secondVespers
-8_Epiph_f7,white,,,,,,,,"[8, 2, 6, 13, 3, 0]",feria,,9,feria,,,,True,True,Ecce advenit,Communis,,,False,,firstVespers,secondVespers
-Septuagesima,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,8,sd II cl,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sept_f2,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sept_f3,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sept_f4,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sept_f5,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sept_f6,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sept_fs,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-Sexagesima,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,8,sd II cl,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sexa_f2,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sexa_f3,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sexa_f4,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sexa_f5,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sexa_f6,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Sexa_fs,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-Quinquagesima,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,8,sd II cl,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Quin_f2,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Quin_f3,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Quin_f4,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Quin_f5,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Quin_f6,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Quin_fs,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,True,False,,Communis,,,False,,firstVespers,secondVespers
-de_Lent_f2,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Lent_f3,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Lent_f4,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Lent_f5,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Lent_f6,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Lent_fs,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-D_Lent_2,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,1,sd I cl,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-D_Lent_3,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,8,sd I cl,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-D_Lent_4,pink,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,1,sd I cl,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-D_Passion_5,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,8,sd I cl,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Passion_f2,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Passion_f3,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Passion_f4,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Passion_f5,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Passion_f6,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-de_Passion_fs,purple,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,19,feria,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-D_Palm_6,purple,,,,,,,,"[0, 0, 0, 0, 0, 0]",False,,8,sd I cl,,,,False,False,,de Quadragesima,,,False,,firstVespers,secondVespers
-D_Easter_1,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Missa,Paschalis,,,False,,firstVespers,secondVespers
-de_Easter_1_f2,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_1_f3,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_1_f4,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_1_f5,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_1_f6,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_1_fs,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-D_Easter_2,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Missa,Paschalis,,,False,,firstVespers,secondVespers
-de_Easter_2_f2,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_2_f3,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_2_f4,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_2_f5,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_2_f6,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_2_fs,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-D_Easter_3,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Missa,Paschalis,,,False,,firstVespers,secondVespers
-de_Easter_3_f2,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_3_f3,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_3_f4,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_3_f5,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_3_f6,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_3_fs,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-D_Easter_4,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Missa,Paschalis,,,False,,firstVespers,secondVespers
-de_Easter_4_f2,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_4_f3,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_4_f4,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_4_f5,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_4_f6,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_4_fs,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-D_Easter_5,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Missa,Paschalis,,,False,,firstVespers,secondVespers
-de_Easter_5_f2,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_5_f3,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_5_f4,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_5_f5,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_5_f6,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_5_fs,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-D_Easter_6,white,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Missa,Paschalis,,,False,,firstVespers,secondVespers
-de_Easter_6_f2,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_6_f3,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_6_f4,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_6_f5,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_6_f6,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-de_Easter_6_fs,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,False,True,Missa,Communis,,,False,,firstVespers,secondVespers
-in_8_Ascension_1,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,16,sd,,,,False,True,Viri galilæi,de Ascensione,,,False,,firstVespers,secondVespers
-in_8_Ascension_2,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,16,sd,,,,False,True,Viri galilæi,de Ascensione,,,False,,firstVespers,secondVespers
-in_8_Ascension_3,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,16,sd,,,,False,True,Viri galilæi,de Ascensione,,,False,,firstVespers,secondVespers
-in_8_Ascension_4,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,16,sd,,,,False,True,Viri galilæi,de Ascensione,,,False,,firstVespers,secondVespers
-in_8_Ascension_5,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,16,sd,,,,False,True,Viri galilæi,de Ascensione,,,False,,firstVespers,secondVespers
-in_8_Ascension_6,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,16,sd,,,,False,True,Viri galilæi,de Ascensione,,,False,,firstVespers,secondVespers
-in_8_Ascension_7,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,16,sd,,,,False,True,Viri galilæi,de Ascensione,,,False,,firstVespers,secondVespers
-2_in_8_CorpusChristi,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",festiva,,9,sd,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-3_in_8_CorpusChristi,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",festiva,,9,sd,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-4_in_8_CorpusChristi,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",festiva,,9,sd,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-5_in_8_CorpusChristi,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",festiva,,9,sd,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-6_in_8_CorpusChristi,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",festiva,,9,sd,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-7_in_8_CorpusChristi,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",festiva,,9,sd,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-8_in_8_CorpusChristi,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",festiva,,9,sd,,,,True,True,Cibavit eos,de Nativitate,"Lauda, Sion",,False,,firstVespers,secondVespers
-2_in_8_SacredHeart,white,,,,,,,,"[1, 0, 3, 1, 1, 0]",festiva,,18,sd,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-3_in_8_SacredHeart,white,,,,,,,,"[1, 0, 3, 1, 1, 0]",festiva,,18,sd,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-4_in_8_SacredHeart,white,,,,,,,,"[1, 0, 3, 1, 1, 0]",festiva,,18,sd,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-5_in_8_SacredHeart,white,,,,,,,,"[1, 0, 3, 1, 1, 0]",festiva,,18,sd,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-6_in_8_SacredHeart,white,,,,,,,,"[1, 0, 3, 1, 1, 0]",festiva,,18,sd,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-7_in_8_SacredHeart,white,,,,,,,,"[1, 0, 3, 1, 1, 0]",festiva,,18,sd,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-8_in_8_SacredHeart,white,,,,,,,,"[1, 0, 3, 1, 1, 0]",festiva,,18,sd,,,,True,True,Cogitationes,de Ssmo Corde Iesu,,,False,,firstVespers,secondVespers
-2_in_8_StJoseph,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,18,feria,,,,True,True,Justus ut palma,de S Joseph,,,False,,firstVespers,secondVespers
-3_in_8_StJoseph,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,18,feria,,,,True,True,Justus ut palma,de S Joseph,,,False,,firstVespers,secondVespers
-4_in_8_StJoseph,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,18,feria,,,,True,True,Justus ut palma,de S Joseph,,,False,,firstVespers,secondVespers
-5_in_8_StJoseph,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,18,feria,,,,True,True,Justus ut palma,de S Joseph,,,False,,firstVespers,secondVespers
-6_in_8_StJoseph,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,18,feria,,,,True,True,Justus ut palma,de S Joseph,,,False,,firstVespers,secondVespers
-7_in_8_StJoseph,white,,,,,,,,"[9, 2, 6, 13, 3, 0]",False,,18,feria,,,,True,True,Justus ut palma,de S Joseph,,,False,,firstVespers,secondVespers
-D_Pent_4,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_4_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_4_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_4_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_4_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_4_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_4_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Pent_5,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dóminus illuminátio,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_5_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dóminus illuminátio,Communi,,,False,,firstVespers,secondVespers
-de_Pent_5_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dóminus illuminátio,Communi,,,False,,firstVespers,secondVespers
-de_Pent_5_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dóminus illuminátio,Communi,,,False,,firstVespers,secondVespers
-de_Pent_5_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dóminus illuminátio,Communi,,,False,,firstVespers,secondVespers
-de_Pent_5_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dóminus illuminátio,Communi,,,False,,firstVespers,secondVespers
-de_Pent_5_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dóminus illuminátio,Communi,,,False,,firstVespers,secondVespers
-D_Pent_6,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,"Exaudi, Domine",de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_6_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,"Exaudi, Domine",Communi,,,False,,firstVespers,secondVespers
-de_Pent_6_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,"Exaudi, Domine",Communi,,,False,,firstVespers,secondVespers
-de_Pent_6_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,"Exaudi, Domine",Communi,,,False,,firstVespers,secondVespers
-de_Pent_6_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,"Exaudi, Domine",Communi,,,False,,firstVespers,secondVespers
-de_Pent_6_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,"Exaudi, Domine",Communi,,,False,,firstVespers,secondVespers
-de_Pent_6_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,"Exaudi, Domine",Communi,,,False,,firstVespers,secondVespers
-D_Pent_7,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dominus fortitudo,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_7_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dominus fortitudo,Communi,,,False,,firstVespers,secondVespers
-de_Pent_7_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dominus fortitudo,Communi,,,False,,firstVespers,secondVespers
-de_Pent_7_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dominus fortitudo,Communi,,,False,,firstVespers,secondVespers
-de_Pent_7_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dominus fortitudo,Communi,,,False,,firstVespers,secondVespers
-de_Pent_7_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dominus fortitudo,Communi,,,False,,firstVespers,secondVespers
-de_Pent_7_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dominus fortitudo,Communi,,,False,,firstVespers,secondVespers
-D_Pent_8,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Omnes gentes,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_8_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnes gentes,Communi,,,False,,firstVespers,secondVespers
-de_Pent_8_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnes gentes,Communi,,,False,,firstVespers,secondVespers
-de_Pent_8_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnes gentes,Communi,,,False,,firstVespers,secondVespers
-de_Pent_8_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnes gentes,Communi,,,False,,firstVespers,secondVespers
-de_Pent_8_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnes gentes,Communi,,,False,,firstVespers,secondVespers
-de_Pent_8_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnes gentes,Communi,,,False,,firstVespers,secondVespers
-D_Pent_9,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Suscepimus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_9_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Suscepimus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_9_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Suscepimus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_9_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Suscepimus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_9_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Suscepimus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_9_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Suscepimus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_9_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Suscepimus,Communi,,,False,,firstVespers,secondVespers
-D_Pent_10,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Ecce Deus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_10_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Ecce Deus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_10_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Ecce Deus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_10_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Ecce Deus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_10_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Ecce Deus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_10_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Ecce Deus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_10_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Ecce Deus,Communi,,,False,,firstVespers,secondVespers
-D_Pent_11,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Cum clamarem,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_11_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Cum clamarem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_11_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Cum clamarem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_11_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Cum clamarem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_11_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Cum clamarem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_11_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Cum clamarem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_11_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Cum clamarem,Communi,,,False,,firstVespers,secondVespers
-D_Pent_12,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Deus in loco,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_12_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in loco,Communi,,,False,,firstVespers,secondVespers
-de_Pent_12_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in loco,Communi,,,False,,firstVespers,secondVespers
-de_Pent_12_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in loco,Communi,,,False,,firstVespers,secondVespers
-de_Pent_12_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in loco,Communi,,,False,,firstVespers,secondVespers
-de_Pent_12_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in loco,Communi,,,False,,firstVespers,secondVespers
-de_Pent_12_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in loco,Communi,,,False,,firstVespers,secondVespers
-D_Pent_13,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Deus in adjutorium,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_13_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in adjutorium,Communi,,,False,,firstVespers,secondVespers
-de_Pent_13_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in adjutorium,Communi,,,False,,firstVespers,secondVespers
-de_Pent_13_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in adjutorium,Communi,,,False,,firstVespers,secondVespers
-de_Pent_13_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in adjutorium,Communi,,,False,,firstVespers,secondVespers
-de_Pent_13_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in adjutorium,Communi,,,False,,firstVespers,secondVespers
-de_Pent_13_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Deus in adjutorium,Communi,,,False,,firstVespers,secondVespers
-D_Pent_14,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Respice Domine,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_14_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Respice Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_14_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Respice Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_14_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Respice Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_14_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Respice Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_14_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Respice Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_14_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Respice Domine,Communi,,,False,,firstVespers,secondVespers
-D_Pent_15,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Protector noster,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_15_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Protector noster,Communi,,,False,,firstVespers,secondVespers
-de_Pent_15_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Protector noster,Communi,,,False,,firstVespers,secondVespers
-de_Pent_15_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Protector noster,Communi,,,False,,firstVespers,secondVespers
-de_Pent_15_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Protector noster,Communi,,,False,,firstVespers,secondVespers
-de_Pent_15_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Protector noster,Communi,,,False,,firstVespers,secondVespers
-de_Pent_15_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Protector noster,Communi,,,False,,firstVespers,secondVespers
-D_Pent_16,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Inclina Domine,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_16_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Inclina Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_16_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Inclina Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_16_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Inclina Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_16_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Inclina Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_16_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Inclina Domine,Communi,,,False,,firstVespers,secondVespers
-de_Pent_16_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Inclina Domine,Communi,,,False,,firstVespers,secondVespers
-D_Pent_17,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Miserere mihi,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_17_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Miserere mihi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_17_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Miserere mihi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_17_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Miserere mihi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_17_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Miserere mihi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_17_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Miserere mihi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_17_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Miserere mihi,Communi,,,False,,firstVespers,secondVespers
-D_Pent_18,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Justus es,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_18_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Justus es,Communi,,,False,,firstVespers,secondVespers
-de_Pent_18_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Justus es,Communi,,,False,,firstVespers,secondVespers
-de_Pent_18_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Justus es,Communi,,,False,,firstVespers,secondVespers
-de_Pent_18_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Justus es,Communi,,,False,,firstVespers,secondVespers
-de_Pent_18_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Justus es,Communi,,,False,,firstVespers,secondVespers
-de_Pent_18_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Justus es,Communi,,,False,,firstVespers,secondVespers
-D_Pent_19,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Da pacem,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_19_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Da pacem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_19_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Da pacem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_19_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Da pacem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_19_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Da pacem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_19_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Da pacem,Communi,,,False,,firstVespers,secondVespers
-de_Pent_19_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Da pacem,Communi,,,False,,firstVespers,secondVespers
-D_Pent_20,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Salus populi,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_20_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Salus populi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_20_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Salus populi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_20_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Salus populi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_20_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Salus populi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_20_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Salus populi,Communi,,,False,,firstVespers,secondVespers
-de_Pent_20_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Salus populi,Communi,,,False,,firstVespers,secondVespers
-D_Pent_21,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Omnia,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_21_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnia,Communi,,,False,,firstVespers,secondVespers
-de_Pent_21_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnia,Communi,,,False,,firstVespers,secondVespers
-de_Pent_21_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnia,Communi,,,False,,firstVespers,secondVespers
-de_Pent_21_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnia,Communi,,,False,,firstVespers,secondVespers
-de_Pent_21_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnia,Communi,,,False,,firstVespers,secondVespers
-de_Pent_21_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Omnia,Communi,,,False,,firstVespers,secondVespers
-D_Pent_22,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,In voluntate tua,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_22_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,In voluntate tua,Communi,,,False,,firstVespers,secondVespers
-de_Pent_22_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,In voluntate tua,Communi,,,False,,firstVespers,secondVespers
-de_Pent_22_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,In voluntate tua,Communi,,,False,,firstVespers,secondVespers
-de_Pent_22_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,In voluntate tua,Communi,,,False,,firstVespers,secondVespers
-de_Pent_22_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,In voluntate tua,Communi,,,False,,firstVespers,secondVespers
-de_Pent_22_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,In voluntate tua,Communi,,,False,,firstVespers,secondVespers
-D_Pent_23,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Si iniquitates,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_23_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Si iniquitates,Communi,,,False,,firstVespers,secondVespers
-de_Pent_23_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Si iniquitates,Communi,,,False,,firstVespers,secondVespers
-de_Pent_23_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Si iniquitates,Communi,,,False,,firstVespers,secondVespers
-de_Pent_23_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Si iniquitates,Communi,,,False,,firstVespers,secondVespers
-de_Pent_23_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Si iniquitates,Communi,,,False,,firstVespers,secondVespers
-de_Pent_23_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Si iniquitates,Communi,,,False,,firstVespers,secondVespers
-D_Pent_24,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_24_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_24_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_24_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_24_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_24_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_24_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Pent_25,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_25_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_25_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_25_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_25_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_25_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_25_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Pent_26,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_26_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_26_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_26_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_26_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_26_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_26_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Pent_27,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_27_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_27_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_27_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_27_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_27_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_27_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Pent_28,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_28_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_28_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_28_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_28_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_28_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Pent_28_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,sd,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_2_22,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_2_22_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_22_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_22_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_22_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_22_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_22_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_3_22,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_3_22_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_22_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_22_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_22_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_22_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_22_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_4_22,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_4_22_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_22_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_22_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_22_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_22_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_22_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_5_22,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_5_22_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_22_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_22_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_22_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_22_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_22_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_6_22,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_6_22_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_22_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_22_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_22_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_22_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_22_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_2_23,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_2_23_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_23_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_23_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_23_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_23_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_23_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_3_23,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_3_23_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_23_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_23_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_23_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_23_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_23_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_4_23,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_4_23_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_23_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_23_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_23_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_23_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_23_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_5_23,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_5_23_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_23_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_23_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_23_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_23_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_23_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_6_23,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_6_23_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_23_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_23_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_23_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_23_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_23_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_2_24,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_2_24_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_24_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_24_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_24_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_24_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_24_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_3_24,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_3_24_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_24_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_24_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_24_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_24_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_24_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_4_24,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_4_24_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_24_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_24_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_24_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_24_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_24_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_5_24,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_5_24_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_24_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_24_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_24_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_24_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_24_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_6_24,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_6_24_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_24_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_24_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_24_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_24_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_24_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_2_25,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_2_25_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_25_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_25_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_25_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_25_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_25_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_3_25,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_3_25_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_25_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_25_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_25_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_25_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_25_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_4_25,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_4_25_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_25_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_25_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_25_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_25_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_25_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_5_25,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_5_25_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_25_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_25_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_25_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_25_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_25_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_6_25,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_6_25_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_25_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_25_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_25_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_25_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_25_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_2_26,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_2_26_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_26_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_26_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_26_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_26_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_26_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_3_26,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_3_26_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_26_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_26_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_26_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_26_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_26_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_4_26,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_4_26_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_26_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_26_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_26_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_26_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_26_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_5_26,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_5_26_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_26_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_26_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_26_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_26_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_26_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_6_26,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_6_26_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_26_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_26_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_26_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_26_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_26_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_2_27,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_2_27_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_27_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_27_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_27_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_27_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_27_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_3_27,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_3_27_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_27_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_27_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_27_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_27_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_27_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_4_27,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_4_27_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_27_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_27_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_27_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_27_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_27_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_5_27,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_5_27_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_27_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_27_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_27_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_27_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_27_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_6_27,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_6_27_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_27_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_27_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_27_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_27_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_27_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_2_28,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_2_28_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_28_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_28_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_28_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_28_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_2_28_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_3_28,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_3_28_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_28_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_28_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_28_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_28_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_3_28_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_4_28,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_4_28_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_28_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_28_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_28_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_28_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_4_28_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_5_28,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_5_28_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_28_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_28_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_28_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_28_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_5_28_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Epiph_6_28,green,A cunctis,ad libitum,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_Epiph_6_28_f2,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_28_f3,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_28_f4,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_28_f5,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_28_f6,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_Epiph_6_28_fs,green,A cunctis,ad libitum,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_UltPent_23,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_UltPent_23_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_23_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_23_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_23_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_23_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_23_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_UltPent_24,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_UltPent_24_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_24_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_24_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_24_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_24_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_24_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_UltPent_25,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_UltPent_25_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_25_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_25_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_25_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_25_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_25_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_UltPent_26,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_UltPent_26_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_26_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_26_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_26_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_26_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_26_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_UltPent_27,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_UltPent_27_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_27_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_27_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_27_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_27_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_27_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_UltPent_28,green,,,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd,,,,True,True,Dicit Dominus,de Trinitate,,,False,,firstVespers,secondVespers
-de_UltPent_28_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_28_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_28_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_28_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_28_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-de_UltPent_28_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",dominica,,23,feria,,,,False,True,Dicit Dominus,Communi,,,False,,firstVespers,secondVespers
-D_Advent_1,purple,Deus qui de beate,Ecclesiæ,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,1,sd I cl,,,,True,False,Ad te levavi,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_1_f2,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Ad te levavi,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_1_f3,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Ad te levavi,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_1_f4,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Ad te levavi,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_1_f5,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Ad te levavi,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_1_f6,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Ad te levavi,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_1_fs,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Ad te levavi,de Trinitate,,,False,,firstVespers,secondVespers
-D_Advent_2,purple,Deus qui de beate,Ecclesiæ,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd II cl,,,,True,False,Populus Sion,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_2_f2,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Populus Sion,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_2_f3,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Populus Sion,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_2_f4,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Populus Sion,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_2_f5,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Populus Sion,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_2_f6,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Populus Sion,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_2_fs,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Populus Sion,de Trinitate,,,False,,firstVespers,secondVespers
-D_Advent_3,pink,Deus qui de beate,Ecclesiæ,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd II cl,,,,True,False,Gaudete,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_3_f2,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Gaudete,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_3_f3,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Gaudete,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_3_f4,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Gaudete,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_3_f5,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Gaudete,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_3_f6,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Gaudete,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_3_fs,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Gaudete,de Trinitate,,,False,,firstVespers,secondVespers
-D_Advent_4,purple,Deus qui de beate,Ecclesiæ,,,,,,"[0, 0, 0, 0, 0, 0]",dominica,,12,sd II cl,,,,True,False,Rorate cæli,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_4_f2,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Rorate cæli,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_4_f3,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Rorate cæli,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_4_f4,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Rorate cæli,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_4_f5,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Rorate cæli,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_4_f6,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Rorate cæli,de Trinitate,,,False,,firstVespers,secondVespers
-de_Advent_4_fs,purple,Deus qui de beate,Ecclesiæ,,,,,,"[9, 2, 6, 13, 3, 0]",feria,,23,feria,,,,True,False,Rorate cæli,de Trinitate,,,False,,firstVespers,secondVespers
-de_Pent_1_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Benedicta sit,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_1_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Benedicta sit,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_1_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Benedicta sit,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_1_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Benedicta sit,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_1_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Benedicta sit,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_1_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Benedicta sit,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_2_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Factus est,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_2_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Factus est,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_2_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Factus est,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_2_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Factus est,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_2_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Factus est,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_2_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Factus est,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_3_f2,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Respice in me,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_3_f3,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Respice in me,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_3_f4,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Respice in me,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_3_f5,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Respice in me,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_3_f6,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Respice in me,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
-de_Pent_3_fs,green,,,,,,,,"[9, 2, 6, 13, 3, 0]",ferial,,23,feria,,,,False,True,Respice in me,de Trinitate,"Lauda, Sion, Salvatorem",,False,,firstVespers,secondVespers
+id,color,com_1,com_2,com_3,compline,lauds,little_hours,matins,nobility,octave,office_type,prime,rank_numeric,rank_verbose,mass_Ad Primam Missam,mass_Ad Secundam Missam,mass_Ad Tertiam Missam,mass_cre,mass_glo,mass_int,mass_pre,mass_seq,vespers_oration,vespers_proper,vespers_propers,vespers_admag_1,vespers_admag_2
+100000,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,True,True,In medio,Communis,,"Deus, qui populo",False,,O Doctor,O Doctor
+100,white,"{""id"": 27400, ""mass"": {""int"": ""L\u00e6tabitur"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}, ""matins"": {""lessons"": 9}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio,Communis,,"Deus, qui populo",False,,O Doctor,O Doctor
+200,white,"{""id"": 27500, ""mass"": {""int"": ""Os justi"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Justus ut palma,Communis,,,False,,firstVespers,secondVespers
+300,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,16,sd,,,,False,True,Si diligis,de Apostolis,,,False,,firstVespers,secondVespers
+400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+500,white,"{""id"": 27600, ""mass"": false}","{""id"": 27700, ""mass"": {""int"": ""Me expectaverunt"", ""glo"": true, ""cre"": true, ""pre"": ""Communis""}}",,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Statuit ei,de Apostolis,,,False,,firstVespers,secondVespers
+600,red,"{""id"": 27800, ""mass"": {""int"": ""In virtute"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 3}","[5, 2, 6, 7, 3, 0]",,False,,22,s,,,,False,True,Justi epulentur,Communis,,,False,,firstVespers,secondVespers
+700,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,15,d,,,,False,True,Intret in conspectu,de Apostolis,,,False,,firstVespers,secondVespers
+800,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,15,d,,,,False,True,Me expectaverunt,Communis,,,False,,firstVespers,secondVespers
+900,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,16,sd,,,,False,True,Intret,Communis,,,False,,firstVespers,secondVespers
+1000,white,"{""id"": 27900, ""mass"": {""int"": ""Me expectaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,"sd, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+1100,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+1200,white,"{""id"": 28000, ""mass"": false}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,"Scio, cui credidi",de Apostolis,,,False,,firstVespers,secondVespers
+1300,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,15,d,,,,False,True,Sacerdotes Dei,Communis,,,False,,firstVespers,secondVespers
+1400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+1500,white,"{""id"": 28100, ""mass"": {""int"": ""Vultum tuum"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Justus,Communis,,,False,,firstVespers,secondVespers
+1600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+1700,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,16,sd,,,,False,True,Loquebar,Communis,,,False,,firstVespers,secondVespers
+1800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Dedit illi,Communis,,,False,,firstVespers,secondVespers
+1900,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,15,d,,,,False,True,Mihi autem,Communis,,,False,,firstVespers,secondVespers
+2000,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Suscepisimus,de Nativitate,,,False,,firstVespers,secondVespers
+2100,red,,,,,,,"{""lessons"": 3}","[8, 2, 6, 7, 3, 0]",,False,,22,s,,,,False,True,Sacerdotes Dei,Communis,,,False,,firstVespers,secondVespers
+2200,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+2300,red,,,,,,,"{""lessons"": 9}","[4, 2, 6, 7, 3, 0]",,False,,15,d,,,,False,True,Gaudeamus,Communis,,,False,,firstVespers,secondVespers
+2400,white,"{""id"": 28200, ""mass"": {""int"": """", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Statuit ei,Communis,,,False,,firstVespers,secondVespers
+2500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+2600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+2700,white,"{""id"": 28300, ""mass"": {""int"": """", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+2800,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+2900,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Vidi civitatem,de B Maria Virg,,,False,,firstVespers,secondVespers
+3000,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Justi decantaverunt,Communis,,,False,,firstVespers,secondVespers
+3100,red,,,,,,,"{""lessons"": 3}","[8, 2, 6, 7, 3, 0]",,False,,22,s,,,,False,True,In virtute,Communis,,,False,,firstVespers,secondVespers
+3200,red,,,,,,,"{""lessons"": 3}","[8, 2, 6, 7, 3, 0]",,False,,22,s,,,,False,True,Salus autem,Communis,,,False,,firstVespers,secondVespers
+3300,red,,,,,,,"{""lessons"": 3}","[8, 2, 6, 7, 3, 0]",,False,,22,s,,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+3400,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Statuit ei Dominus,Communis,,,False,,firstVespers,secondVespers
+3500,white,"{""id"": 27300}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+3600,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Mihi autem,de Apostolis,,,False,,firstVespers,secondVespers
+3700,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Oculus Dei,Communis,,,False,,firstVespers,secondVespers
+3800,white,"{""id"": 28400, ""mass"": {""int"": ""Si diligis me"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Os iusti,Communis,,,False,,firstVespers,secondVespers
+3900,red,,,,,,,"{""lessons"": 9}","[4, 2, 6, 7, 3, 0]",,False,,15,d,,,,False,True,Me expectaverunt,Communis,,,False,,firstVespers,secondVespers
+4000,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio ecclesiae,Communis,,,False,,firstVespers,secondVespers
+4100,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os iusti,Communis,,,False,,firstVespers,secondVespers
+4200,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Cognovi,Communis,,,False,,firstVespers,secondVespers
+4300,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,16,sd,,,,False,True,Clamaverunt iusti,Communis,,,False,,firstVespers,secondVespers
+4400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+4500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+4600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio ecclesiae,Communis,,,False,,firstVespers,secondVespers
+4700,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,2,d I cl,,,,True,True,Justus ut palma,De Sancto Ioseph,,,False,,firstVespers,secondVespers
+4800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,14,dm,,,,False,True,Os iusti,Communis,,,False,,firstVespers,secondVespers
+4900,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Benedicite Dominum,Communis,,,False,,firstVespers,secondVespers
+5000,white,,,,,,,"{""lessons"": 9}","[1, 2, 6, 2, 1, 0]",,False,,2,d I cl,,,,True,True,Vultum tuum,De B Maria Virg,,,False,,firstVespers,secondVespers
+5100,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,Tenuisti manum,Communis,,,False,,firstVespers,secondVespers
+5200,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Ego autem,Communis,,,False,,firstVespers,secondVespers
+5300,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Justus ut palma,Communis,,,False,,firstVespers,secondVespers
+5400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio ecclesiae,Communis,,,False,,firstVespers,secondVespers
+5500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os iusti,Communis,,,False,,firstVespers,secondVespers
+5600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+5700,white,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,16,sd,,,,False,True,"['In virtute', 'Protexisti']",Communis,,,False,,firstVespers,secondVespers
+5800,red,"{""id"": 28500, ""mass"": {""int"": [""Sapientiam"", ""Sancti tui""], ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Narraverunt mihi,Communis,,,False,,firstVespers,secondVespers
+5900,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+6000,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio ecclesiae,Communis,,,False,,firstVespers,secondVespers
+6100,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Si diligis me,Communis,,,False,,firstVespers,secondVespers
+6200,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Protexisti me,Communis,,,False,,firstVespers,secondVespers
+6300,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,True,True,Protexisti me,Communis,,,False,,firstVespers,secondVespers
+6400,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Protexisti me,de Apostolis,,,False,,firstVespers,secondVespers
+6500,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+6600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio ecclesiae,Communis,,,False,,firstVespers,secondVespers
+6700,white,"{""id"": 28600, ""mass"": {""int"": [""Protexisti"", ""In virtute""], ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Christo confixus sum,Communis,,,False,,firstVespers,secondVespers
+6800,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Protexisti,Communis,,,False,,firstVespers,secondVespers
+6900,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+7000,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Clamaverunt ad te,De Apostolis,,,False,,firstVespers,secondVespers
+7100,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio ecclesiae,Communis,,,False,,firstVespers,secondVespers
+7200,red,"{""id"": 28700, ""mass"": {""int"": ""Sancti tui"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Nos autem gloriari,De Cruce,,,False,,firstVespers,secondVespers
+7300,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,"Cognovi, Domine",Communis,,,False,,firstVespers,secondVespers
+7400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+7500,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Protexisti me,De Apostolis,,,False,,firstVespers,secondVespers
+7600,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Protexisti me,Communis,,,False,,firstVespers,secondVespers
+7700,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Benedicite Dominum,Communis,,,False,,firstVespers,secondVespers
+7800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In media,Communis,,,False,,firstVespers,secondVespers
+7900,white,"{""id"": 28800, ""mass"": {""int"": ""Sancti tui"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Statuit ei,Communis,,,False,,firstVespers,secondVespers
+8000,red,,,,,,,"{""lessons"": 9}","[5, 2, 6, 7, 3, 0]",,False,,16,sd,,,,False,True,"Ecce, oculi Domini",Communis,,,False,,firstVespers,secondVespers
+8100,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+8200,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Protexisti,Communis,,,False,,firstVespers,secondVespers
+8300,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Os iusti,Communis,,,False,,firstVespers,secondVespers
+8400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+8500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+8600,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,"['Protexisti', 'In virtute']",Communis,,,False,,firstVespers,secondVespers
+8700,white,"{""id"": 28900, ""mass"": {""int"": ""Dilexisti"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+8800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+8900,white,"{""id"": 29000, ""mass"": {""int"": ""Si diligis me"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+9000,white,"{""id"": 29100, ""mass"": {""int"": ""Si diligis me"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Caritas Dei,Communis,,,False,,firstVespers,secondVespers
+9100,white,"{""id"": 29200, ""mass"": {""int"": ""Si diligis me"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+9200,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,Sacerdotes,Communis,,,False,,firstVespers,secondVespers
+9300,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+9400,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+9500,white,"{""id"": 29300, ""mass"": {""int"": ""Vultum tuum"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Gaudeamus,de B Maria Virg,,,False,,firstVespers,secondVespers
+9600,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+9700,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Clamaverunt,Communis,,,False,,firstVespers,secondVespers
+9800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Factum est,Communis,,,False,,firstVespers,secondVespers
+9900,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Exsultabo,Communis,,,False,,firstVespers,secondVespers
+10000,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+10100,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,"['Sapientiam', 'Sancti tui']",Communis,,,False,,firstVespers,secondVespers
+10200,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Cognovi,Communis,,,False,,firstVespers,secondVespers
+10300,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Mihi autem,de Apostlis,,,False,,firstVespers,secondVespers
+10400,white,"{""id"": 29400, ""mass"": {""int"": [""Intret in conspectu"", ""Sancti tui""], ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+10500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+10600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+10700,red,,,,,,,"{""lessons"": 0}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Multæ tribulationes,Communis,,,False,,firstVespers,secondVespers
+10800,white,"{""id"": 29500, ""mass"": {""int"": ""Salus autem"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 0}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+10900,white,,,,,,,"{""lessons"": 0}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+11000,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+11100,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Minuisti,Communis,,,False,,firstVespers,secondVespers
+11200,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Sacerdotes tui,Communis,,,False,,firstVespers,secondVespers
+11300,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,19,v,,,,False,False,Ne timeas,Communis,,,False,,firstVespers,secondVespers
+11400,white,,,,,,,"{""lessons"": 9}","[1, 0, 4, 4, 1, 0]",,False,,2,d I cl cum Oct communi,,,,False,True,De ventre,Communis,,,False,,firstVespers,secondVespers
+11500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+11600,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Multæ tribulationes,Communis,,,False,,firstVespers,secondVespers
+11800,red,"{""id"": 29600, ""mass"": {""int"": ""Dicit Dominus"", ""glo"": false, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Lex veritatis,Communis,,,False,,firstVespers,secondVespers
+11900,red,,,,,,,"{""lessons"": 9}","[1, 2, 4, 5, 1, 0]",,False,,2,d I cl cum Oct communi,,,,True,True,Nunc scio,de Apostolis,,,False,,firstVespers,secondVespers
+12000,red,"{""id"": 29700, ""mass"": {""int"": """", ""glo"": true, ""cre"": true, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,"Scio, cui credidi",de Apostolis,,,False,,firstVespers,secondVespers
+12100,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,2,d I cl,,,,True,True,Redemisti nos,de Cruce,,,False,,firstVespers,secondVespers
+12200,white,"{""id"": 29800, ""mass"": {""int"": ""Sapientiam"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,"Salve, sancta Parens",de BMV,,,False,,firstVespers,secondVespers
+12300,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,True,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+12500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,Sermo meus,de Apostolis,,,False,,firstVespers,secondVespers
+12700,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Sacerdotes tui,Communis,,,False,,firstVespers,secondVespers
+12800,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Cognovi,Communis,,,False,,firstVespers,secondVespers
+12900,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,"Laudate, pueri",Communis,,,False,,firstVespers,secondVespers
+13000,red,,,,,,,"{""lessons"": 3}","[8, 2, 6, 8, 3, 0]",,False,,22,s,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+13100,white,"{""id"": 29900, ""mass"": {""int"": ""Salus autem"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+13200,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+13300,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+13400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,"sd, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+13500,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Gaudeamus, de B Maria Virg,,,False,,firstVespers,secondVespers
+13600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+13700,white,"{""id"": 30000, ""mass"": {""int"": ""Clamaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Majorem hac,Communis,,,False,,firstVespers,secondVespers
+13800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Justus ut palma,Communis,,,False,,firstVespers,secondVespers
+13900,white,"{""id"": 30100, ""mass"": {""int"": ""Me expectaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Effusum est,Communis,,,False,,firstVespers,secondVespers
+14000,white,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Loquebar,Communis,,,False,,firstVespers,secondVespers
+14100,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,True,True,Me expectaverunt,Communis,,,False,,firstVespers,secondVespers
+14200,red,"{""id"": 30200, ""mass"": {""int"": ""Statuit"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Sacerdotes Dei,Communis,,,False,,firstVespers,secondVespers
+14300,purple,"{""id"": 30300, ""mass"": {""int"": ""Me expectaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,19,v,,,,False,False,Ego autem,Communis,,,False,,firstVespers,secondVespers
+14400,red,"{""id"": 30400, ""mass"": {""int"": ""In virtute"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Mihi autem,de Apostolis,,,False,,firstVespers,secondVespers
+14500,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,False,True,Gaudeamus,Communis,,,False,,firstVespers,secondVespers
+14600,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Lætabitur,Communis,,,False,,firstVespers,secondVespers
+14700,red,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Intret in conspectu,Communis,,,False,,firstVespers,secondVespers
+14800,white,"{""id"": 30500, ""mass"": {""int"": ""Sapientiam"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+14900,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Intret in conspectu,Communis,,,False,,firstVespers,secondVespers
+15000,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,14,dm,,,,False,True,In nomine Jesu,Communis,,,False,,firstVespers,secondVespers
+15100,white,"{""id"": 30600, ""mass"": {""int"": """", ""glo"": true, ""cre"": true, ""pre"": ""de Apostolis""}}","{""id"": 34700, ""mass"": {""int"": ""Clamaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Nunc scio vere,de Apostolis,,,False,,firstVespers,secondVespers
+15200,white,"{""id"": 30700, ""mass"": {""int"": ""Si diligis me"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,Spiritus Domini,Communis,,,False,,firstVespers,secondVespers
+15300,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Sederunt,Communis,,,False,,firstVespers,secondVespers
+15400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,14,"dm, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+15500,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,"Salve, sancta parens",De B Mariae Virginis,,,False,,firstVespers,secondVespers
+15600,white,"{""id"": 30800, ""mass"": {""int"": ""Sapientiam"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,11,d II cl,,,,True,True,Illuxerunt,de Nativitate,,,False,,firstVespers,secondVespers
+15700,white,"{""id"": 30900, ""mass"": {""int"": ""Sacerdotes Dei"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+15800,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Timete Dominum,Communis,,,False,,firstVespers,secondVespers
+15900,white,"{""id"": 31000, ""mass"": {""int"": ""Dispersit"", ""glo"": false, ""cre"": false, ""pre"": ""Communis""}}","{""id"": 34800, ""mass"": {""int"": ""L\u00e6tabitur"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+16000,red,,,,,,,"{""lessons"": 9}",,,False,,10,d II cl,,,,False,True,Confessio,Communis,,,False,,firstVespers,secondVespers
+16100,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Salus autem,Communis,,,False,,firstVespers,secondVespers
+16200,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+16300,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Salus autem,Communis,,,False,,firstVespers,secondVespers
+16400,purple,"{""id"": 31100, ""mass"": {""int"": ""Justus"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",Spiritus Sancti,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,19,v,,,,False,False,Vultum tuum,Communis,,,False,,firstVespers,secondVespers
+16500,white,,,,,,,"{""lessons"": 9}","[1, 1, 4, 2, 1, 0]",,False,,2,d I cl cum Oct communi,,,,True,True,Signum magnum,de B Maria Virg,,,False,,firstVespers,secondVespers
+16600,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,"d II cl, mtv",,,,True,True,Dispersit,de B Maria Virg,,,False,,firstVespers,secondVespers
+16700,white,"{""id"": 31200, ""mass"": {""int"": ""Probasti"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,Os justi,de B Maria Virg,,,False,,firstVespers,secondVespers
+16800,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,True,True,Lætabitur,de B Maria Virg,,,False,,firstVespers,secondVespers
+16900,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,Os justi,de B Maria Virg,,,False,,firstVespers,secondVespers
+17000,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,True,True,In medio,de B Maria Virg,,,False,,firstVespers,secondVespers
+17100,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,True,True,Cognovi,de B Maria Virg,,,False,,firstVespers,secondVespers
+17200,white,"{""id"": 31300, ""mass"": {""int"": ""Salus autem"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Adeamus,de B Maria Virg,,,False,,firstVespers,secondVespers
+17300,white,"{""id"": 31400, ""mass"": {""int"": ""Ego autem"", ""glo"": false, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,19,"d, mtv",,,,False,True,Justus,Communis,,,False,,firstVespers,secondVespers
+17400,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Mihi autem,de Apostolis,,,False,,firstVespers,secondVespers
+17500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+17600,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+17700,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,"Venite, filii",Communis,,,False,,firstVespers,secondVespers
+17800,white,"{""id"": 31500, ""mass"": {""int"": ""L\u00e6tabitur"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+17900,white,"{""id"": 31600, ""mass"": {""int"": ""Me expectaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,False,True,Loquebar,Communis,,,False,,firstVespers,secondVespers
+18000,white,"{""id"": 31700, ""mass"": {""int"": ""Sapientiam"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+18100,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+18200,white,"{""id"": 31800, ""mass"": {""int"": ""Clamaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 3}","[4, 2, 6, 8, 3, 0]",,False,,22,s,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+18300,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,"sd, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+18400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Extuli,de Apostolis,,,False,,firstVespers,secondVespers
+18500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,"sd, mtv",,,,False,True,Statuit ei,Communis,,,False,,firstVespers,secondVespers
+18600,white,"{""id"": 31900, ""mass"": {""int"": ""In virtute"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,"Salve, sancta Parens",de B Maria Virg,,,False,,firstVespers,secondVespers
+18700,white,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Lætabitur,Communis,,,False,,firstVespers,secondVespers
+18800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Justus,Communis,,,False,,firstVespers,secondVespers
+18900,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Salus autem,Communis,,,False,,firstVespers,secondVespers
+19000,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Vultum tuum,de B Maria Virg,,,False,,firstVespers,secondVespers
+19100,red,,,,,,,"{""lessons"": 9}",,,False,,14,dm,,,,True,True,Nos autem,de Cruce,,,False,,firstVespers,secondVespers
+19200,white,"{""id"": 32000, ""mass"": {""int"": ""In virtute"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Stabant,de B Maria Virg,Stabat Mater,,False,,firstVespers,secondVespers
+19300,red,"{""id"": 32100, ""mass"": {""int"": ""Intret"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Intret,de Apostolis,,,False,,firstVespers,secondVespers
+19400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Mihi autem,Communis,,,False,,firstVespers,secondVespers
+19500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Dilectio,Communis,,,False,,firstVespers,secondVespers
+19600,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Salus autem,Communis,,,False,,firstVespers,secondVespers
+19700,red,"{""id"": 32200, ""mass"": {""int"": ""Ego autem"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Sapientiam,Communis,,,False,,firstVespers,secondVespers
+19800,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Os justi,de Apostolis,,,False,,firstVespers,secondVespers
+19900,white,"{""id"": 32300, ""mass"": {""int"": ""Intret"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+20000,red,"{""id"": 32400, ""mass"": {""int"": ""Loquebar"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Si diligis me,Communis,,,False,,firstVespers,secondVespers
+20100,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Salve,de B Maria Virg,,,False,,firstVespers,secondVespers
+20200,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Salus autem,Communis,,,False,,firstVespers,secondVespers
+20300,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Sapientiam,Communis,,,False,,firstVespers,secondVespers
+20400,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,In virtute,Communis,,,False,,firstVespers,secondVespers
+20500,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,2,d I cl,,,,True,True,Benedicite,Communis,,,False,,firstVespers,secondVespers
+20600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+20700,white,,,,,,,"{""lessons"": 3}","[4, 2, 6, 8, 3, 0]",,False,,22,s,,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+20800,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Benedicite,Communis,,,False,,firstVespers,secondVespers
+20900,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Veni de Libano,Communis,,,False,,firstVespers,secondVespers
+21000,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,14,dm,,,,False,True,Mihi autem,Communis,,,False,,firstVespers,secondVespers
+21100,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Salus autem,Communis,,,False,,firstVespers,secondVespers
+21200,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+21300,white,"{""id"": 32500, ""mass"": {""int"": ""Si diligis me"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}","{""id"": 34900, ""mass"": {""int"": ""Sapientiam"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Gaudeamus,de B Maria Virg,,,False,,firstVespers,secondVespers
+21400,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Cognovi,Communis,,,False,,firstVespers,secondVespers
+21500,white,"{""id"": 32600, ""mass"": {""int"": ""Sapientiam"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,In sermonibus,Communis,,,False,,firstVespers,secondVespers
+21600,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,"sd, mtv",,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+21700,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Ecce Virgo,de B Maria Virg,,,False,,firstVespers,secondVespers
+21800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+21900,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Si diligis me,Communis,,,False,,firstVespers,secondVespers
+22000,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+22100,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Cognovi,Communis,,,False,,firstVespers,secondVespers
+22200,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Sub umbra,Communis,,,False,,firstVespers,secondVespers
+22300,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Mihi autem,de Apostolis,,,False,,firstVespers,secondVespers
+22400,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,False,True,Justus ut palma,Communis,,,False,,firstVespers,secondVespers
+22500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Miseratio hominis,Communis,,,False,,firstVespers,secondVespers
+22600,white,"{""id"": 32700, ""mass"": {""int"": ""Loquebar"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 3}","[4, 2, 6, 8, 3, 0]",,False,,22,s,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+22700,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Benedicite,Communis,,,False,,firstVespers,secondVespers
+22800,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Intret,Communis,,,False,,firstVespers,secondVespers
+22900,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+23000,purple,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,19,v,,,,False,False,Intret,Communis,,,False,,firstVespers,secondVespers
+23100,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Mihi autem,de Apostolis,,,False,,firstVespers,secondVespers
+23200,purple,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,19,v,,,,False,False,Judicant,Communis,,,False,,firstVespers,secondVespers
+23300,white,,,,,,,"{""lessons"": 9}","[1, 1, 4, 3, 1, 0]",,False,,2,d I cl cum Oct communi,,,,True,True,Gaudeamus,Communis,,,False,,firstVespers,secondVespers
+23400,black,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,"{'int': 'Requiem', 'glo': False, 'seq': 'Dies Iræ', 'cre': False, 'pre': 'Defunctorum'}","{'int': 'Requiem', 'glo': False, 'seq': 'Dies Iræ', 'cre': False, 'pre': 'Defunctorum'}","{'int': 'Requiem', 'glo': False, 'seq': 'Dies Iræ', 'cre': False, 'pre': 'Defunctorum'}",,,,,,,False,,firstVespers,secondVespers
+23500,white,"{""id"": 32800, ""mass"": {""int"": """", ""glo"": true, ""cre"": true, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,Statuit ei,Communis,,,False,,firstVespers,secondVespers
+23700,white,"{""id"": 32900, ""mass"": {""int"": ""Laetabitur"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Terribilis,Communis,,,False,,firstVespers,secondVespers
+23800,white,"{""id"": 33000, ""mass"": {""int"": ""Clamaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+23900,white,"{""id"": 33100, ""mass"": {""int"": ""Laetabitur"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Statuit ei,Communis,,,False,,firstVespers,secondVespers
+24000,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Si diligis me,de Apostolis,,,False,,firstVespers,secondVespers
+24100,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Justus,Communis,,,False,,firstVespers,secondVespers
+24200,red,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Gaudeamus,Communis,,,False,,firstVespers,secondVespers
+24300,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+24400,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dilexisti,Communis,,,False,,firstVespers,secondVespers
+24500,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,False,True,Statuit,Communis,,,False,,firstVespers,secondVespers
+24600,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Terribilis,de Apostolis,,,False,,firstVespers,secondVespers
+24700,white,"{""id"": 33200, ""mass"": {""int"": ""Si diligis me"", ""glo"": true, ""cre"": false, ""pre"": ""de Apostolis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Cognovi,Communis,,,False,,firstVespers,secondVespers
+24800,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Justus,Communis,,,False,,firstVespers,secondVespers
+24900,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,14,dm,,,,True,True,Salve,de B Maria Virg,,,False,,firstVespers,secondVespers
+25000,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Loquebar,Communis,,,False,,firstVespers,secondVespers
+25100,red,"{""id"": 33300, ""mass"": {""int"": ""Me exspectaverunt"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Dicit Dóminus,de Apostolis,,,False,,firstVespers,secondVespers
+25200,white,"{""id"": 33400, ""mass"": {""int"": """", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+25300,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,False,True,Loquebar,Communis,,,False,,firstVespers,secondVespers
+25400,white,"{""id"": 33500, ""mass"": {""int"": """", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+25500,purple,"{""id"": 33600, ""mass"": {""int"": ""Laetabitur"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,22,v,,,,False,False,Dominus secus,Communis,,,False,,firstVespers,secondVespers
+25600,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Mihi autem,de Apostolis,,,False,,firstVespers,secondVespers
+25800,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Me expectaverunt,Communis,,,False,,firstVespers,secondVespers
+25900,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,14,"dm, mtv",,,,False,True,Loquebar,Communis,,,False,,firstVespers,secondVespers
+26000,white,"{""id"": 33700, ""mass"": {""int"": ""Loquebar"", ""glo"": true, ""cre"": false, ""pre"": ""Communis""}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+26100,white,,,,,,,"{""lessons"": 3}","[4, 2, 6, 8, 3, 0]",,False,,22,s,,,,False,True,Os justi,Communis,,,False,,firstVespers,secondVespers
+26200,white,"{""id"": 33800, ""rank"": [19, ""v""], ""nobility"": [0, 0, 0, 0, 0, 0], ""office_type"": false, ""color"": ""purple"", ""mass"": {""int"": ""Venite, audite"", ""glo"": false, ""cre"": false, ""pre"": ""Communis""}, ""matins"": {""lessons"": 9}, ""lauds"": {}, ""prime"": {}, ""little_hours"": {}, ""vespers"": {""proper"": false, ""admag"": [""firstVespers"", ""secondVespers""], ""propers"": {}, ""oration"": """"}, ""compline"": {}}",,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,d,,,,False,True,Statuit ei,Communis,,,False,,firstVespers,secondVespers
+26300,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,15,"d, mtv",,,,True,True,In medio,Communis,,,False,,firstVespers,secondVespers
+26400,white,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",4,False,,2,d I cl cum Oct communi,,,,True,True,Gaudens gaudebo,de B Maria Virg,,,False,,firstVespers,secondVespers
+26600,red,,,,,,,"{""lessons"": 3}","[0, 0, 0, 0, 0, 0]",,False,,22,s,,,,True,True,Si diligis me,de B Maria Virg,,,False,,firstVespers,secondVespers
+26700,white,,,,,,,"{""lessons"": 9}","[4, 2, 6, 8, 3, 0]",,False,,16,sd,,,,True,True,Si diligis me,de B Maria Virg,,,False,,firstVespers,secondVespers
+26900,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,15,d,,,,True,True,Dilexisti,de B Maria Virg,,,False,,firstVespers,secondVespers
+27000,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,16,sd,,,,False,True,Sacerdotes Dei,Communis,,,False,,firstVespers,secondVespers
+27100,purple,,,,,,,"{""lessons"": 9}","[8, 2, 6, 5, 3, 0]",,False,,22,v,,,,False,False,Ego autem,Communis,,,False,,firstVespers,secondVespers
+27200,red,,,,,,,"{""lessons"": 9}","[0, 0, 0, 0, 0, 0]",,False,,10,d II cl,,,,True,True,Mihi autem,de Apostolis,,,False,,firstVespers,secondVespers

@@ -3,7 +3,7 @@ from datetime import datetime
 
 class Feast:
     """
-    Each feast or office is of class Feast, you could say that most of the data
+    Each feast or office is of class Feast; you could say that most of the data
     is handled by this class.
 
     If there are too many comments here for your taste, then too bad. I have to
