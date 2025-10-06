@@ -10,9 +10,9 @@ class Diocese:
         self.name = "D. <Diocese>" # in latin, genitive
         self.country = "<country>" # as appears in ../country, minus the extension
 
-        self.sanctoral = import_module(f".country.{self.country}", "sanctoral")
+        self.sanctoral = import_module(f"ordotools.sanctoral.country.{self.country}")
         self.country_data = self.sanctoral.Country(self.year).data
-        self.roman = import_module(".diocese.roman", "sanctoral")
+        self.roman = import_module("ordotools.sanctoral.diocese.roman")
         self.roman_data = self.roman.Sanctoral(self.year).data
 
         self.data = {

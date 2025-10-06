@@ -24,18 +24,19 @@ def num_coms(feast):
     else:
         return "3"
 
+# TODO: add the color of the day to the table...
 
-table = Table(show_header=True, header_style="bold red", expand=True, row_styles=['dim', 'none'])  # , box=box.DOUBLE)
+
+table = Table(show_header=True, header_style="bold red", expand=True, row_styles=['dim', 'none'])
 
 # Feasts and number of commemoratins
 table.add_column("Date", width=12)  # style="dim", width=12)
 table.add_column("Feast Name")
 table.add_column("Rank", justify="center")
 table.add_column("Verbose Rank", justify="left")
-# table.add_column("Com", justify="center")
-table.add_column("1 Com", justify="left")
-table.add_column("2 Com", justify="left")
-table.add_column("3 Com", justify="left")
+table.add_column("1 Commemoration", justify="left")
+table.add_column("2 Commemoration", justify="left")
+table.add_column("3 Commemoration", justify="left")
 
 for feast in data:
 
