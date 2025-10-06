@@ -194,15 +194,12 @@ class Temporal:
                         f"de_Epiph_{i+1}_{j+2 if j != 5 else 's'}"
                     }
             i += 1
-            
+
         return [y, i+1]
 
-<<<<<<< HEAD
-=======
     # TODO: Christ the King is on the last Sunday of October
 
     @cached_property
->>>>>>> 0cd0f57ecb7dec0ea24f7fea9e9cb3ff4e8ab386
     def gesimas(self) -> dict:
         """ Septuagesima to Quinquagesima """
         y = {}
@@ -230,26 +227,6 @@ class Temporal:
     @cached_property
     def lent(self) -> dict:
         """ All of the Sundays and Ferias of Lent, up to Easter """
-<<<<<<< HEAD
-        for i in range(7):
-            if i == 0:
-                y = {
-                    self.easter-weeks(7-i)+days(3+c):
-                    f"""{
-                        "de_" if c == 0 else ""
-                        }AshWed{f"_f{c+4 if c != 3 else 's'}" if c != 0 else ""}"""
-                    for c in range(4)
-                }
-            else:
-                for j in range(7):
-                    if i == 1 and j in [3, 5, 6]:
-                        y |= {self.easter-weeks(7-i)+days(j): f"Ember_Lent_{j+1 if j != 6 else 's'}"}
-                    elif i == 5 and j == 5:
-                        y |= {
-                            self.easter-weeks(7-i)+days(j):
-                            "SevenSorrows"
-                        }
-=======
         y = {}
         
         # Pre-calculate common date calculations
@@ -281,7 +258,6 @@ class Temporal:
                         season = "Lent"
                     elif i == 5:
                         season = "Passion"
->>>>>>> 0cd0f57ecb7dec0ea24f7fea9e9cb3ff4e8ab386
                     else:
                         season = "Palm"
                     
@@ -335,10 +311,10 @@ class Temporal:
                 ascension_counter += 1
             else:
                 the_sunday = f"D_Easter_{i}"
-<<<<<<< HEAD
-            d = 1  # easily matches monday with days(1)
-            while d != 7:
-=======
+# <<<<<<< HEAD
+#             d = 1  # easily matches monday with days(1)
+#             while d != 7:
+# =======
                 
             # Add Sunday
             sunday_date = easter_weeks[week_index]
@@ -349,7 +325,7 @@ class Temporal:
             
             # Process each weekday
             for d, date in enumerate(weekday_dates, 1):  # d starts at 1
->>>>>>> 0cd0f57ecb7dec0ea24f7fea9e9cb3ff4e8ab386
+# >>>>>>> 0cd0f57ecb7dec0ea24f7fea9e9cb3ff4e8ab386
                 if i == 2 and d >= 3:
                     if d == 3:
                         y[date] = "StJoseph"
@@ -367,11 +343,11 @@ class Temporal:
                 elif i == 5:  # the whole week is special
                     # TODO: clean up the Ascension days
                     if d <= 3:  # rogations
-<<<<<<< HEAD
-                        y |= {self.easter+weeks(i)+days(d): f"Rogation_{d}"}
-=======
+# <<<<<<< HEAD
+#                         y |= {self.easter+weeks(i)+days(d): f"Rogation_{d}"}
+# =======
                         y[date] = f"Rogation_{d}"
->>>>>>> 0cd0f57ecb7dec0ea24f7fea9e9cb3ff4e8ab386
+# >>>>>>> 0cd0f57ecb7dec0ea24f7fea9e9cb3ff4e8ab386
                     elif d == 4:
                         y[date] = "Ascension"
                         ascension_counter += 1
@@ -539,12 +515,7 @@ class Temporal:
             big_data[key] = {
                 "id": id_value,
                 "rank": data[value]["rank"],
-<<<<<<< HEAD
-                # the blue color is easily recognized as incorrect
-                "color": data[value]["color"] if value in data.keys() else "blue",
-=======
                 "color": color_value,
->>>>>>> 0cd0f57ecb7dec0ea24f7fea9e9cb3ff4e8ab386
                 "mass": data[value]["mass"],
                 "com_1": data[value]["com_1"],
                 "com_2": data[value]["com_2"],
