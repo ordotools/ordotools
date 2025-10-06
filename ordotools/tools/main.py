@@ -2,7 +2,7 @@ from importlib import import_module
 
 import logging
 
-from ordotools.tools import fasting
+# from ordotools.tools import fasting
 from ordotools.tools.commemorations import seasonal_commemorations
 
 from ordotools.tools.feast import Feast
@@ -29,6 +29,7 @@ class LiturgicalCalendar:
         self.year = year
         self.diocese = diocese
         self.language = language
+
         # WARN: theoretically we could have more than one transfer
         # self.transfers = None
 
@@ -50,6 +51,7 @@ class LiturgicalCalendar:
                     "day_in_octave": feast.day_in_octave,
                     "color": feast.color,
                     "mass": feast.mass,
+                    # FIX: this is probably cusing blank commemorations.
                     "com_1": feast.com_1 if feast.com_1 is not None else {},
                     "com_2": feast.com_2 if feast.com_2 is not None else {},
                     "com_3": feast.com_3 if feast.com_3 is not None else {},
@@ -175,7 +177,7 @@ class LiturgicalCalendar:
 
     def add_translation(self, compiled_calendar: tuple) -> list:
         """
-        Finds the translation for each code
+        Finds the translation for each feast id
         """
         year = []
         translations = Translations()
@@ -231,7 +233,7 @@ class LiturgicalCalendar:
         # OPTIM: add this in on initiation, perhaps
         logging.info('Adding Friday abstinence...')
         for feast in full_calendar:
-            friday_abstinence(feast) # this might be better in Feast
+            friday_abstinence(feast)  # this might be better in Feast
 
         logging.info('Adding the Lenten fast...')
         fasting_rules = Fasting(self.year)

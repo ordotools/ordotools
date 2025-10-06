@@ -5,7 +5,7 @@ from ordotools.tools.helpers import days
 from ordotools.tools.helpers import weeks
 
 """
-Almost Everything having to do with the ordering and assignment of
+Almost everything having to do with the ordering and assignment of
 commemorations is contained in this file. The "seasonal
 commemorations" are added after the commemorations of concurrance
 and occurance are figured out.
@@ -14,7 +14,7 @@ and occurance are figured out.
 
 def existing_commemoration(feast: Feast) -> int:
     """
-    Finds the number of commorations that are already in a Feast object.
+    Finds the number of commemorations that are already in a Feast object.
     """
     if "id" in feast.com_1.keys():
         if "id" in feast.com_2.keys():

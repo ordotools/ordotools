@@ -2968,13 +2968,13 @@ class Translations:
                 "Octave day",
             ],
             "fr": [
-                "2nd day within the Octave",
-                "3rd day within the Octave",
-                "4th day within the Octave",
-                "5th day within the Octave",
-                "6th day within the Octave",
-                "7th day within the Octave",
-                "Octave day",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
             ],
         }
 

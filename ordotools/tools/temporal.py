@@ -24,7 +24,7 @@ class Temporal:
 
     Some of the f-strings and dictionary comprehensions might be too cumbersome
     for some tastes, but in this case they save quite a bit of time and
-    debugging because of the complications of building a liturgical calendar.
+    debugging.
 
     The lack of verboseness in some of the naming conventions is intentional
     (e.g., not mentioning "Holy Saturday" explicitly, but naming it the
@@ -147,8 +147,6 @@ class Temporal:
             i += 1
         return [y, i+1]
 
-    # TODO: Christ the King is on the last Sunday of October
-
     def gesimas(self) -> dict:
         """ Septuagesima to Quinquagesima """
         y = {}
@@ -170,15 +168,15 @@ class Temporal:
         for i in range(7):
             if i == 0:
                 y = {
-                    self.easter-weeks(7-i)+days(3+c):\
+                    self.easter-weeks(7-i)+days(3+c):
                     f"""{
-                    "de_" if c == 0 else ""
-                    }AshWed{f"_f{c+4 if c != 3 else 's'}" if c != 0 else ""}"""\
+                        "de_" if c == 0 else ""
+                        }AshWed{f"_f{c+4 if c != 3 else 's'}" if c != 0 else ""}"""
                     for c in range(4)
                 }
             else:
                 for j in range(7):
-                    if i == 1 and j in [3,5,6]:
+                    if i == 1 and j in [3, 5, 6]:
                         y |= {self.easter-weeks(7-i)+days(j): f"Ember_Lent_{j+1 if j != 6 else 's'}"}
                     elif i == 5 and j == 5:
                         y |= {
@@ -209,8 +207,7 @@ class Temporal:
         """
         From Whit Sunday to Pentecost
         There is probably a better way to implement this,
-        but this works for now. Not too easy to debug;
-        that is why there are more comments than ususal.
+        but this works for now. Not too easy to debug.
         """
         y = {}
         ascension_counter = 1
@@ -223,7 +220,7 @@ class Temporal:
                 ascension_counter += 1
             else:
                 the_sunday = f"D_Easter_{i}"
-            d = 1 # easily matches monday with days(1)
+            d = 1  # easily matches monday with days(1)
             while d != 7:
                 if i == 2 and d >= 3:
                     if d == 3:
@@ -241,9 +238,9 @@ class Temporal:
                     else:
                         y |= {self.easter+weeks(i)+days(d): f"{solemnity_counter}_in_8_StJoseph"}
                         solemnity_counter += 1
-                elif i == 5: # the whole week is special
+                elif i == 5:  # the whole week is special
                     # TODO: clean up the Ascension days
-                    if d <= 3: # rogations
+                    if d <= 3:  # rogations
                         y |= {self.easter+weeks(i)+days(d): f"Rogation_{d}"}
                     elif d == 4:
                         y |= {self.easter+weeks(i)+days(d): "Ascension"}
@@ -266,7 +263,6 @@ class Temporal:
             solemnity_counter += 1 if solemnity_counter > 1 else 0
         return y
 
-    # TODO: add the feast of Christ the King
 
     def pentecost(self) -> dict:
         """
@@ -382,6 +378,7 @@ class Temporal:
             big_data |= {key: {
                 "id": data[value]["id"] if value in data.keys() else value,
                 "rank": data[value]["rank"],
+                # the blue color is easily recognized as incorrect
                 "color": data[value]["color"] if value in data.keys() else "blue",
                 "mass": data[value]["mass"],
                 "com_1": data[value]["com_1"],

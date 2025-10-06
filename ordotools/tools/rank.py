@@ -200,7 +200,7 @@ def rank(dynamic: Feast, static: Feast):
             ranked = nobility(one, two, ranking_result)
         else:
             # NOTE: I believe that this occurs when we have an anticipation?
-            print(f"WARNING!! We have a problem with {one.id} occuring on {two.id}")
+            # print(f"WARNING!! We have a problem with {one.id} occuring on {two.id}")
             return sorted(one, two)
 
     # TODO: We have to make sure that this is always executed
