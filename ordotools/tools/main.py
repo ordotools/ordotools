@@ -21,6 +21,7 @@ from ordotools.tools.translations import Translations
 from ordotools.tools.temporal import Temporal
 
 from ordotools.sanctoral.diocese.roman import Sanctoral
+from ordotools.tools.sanctoral_repo import SanctoralRepository
 
 
 class LiturgicalCalendar:
@@ -208,14 +209,21 @@ class LiturgicalCalendar:
         return year
 
     def build(self) -> list:
-        saints = Sanctoral(self.year)
+        # Lazy-migrate dict sources into SQLite and read through repository
+        repo = SanctoralRepository()
         if self.diocese == 'roman':
-            sanctoral = saints.data if leap_year(self.year) is False else saints.leapyear()
+            # Source python dict and upsert for this year if DB empty
+            saints = Sanctoral(self.year)
+            source = saints.data if leap_year(self.year) is False else saints.leapyear()
+            repo.ensure_year("roman", self.year, source)
+            sanctoral = repo.load_year("roman", self.year)
         else:
             diocese = import_module(
                 f"ordotools.sanctoral.diocese.{self.diocese}",
             )
-            sanctoral = diocese.Diocese(self.year).calendar()
+            source = diocese.Diocese(self.year).calendar()
+            repo.ensure_year(self.diocese, self.year, source)
+            sanctoral = repo.load_year(self.diocese, self.year)
         logging.info('Initializing...')
         initialized = self.initialize([self.temporal, sanctoral])
         logging.info('Adding the calendars together...')
