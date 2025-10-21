@@ -20,8 +20,8 @@ from ordotools.tools.rank import rank
 from ordotools.tools.translations import Translations
 from ordotools.tools.temporal import Temporal
 
-from ordotools.sanctoral.diocese.roman import Sanctoral
-from ordotools.tools.sanctoral_repo import SanctoralRepository
+from ordotools.tools.repositories.sanctoral_repo import SanctoralRepository
+from ordotools.tools.repositories.translations_repo import TranslationsRepository
 
 
 class LiturgicalCalendar:
@@ -209,21 +209,18 @@ class LiturgicalCalendar:
         return year
 
     def build(self) -> list:
-        # Lazy-migrate dict sources into SQLite and read through repository
+        # Load sanctoral data from database
         repo = SanctoralRepository()
-        if self.diocese == 'roman':
-            # Source python dict and upsert for this year if DB empty
-            saints = Sanctoral(self.year)
-            source = saints.data if leap_year(self.year) is False else saints.leapyear()
-            repo.ensure_year("roman", self.year, source)
-            sanctoral = repo.load_year("roman", self.year)
-        else:
-            diocese = import_module(
-                f"ordotools.sanctoral.diocese.{self.diocese}",
-            )
-            source = diocese.Diocese(self.year).calendar()
-            repo.ensure_year(self.diocese, self.year, source)
-            sanctoral = repo.load_year(self.diocese, self.year)
+        sanctoral = repo.get_year_calendar(self.diocese)
+        # Update date keys to use actual year instead of dummy year
+        from datetime import datetime
+        sanctoral_updated = {}
+        for date_key, feast_data in sanctoral.items():
+            new_date = datetime(year=self.year, month=date_key.month, day=date_key.day)
+            sanctoral_updated[new_date] = feast_data
+        sanctoral = sanctoral_updated
+        repo.close()
+        
         logging.info('Initializing...')
         initialized = self.initialize([self.temporal, sanctoral])
         logging.info('Adding the calendars together...')

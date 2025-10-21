@@ -1,3 +1,7 @@
+"""
+DEPRECATED: This file is deprecated and kept for backward compatibility only.
+Use ordotools.tools.repositories.sanctoral_repo instead.
+"""
 import json
 from datetime import datetime
 from typing import Dict

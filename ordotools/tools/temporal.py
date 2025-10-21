@@ -8,7 +8,7 @@ from ordotools.tools.helpers import findsunday
 from ordotools.tools.helpers import last_sunday
 from ordotools.tools.helpers import weekday
 from ordotools.tools.helpers import weeks
-from ordotools.tools.temporal_data import TemporalData
+from ordotools.tools.repositories.temporal_repo import TemporalRepository
 
 
 class Temporal:
@@ -493,7 +493,10 @@ class Temporal:
     @cached_property
     def _temporal_data(self):
         """Cache the temporal data to avoid creating it multiple times"""
-        return TemporalData().data
+        repo = TemporalRepository()
+        data = repo.get_all_feasts()
+        repo.close()
+        return data
         
     def return_temporal(self) -> dict:
         big_data = {}

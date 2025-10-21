@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Database - Ordotools</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2rem;
+        }
+        
+        .nav-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 1.5rem;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            background: none;
+            border: none;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            cursor: pointer;
+            color: #666;
+            font-weight: 600;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.2s;
+        }
+        
+        .tab:hover {
+            background: #f5f5f5;
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            align-items: end;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .filter-group label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+        
+        .filter-group select, .filter-group input[type="text"] {
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1rem;
+            min-width: 150px;
+            background: white;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4);
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .pagination button {
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .pagination button:hover:not(:disabled) {
+            background: #667eea;
+            color: white;
+        }
+        
+        .pagination button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .pagination .page-info {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .stats {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+        
+        .htmx-indicator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 0.5rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: #667eea;
+            color: white;
+        }
+        
+        .badge-source {
+            background: #28a745;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .badge-unique {
+            background: #ff6b6b;
+        }
+        
+        .rank-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .rank-1 { background: #ffd700; color: #333; }
+        .rank-2 { background: #ff6b6b; color: white; }
+        .rank-3 { background: #4ecdc4; color: white; }
+        .rank-4 { background: #95e1d3; color: #333; }
+        .rank-5 { background: #dfe6e9; color: #333; }
+        
+        .color-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .color-white { background: #fff; color: #333; border: 1px solid #ddd; }
+        .color-red { background: #dc3545; color: white; }
+        .color-green { background: #28a745; color: white; }
+        .color-violet { background: #6f42c1; color: white; }
+        .color-black { background: #212529; color: white; }
+        .color-rose { background: #ff69b4; color: white; }
+        
+        .feast-name {
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Browse Database</h1>
+            <a href="/" class="nav-link">← Back to Dashboard</a>
+        </div>
+        
+        <div class="card">
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('temporal')">📅 Temporal Feasts</button>
+                <button class="tab" onclick="switchTab('sanctoral')">⛪ Sanctoral Feasts</button>
+                <button class="tab" onclick="switchTab('dioceses')">🏛️ Dioceses</button>
+                <button class="tab" onclick="switchTab('countries')">🌍 Countries</button>
+                <button class="tab" onclick="switchTab('translations')">🌐 Translations</button>
+            </div>
+            
+            <!-- Filters for each table type -->
+            <div id="filters-container">
+                <!-- Temporal filters -->
+                <div id="temporal-filters" class="filters">
+                    <div class="filter-group">
+                        <label for="temporal-language">Language</label>
+                        <select id="temporal-language">
+                            <option value="la">Latin (la)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <!-- Sanctoral filters -->
+                <div id="sanctoral-filters" class="filters" style="display: none;">
+                    <div class="filter-group">
+                        <label for="sanctoral-diocese">Diocese</label>
+                        <select id="sanctoral-diocese">
+                            <option value="roman">Roman</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sanctoral-language">Language</label>
+                        <select id="sanctoral-language">
+                            <option value="la">Latin (la)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>&nbsp;</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="unique-only">
+                            <label for="unique-only">Unique to diocese only</label>
+                        </div>
+                    </div>
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <!-- Translation filters -->
+                <div id="translations-filters" class="filters" style="display: none;">
+                    <div class="filter-group">
+                        <label for="trans-feast-type">Feast Type</label>
+                        <select id="trans-feast-type">
+                            <option value="">All</option>
+                            <option value="temporal">Temporal</option>
+                            <option value="sanctoral">Sanctoral</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="trans-language">Language</label>
+                        <select id="trans-language">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <!-- No special filters for dioceses/countries -->
+                <div id="dioceses-filters" class="filters" style="display: none;">
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Refresh</button>
+                    </div>
+                </div>
+                
+                <div id="countries-filters" class="filters" style="display: none;">
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Refresh</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="results-container">
+                <div class="loading">
+                    <div class="htmx-indicator" style="width: 40px; height: 40px; margin: 0 auto 1rem;"></div>
+                    <p>Loading data...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentPage = 1;
+        let currentType = 'temporal';
+        let state = {
+            temporal: { language: 'la' },
+            sanctoral: { diocese: 'roman', language: 'la', uniqueOnly: false },
+            translations: { feastType: '', language: '' }
+        };
+        
+        // Load data on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type');
+            if (type) {
+                switchTab(type);
+            } else {
+                loadLanguages();
+                loadDioceses();
+                switchTab('temporal');
+            }
+        });
+        
+        async function loadLanguages() {
+            try {
+                const response = await fetch('/api/languages');
+                const languages = await response.json();
+                
+                // Populate language selectors
+                ['temporal-language', 'sanctoral-language', 'trans-language'].forEach(id => {
+                    const select = document.getElementById(id);
+                    if (id === 'trans-language') {
+                        select.innerHTML = '<option value="">All</option>';
+                    } else {
+                        select.innerHTML = '';
+                    }
+                    languages.forEach(lang => {
+                        const option = document.createElement('option');
+                        option.value = lang;
+                        option.textContent = getLanguageName(lang);
+                        select.appendChild(option);
+                        if (lang === 'la' && id !== 'trans-language') {
+                            option.selected = true;
+                        }
+                    });
+                });
+            } catch (error) {
+                console.error('Error loading languages:', error);
+            }
+        }
+        
+        async function loadDioceses() {
+            try {
+                const response = await fetch('/api/dioceses');
+                const dioceses = await response.json();
+                const select = document.getElementById('sanctoral-diocese');
+                select.innerHTML = '';
+                dioceses.forEach(diocese => {
+                    const option = document.createElement('option');
+                    option.value = diocese.code;
+                    option.textContent = diocese.name_english || diocese.name_latin;
+                    select.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error loading dioceses:', error);
+            }
+        }
+        
+        function getLanguageName(code) {
+            const names = {
+                'la': 'Latin (la)',
+                'en': 'English (en)',
+                'fr': 'French (fr)',
+                'es': 'Spanish (es)',
+                'it': 'Italian (it)',
+                'de': 'German (de)'
+            };
+            return names[code] || code;
+        }
+        
+        function switchTab(type) {
+            currentType = type;
+            currentPage = 1;
+            
+            // Update tab styling
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach((tab, index) => {
+                tab.classList.remove('active');
+                const types = ['temporal', 'sanctoral', 'dioceses', 'countries', 'translations'];
+                if (types[index] === type) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            // Show/hide appropriate filters
+            ['temporal', 'sanctoral', 'dioceses', 'countries', 'translations'].forEach(t => {
+                const filterEl = document.getElementById(`${t}-filters`);
+                if (filterEl) {
+                    filterEl.style.display = (t === type) ? 'flex' : 'none';
+                }
+            });
+            
+            // Load data
+            loadData();
+        }
+        
+        function applyFilters() {
+            currentPage = 1;
+            
+            // Update state based on current type
+            if (currentType === 'temporal') {
+                state.temporal.language = document.getElementById('temporal-language').value;
+            } else if (currentType === 'sanctoral') {
+                state.sanctoral.diocese = document.getElementById('sanctoral-diocese').value;
+                state.sanctoral.language = document.getElementById('sanctoral-language').value;
+                state.sanctoral.uniqueOnly = document.getElementById('unique-only').checked;
+            } else if (currentType === 'translations') {
+                state.translations.feastType = document.getElementById('trans-feast-type').value;
+                state.translations.language = document.getElementById('trans-language').value;
+            }
+            
+            loadData();
+        }
+        
+        function changePage(page) {
+            currentPage = page;
+            loadData();
+        }
+        
+        async function loadData() {
+            let url = `/api/browse/${currentType}?page=${currentPage}`;
+            
+            if (currentType === 'temporal') {
+                url += `&language=${state.temporal.language}`;
+            } else if (currentType === 'sanctoral') {
+                url += `&diocese=${state.sanctoral.diocese}&language=${state.sanctoral.language}`;
+                if (state.sanctoral.uniqueOnly) {
+                    url += '&unique_only=true';
+                }
+            } else if (currentType === 'translations') {
+                if (state.translations.feastType) url += `&feast_type=${state.translations.feastType}`;
+                if (state.translations.language) url += `&language=${state.translations.language}`;
+            }
+            
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.error) {
+                    document.getElementById('results-container').innerHTML = 
+                        `<div class="loading"><p style="color: red;">Error: ${data.error}</p></div>`;
+                    return;
+                }
+                
+                renderTable(data);
+            } catch (error) {
+                document.getElementById('results-container').innerHTML = 
+                    `<div class="loading"><p style="color: red;">Error loading data: ${error.message}</p></div>`;
+            }
+        }
+        
+        function renderTable(data) {
+            if (currentType === 'temporal') {
+                renderTemporalTable(data);
+            } else if (currentType === 'sanctoral') {
+                renderSanctoralTable(data);
+            } else if (currentType === 'dioceses') {
+                renderDiocesesTable(data);
+            } else if (currentType === 'countries') {
+                renderCountriesTable(data);
+            } else if (currentType === 'translations') {
+                renderTranslationsTable(data);
+            }
+        }
+        
+        function getRankBadgeClass(rank) {
+            if (rank === 1) return 'rank-1';
+            if (rank === 2) return 'rank-2';
+            if (rank === 3) return 'rank-3';
+            if (rank === 4) return 'rank-4';
+            return 'rank-5';
+        }
+        
+        function getColorBadgeClass(color) {
+            const c = color.toLowerCase();
+            if (c === 'white') return 'color-white';
+            if (c === 'red') return 'color-red';
+            if (c === 'green') return 'color-green';
+            if (c === 'violet') return 'color-violet';
+            if (c === 'black') return 'color-black';
+            if (c === 'rose') return 'color-rose';
+            return 'color-white';
+        }
+        
+        function renderTemporalTable(data) {
+            const { feasts, pagination, language } = data;
+            
+            let html = `
+                <div class="stats">
+                    <span><strong>Language:</strong> ${getLanguageName(language)}</span>
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feast Name</th>
+                                <th>ID</th>
+                                <th>Rank</th>
+                                <th>Color</th>
+                                <th>Office Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            if (feasts.length === 0) {
+                html += '<tr><td colspan="5" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
+                feasts.forEach(feast => {
+                    const rankNum = feast.rank ? feast.rank[0] : 5;
+                    html += `
+                        <tr>
+                            <td><span class="feast-name">${feast.name}</span></td>
+                            <td>${feast.id}</td>
+                            <td><span class="rank-badge ${getRankBadgeClass(rankNum)}">${feast.rank ? feast.rank[1] : 'N/A'}</span></td>
+                            <td><span class="color-badge ${getColorBadgeClass(feast.color)}">${feast.color}</span></td>
+                            <td>${feast.office_type || 'N/A'}</td>
+                        </tr>
+                    `;
+                });
+            }
+            
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+        
+        function renderSanctoralTable(data) {
+            const { feasts, pagination, diocese, unique_only, language } = data;
+            
+            let html = `
+                <div class="stats">
+                    <span><strong>Diocese:</strong> ${diocese}</span>
+                    <span><strong>Language:</strong> ${getLanguageName(language)}</span>
+                    ${unique_only ? '<span><strong>Showing:</strong> Unique to diocese only</span>' : ''}
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Feast Name</th>
+                                <th>ID</th>
+                                <th>Source</th>
+                                <th>Rank</th>
+                                <th>Color</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            if (feasts.length === 0) {
+                html += '<tr><td colspan="6" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
+                feasts.forEach(feast => {
+                    const date = `${String(feast.month).padStart(2, '0')}/${String(feast.day).padStart(2, '0')}`;
+                    const rankNum = feast.rank ? feast.rank[0] : 5;
+                    const isUnique = feast.diocese_source !== 'roman';
+                    html += `
+                        <tr>
+                            <td><strong>${date}</strong></td>
+                            <td><span class="feast-name">${feast.name}</span></td>
+                            <td>${feast.id}</td>
+                            <td><span class="badge-source ${isUnique ? 'badge-unique' : ''}">${feast.diocese_source}</span></td>
+                            <td><span class="rank-badge ${getRankBadgeClass(rankNum)}">${feast.rank ? feast.rank[1] : 'N/A'}</span></td>
+                            <td><span class="color-badge ${getColorBadgeClass(feast.color)}">${feast.color}</span></td>
+                        </tr>
+                    `;
+                });
+            }
+            
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+        
+        function renderDiocesesTable(data) {
+            const { dioceses, pagination } = data;
+            
+            let html = `
+                <div class="stats">
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name (Latin)</th>
+                                <th>Name (English)</th>
+                                <th>Country</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            if (dioceses.length === 0) {
+                html += '<tr><td colspan="4" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
+                dioceses.forEach(diocese => {
+                    html += `
+                        <tr>
+                            <td><strong>${diocese.code}</strong></td>
+                            <td>${diocese.name_latin}</td>
+                            <td>${diocese.name_english || 'N/A'}</td>
+                            <td>${diocese.country_name || 'Universal'}</td>
+                        </tr>
+                    `;
+                });
+            }
+            
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+        
+        function renderCountriesTable(data) {
+            const { countries, pagination } = data;
+            
+            let html = `
+                <div class="stats">
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name (Latin)</th>
+                                <th>Name (English)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            if (countries.length === 0) {
+                html += '<tr><td colspan="3" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
+                countries.forEach(country => {
+                    html += `
+                        <tr>
+                            <td><strong>${country.code}</strong></td>
+                            <td>${country.name_latin}</td>
+                            <td>${country.name_english || 'N/A'}</td>
+                        </tr>
+                    `;
+                });
+            }
+            
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+        
+        function renderTranslationsTable(data) {
+            const { translations, pagination, feast_type, language } = data;
+            
+            let html = `
+                <div class="stats">
+                    ${feast_type ? `<span><strong>Feast Type:</strong> ${feast_type}</span>` : ''}
+                    ${language ? `<span><strong>Language:</strong> ${getLanguageName(language)}</span>` : ''}
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feast ID</th>
+                                <th>Type</th>
+                                <th>Language</th>
+                                <th>Translation</th>
+                                <th>Default</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            if (translations.length === 0) {
+                html += '<tr><td colspan="5" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
+                translations.forEach(trans => {
+                    html += `
+                        <tr>
+                            <td><strong>${trans.feast_id}</strong></td>
+                            <td><span class="badge">${trans.feast_type}</span></td>
+                            <td>${getLanguageName(trans.language_code)}</td>
+                            <td>${trans.translation}</td>
+                            <td>${trans.is_default ? '✓' : ''}</td>
+                        </tr>
+                    `;
+                });
+            }
+            
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+        
+        function renderPagination(pagination) {
+            return `
+                <div class="pagination">
+                    <button onclick="changePage(1)" ${pagination.page === 1 ? 'disabled' : ''}>
+                        ⏮ First
+                    </button>
+                    <button onclick="changePage(${pagination.page - 1})" ${pagination.page === 1 ? 'disabled' : ''}>
+                        ← Previous
+                    </button>
+                    <span class="page-info">Page ${pagination.page} of ${pagination.total_pages || 1}</span>
+                    <button onclick="changePage(${pagination.page + 1})" ${pagination.page >= pagination.total_pages ? 'disabled' : ''}>
+                        Next →
+                    </button>
+                    <button onclick="changePage(${pagination.total_pages || 1})" ${pagination.page >= pagination.total_pages ? 'disabled' : ''}>
+                        Last ⏭
+                    </button>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
