@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feast Manager • Ordotools</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/grids-responsive-min.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            background: #fff;
+            color: #222;
+            overflow: hidden;
+        }
+        main {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+        .toolbar {
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e1e5ea;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 30;
+        }
+        .toolbar-left {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1rem;
+            align-items: center;
+        }
+        .view-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111;
+            letter-spacing: -0.01em;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+        .search-box input {
+            padding: 0.45rem 0.65rem;
+            border: 1px solid #cbd2d9;
+            border-radius: 4px;
+            min-width: 220px;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            overflow-y: auto;
+            flex: 1;
+            min-height: 0;
+            padding: 0 1.5rem 1.5rem;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            min-width: 1100px;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: #fff;
+        }
+        table th, table td {
+            white-space: nowrap;
+            font-size: 0.92rem;
+            padding: 0.5rem 0.75rem;
+        }
+        thead th {
+            position: sticky;
+            top: 0;
+            background: #f7f8fa;
+            text-align: left;
+            border-bottom: 1px solid #d8dde6;
+            box-shadow: inset 0 -1px 0 #d8dde6;
+            z-index: 10;
+        }
+        tbody {
+            background: #fff;
+        }
+        tbody tr {
+            cursor: pointer;
+        }
+        tbody tr:hover {
+            background: #f1f5fb;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+        }
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            z-index: 1000;
+        }
+        .modal.open {
+            display: flex;
+        }
+        .modal-content {
+            max-width: 640px;
+            width: 100%;
+            background: #fff;
+            border-radius: 6px;
+            padding: 1.5rem;
+            border: 1px solid #d8d8d8;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .modal-header h2 {
+            margin: 0;
+        }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+        .fieldset {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .fieldset legend {
+            font-weight: 600;
+            padding: 0 0.3rem;
+        }
+        .inline-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .form-status {
+            margin-top: 0.75rem;
+            padding: 0.6rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .form-status.success {
+            display: block;
+            background: #e6f4ea;
+            color: #1f7a39;
+        }
+        .form-status.error {
+            display: block;
+            background: #fdecef;
+            color: #a4243b;
+        }
+        details summary {
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <span class="view-title">Feast Manager</span>
+                <div class="inline-actions">
+                    <button id="new-feast" class="pure-button pure-button-primary">New Feast</button>
+                    <button id="refresh-overview" class="pure-button">Refresh</button>
+                </div>
+            </div>
+            <div class="search-box">
+                <label for="search-input">Quick Filter</label>
+                <input id="search-input" type="text" placeholder="Filter by ID, name, type, or color">
+            </div>
+        </div>
+        <div class="table-wrapper">
+            <table class="pure-table pure-table-horizontal">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>ID</th>
+                        <th>Name (Latin)</th>
+                        <th>Rank #</th>
+                        <th>Rank Text</th>
+                        <th>Color</th>
+                        <th>Office</th>
+                        <th>Appears?</th>
+                        <th>Month</th>
+                        <th>Day</th>
+                        <th>Calendar Diocese</th>
+                        <th>Calendar Country</th>
+                        <th>Assignments</th>
+                        <th>Owning Diocese</th>
+                        <th>Owning Country</th>
+                    </tr>
+                </thead>
+                <tbody id="feasts-body">
+                    <tr><td colspan="15" class="empty-state">Loading…</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="modal" id="feast-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Feast</h2>
+                <button type="button" class="modal-close" id="modal-close" aria-label="Close">×</button>
+            </div>
+            <form id="feast-form" class="pure-form pure-form-stacked">
+                <input type="hidden" id="form-mode" value="create">
+                <input type="hidden" id="calendar-assignment-id">
+                
+                <div id="sanctoral-primary-fields" style="display:none; margin-bottom: 1rem;">
+                    <div class="pure-g" style="gap: 0.75rem;">
+                        <div class="pure-u-1 pure-u-md-1-2">
+                            <label for="calendar-month">Month</label>
+                            <input id="calendar-month" list="month-list" autocomplete="off" placeholder="1-12">
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-2">
+                            <label for="calendar-day">Day</label>
+                            <input id="calendar-day" list="day-list" autocomplete="off" placeholder="1-31">
+                        </div>
+                    </div>
+                    <datalist id="month-list"></datalist>
+                    <datalist id="day-list"></datalist>
+                    
+                    <label for="latin-name" style="margin-top: 0.75rem;">Latin Name</label>
+                    <input id="latin-name" placeholder="Latin title (maintained via translations)" readonly>
+                </div>
+                <fieldset class="fieldset">
+                    <legend>Shared Fields</legend>
+                    <label for="feast-type">Feast Type</label>
+                    <select id="feast-type">
+                        <option value="temporal">Temporal</option>
+                        <option value="sanctoral">Sanctoral</option>
+                    </select>
+                    
+                    <div id="feast-id-wrapper">
+                        <label for="feast-id">Feast ID</label>
+                        <input id="feast-id" list="feast-id-list" autocomplete="off">
+                        <datalist id="feast-id-list"></datalist>
+                    </div>
+                    
+                    <label for="rank-numeric">Rank (numeric)</label>
+                    <input id="rank-numeric" list="rank-numeric-list" autocomplete="off">
+                    <datalist id="rank-numeric-list"></datalist>
+                    
+                    <label for="rank-verbose">Rank (text)</label>
+                    <input id="rank-verbose" list="rank-verbose-list" autocomplete="off">
+                    <datalist id="rank-verbose-list"></datalist>
+                    
+                    <label for="feast-color">Color</label>
+                    <input id="feast-color" list="color-list" autocomplete="off">
+                    <datalist id="color-list"></datalist>
+                    
+                    <label for="office-type">Office Type</label>
+                    <input id="office-type" list="office-type-list" autocomplete="off">
+                    <datalist id="office-type-list"></datalist>
+                </fieldset>
+                
+                <fieldset class="fieldset" id="sanctoral-fields">
+                    <legend>Sanctoral Options</legend>
+                    <label for="owning-diocese">Owning Diocese</label>
+                    <div class="inline-actions">
+                        <select id="owning-diocese">
+                            <option value="">Roman / universal source</option>
+                        </select>
+                        <button type="button" class="pure-button pure-button-secondary" id="show-diocese-form">Add Diocese</button>
+                    </div>
+                    <small id="owning-country-label" style="display:block; margin-top:0.4rem; color:#555;">Country: —</small>
+                    
+                    <label class="pure-checkbox" style="margin-top: 0.75rem;">
+                        <input type="checkbox" id="appears-in-calendar" checked>
+                        Appears in a diocesan calendar
+                    </label>
+                    
+                    <div id="calendar-section">
+                        <label for="calendar-diocese">Calendar Diocese</label>
+                        <div class="inline-actions">
+                            <select id="calendar-diocese">
+                                <option value="">Roman calendar (universal)</option>
+                            </select>
+                            <button type="button" class="pure-button pure-button-secondary" id="show-calendar-diocese-form">Add Diocese</button>
+                        </div>
+                        <small id="calendar-country-label" style="display:block; margin-top:0.4rem; color:#555;">Country: —</small>
+                        
+                    </div>
+                </fieldset>
+                
+                <div class="inline-actions" style="justify-content: flex-end; gap: 0.75rem;">
+                    <button type="button" class="pure-button" id="cancel-feast">Cancel</button>
+                    <button type="submit" class="pure-button pure-button-primary" id="save-feast">Save</button>
+                </div>
+                <div class="form-status" id="feast-form-status"></div>
+            </form>
+            
+            <details id="new-country-details" style="margin-top: 1.25rem;">
+                <summary>Add New Country</summary>
+                <form id="new-country-form" class="pure-form pure-form-stacked" style="margin-top: 0.75rem;">
+                    <label for="new-country-code">Country Code</label>
+                    <input id="new-country-code" maxlength="6" required placeholder="e.g. ITA">
+                    <label for="new-country-name-latin">Name (Latin)</label>
+                    <input id="new-country-name-latin" required placeholder="Italia">
+                    <label for="new-country-name-english">Name (English)</label>
+                    <input id="new-country-name-english" placeholder="Italy">
+                    <button type="submit" class="pure-button pure-button-primary" style="margin-top:0.6rem;">Add Country</button>
+                    <div class="form-status" id="country-form-status"></div>
+                </form>
+            </details>
+            
+            <details id="new-diocese-details" style="margin-top: 1.25rem;">
+                <summary>Add New Diocese</summary>
+                <form id="new-diocese-form" class="pure-form pure-form-stacked" style="margin-top: 0.75rem;">
+                    <label for="new-diocese-code">Diocese Code</label>
+                    <input id="new-diocese-code" maxlength="50" required placeholder="roman">
+                    <label for="new-diocese-name-latin">Name (Latin)</label>
+                    <input id="new-diocese-name-latin" required placeholder="Dioecesis Romana">
+                    <label for="new-diocese-name-english">Name (English)</label>
+                    <input id="new-diocese-name-english" placeholder="Diocese of Rome">
+                    <label for="new-diocese-country">Country</label>
+                    <select id="new-diocese-country">
+                        <option value="">Universal / Not linked</option>
+                    </select>
+                    <button type="submit" class="pure-button pure-button-primary" style="margin-top:0.6rem;">Add Diocese</button>
+                    <div class="form-status" id="diocese-form-status"></div>
+                </form>
+            </details>
+        </div>
+    </div>
+
+    <script>
+        const initialMetadata = {{ metadata|tojson }};
+        const initialLanguages = {{ languages|tojson }};
+        
+        let metadata = initialMetadata;
+        let overview = [];
+        let filteredOverview = [];
+        let currentMode = 'create';
+        let currentType = 'temporal';
+        let currentId = null;
+        
+        const bodyEl = document.getElementById('feasts-body');
+        const searchInput = document.getElementById('search-input');
+        const modal = document.getElementById('feast-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const form = document.getElementById('feast-form');
+        const formStatus = document.getElementById('feast-form-status');
+        const feastTypeField = document.getElementById('feast-type');
+        const feastIdField = document.getElementById('feast-id');
+        const feastIdWrapper = document.getElementById('feast-id-wrapper');
+        const rankNumericField = document.getElementById('rank-numeric');
+        const rankVerboseField = document.getElementById('rank-verbose');
+        const colorField = document.getElementById('feast-color');
+        const officeField = document.getElementById('office-type');
+        const sanctoralPrimaryFields = document.getElementById('sanctoral-primary-fields');
+        const latinNameField = document.getElementById('latin-name');
+        const owningDioceseField = document.getElementById('owning-diocese');
+        const owningCountryLabel = document.getElementById('owning-country-label');
+        const appearsCheckbox = document.getElementById('appears-in-calendar');
+        const calendarSection = document.getElementById('calendar-section');
+        const calendarDioceseField = document.getElementById('calendar-diocese');
+        const calendarCountryLabel = document.getElementById('calendar-country-label');
+        const calendarMonthField = document.getElementById('calendar-month');
+        const calendarDayField = document.getElementById('calendar-day');
+        const calendarAssignmentIdField = document.getElementById('calendar-assignment-id');
+        const sanctoralFields = document.getElementById('sanctoral-fields');
+        const newCountryForm = document.getElementById('new-country-form');
+        const newDioceseForm = document.getElementById('new-diocese-form');
+        const countryFormStatus = document.getElementById('country-form-status');
+        const dioceseFormStatus = document.getElementById('diocese-form-status');
+        
+        function populateDatalist(id, values) {
+            const datalist = document.getElementById(id);
+            if (!datalist) return;
+            datalist.innerHTML = '';
+            (values || []).forEach(value => {
+                const option = document.createElement('option');
+                option.value = value;
+                datalist.appendChild(option);
+            });
+        }
+        
+        function populateSelect(select, items, opts = {}) {
+            const previousValue = select.value;
+            const { includeRomanOption = false } = opts;
+            const romanOption = includeRomanOption ? { id: '', code: 'roman', name_english: 'Roman calendar (universal)' } : null;
+            select.innerHTML = '';
+            if (romanOption) {
+                const opt = new Option(romanOption.name_english, romanOption.id);
+                opt.dataset.code = romanOption.code;
+                select.appendChild(opt);
+            } else if (!opts.skipEmpty) {
+                const opt = new Option('—', '');
+                select.appendChild(opt);
+            }
+            (items || []).forEach(item => {
+                const label = `${item.code} — ${item.name_english || item.name_latin}`;
+                const opt = new Option(label, item.id ?? item.code);
+                opt.dataset.code = item.code;
+                opt.dataset.country = item.country_code || '';
+                select.appendChild(opt);
+            });
+            if (previousValue && Array.from(select.options).some(o => o.value === previousValue)) {
+                select.value = previousValue;
+            }
+        }
+        
+        function updateMetadataControls() {
+            populateDatalist('feast-id-list', metadata.temporal_ids || []);
+            populateDatalist('rank-numeric-list', metadata.rank_numeric_values || []);
+            populateDatalist('rank-verbose-list', metadata.rank_verbose_values || []);
+            populateDatalist('color-list', metadata.color_values || []);
+            populateDatalist('office-type-list', metadata.office_type_values || []);
+            populateDatalist('month-list', metadata.month_values || []);
+            populateDatalist('day-list', metadata.day_values || []);
+            populateSelect(owningDioceseField, metadata.dioceses || [], { skipEmpty: false });
+            populateSelect(calendarDioceseField, metadata.dioceses || [], { includeRomanOption: true });
+            populateSelect(document.getElementById('new-diocese-country'), metadata.countries || [], { skipEmpty: false });
+        }
+        
+        function loadOverview() {
+            bodyEl.innerHTML = '<tr><td colspan="15" class="empty-state">Loading…</td></tr>';
+            fetch('/api/feasts/overview')
+                .then(resp => resp.json())
+                .then(data => {
+                    overview = data.feasts || [];
+                    filteredOverview = overview.slice();
+                    renderTable();
+                })
+                .catch(err => {
+                    console.error(err);
+                    bodyEl.innerHTML = '<tr><td colspan="15" class="empty-state">Unable to load data.</td></tr>';
+                });
+        }
+        
+        function refreshMetadata() {
+            fetch('/api/feasts/metadata')
+                .then(resp => resp.json())
+                .then(data => {
+                    metadata = data;
+                    updateMetadataControls();
+                })
+                .catch(err => console.error('Metadata refresh failed', err));
+        }
+        
+        function renderTable() {
+            if (!filteredOverview.length) {
+                bodyEl.innerHTML = '<tr><td colspan="15" class="empty-state">No feasts match the current filter.</td></tr>';
+                return;
+            }
+            const rows = filteredOverview.map(feast => {
+                const appears = feast.appears_in_calendar ? 'Yes' : 'No';
+                const month = feast.month != null ? String(feast.month).padStart(2, '0') : '—';
+                const day = feast.day != null ? String(feast.day).padStart(2, '0') : '—';
+                const calendarDiocese = feast.calendar_diocese_code || '—';
+                const calendarCountry = feast.calendar_country_code || '—';
+                const owningDiocese = feast.owning_diocese_code || '—';
+                const owningCountry = feast.owning_country_code || '—';
+                const assignments = feast.assignment_summary || '—';
+                return `
+                    <tr data-type="${feast.feast_type}" data-id="${feast.id}">
+                        <td>${feast.feast_type}</td>
+                        <td>${feast.display_id || feast.id}</td>
+                        <td>${feast.name_latin || ''}</td>
+                        <td>${feast.rank_numeric ?? ''}</td>
+                        <td>${feast.rank_verbose || ''}</td>
+                        <td>${feast.color || ''}</td>
+                        <td>${feast.office_type || ''}</td>
+                        <td>${appears}</td>
+                        <td>${month}</td>
+                        <td>${day}</td>
+                        <td>${calendarDiocese}</td>
+                        <td>${calendarCountry}</td>
+                        <td>${assignments}</td>
+                        <td>${owningDiocese}</td>
+                        <td>${owningCountry}</td>
+                    </tr>
+                `;
+            }).join('');
+            bodyEl.innerHTML = rows;
+            bodyEl.querySelectorAll('tr').forEach(row => {
+                row.addEventListener('click', () => openFeastForm(row.dataset.type, row.dataset.id, 'edit'));
+            });
+        }
+        
+        function filterOverview(term) {
+            const lowered = term.trim().toLowerCase();
+            if (!lowered) {
+                filteredOverview = overview.slice();
+                renderTable();
+                return;
+            }
+            filteredOverview = overview.filter(feast => {
+                const fields = [
+                    feast.feast_type,
+                    String(feast.id),
+                    feast.display_id || '',
+                    feast.name_latin || '',
+                    feast.rank_verbose || '',
+                    feast.color || '',
+                    feast.office_type || '',
+                    feast.calendar_diocese_code || '',
+                    feast.owning_diocese_code || '',
+                ];
+                return fields.some(field => field && field.toLowerCase().includes(lowered));
+            });
+            renderTable();
+        }
+        
+        function openFeastForm(type, id = null, mode = 'create') {
+            currentMode = mode;
+            currentType = type || 'temporal';
+            currentId = id;
+            form.reset();
+            clearStatus();
+            modal.classList.add('open');
+            feastTypeField.disabled = mode === 'edit';
+            feastTypeField.value = currentType;
+            toggleTypeSections();
+            if (mode === 'edit' && id != null) {
+                modalTitle.textContent = `Edit ${currentType} feast`;
+                loadFeastDetail(currentType, id);
+            } else {
+                modalTitle.textContent = `New ${currentType} feast`;
+                calendarAssignmentIdField.value = '';
+                feastIdField.value = '';
+                latinNameField.value = '';
+                calendarMonthField.value = '';
+                calendarDayField.value = '';
+                appearsCheckbox.checked = currentType === 'sanctoral';
+                toggleCalendarSection();
+                if (currentType === 'sanctoral') {
+                    const defaultCalendarCode = metadata.calendar_diocese_codes && metadata.calendar_diocese_codes.includes('roman') ? '' : '';
+                    calendarDioceseField.value = defaultCalendarCode;
+                    updateCalendarDioceseDisplay();
+                    owningDioceseField.value = '';
+                    updateDioceseDisplay();
+                }
+            }
+        }
+        
+        function closeModal() {
+            modal.classList.remove('open');
+            currentId = null;
+        }
+        
+        function clearStatus() {
+            formStatus.className = 'form-status';
+            formStatus.textContent = '';
+            formStatus.style.display = 'none';
+        }
+        
+        function showStatus(message, isError = false) {
+            formStatus.textContent = message;
+            formStatus.className = 'form-status ' + (isError ? 'error' : 'success');
+            formStatus.style.display = 'block';
+        }
+        
+        function loadFeastDetail(type, id) {
+            fetch(`/api/feasts/${type}/${id}`)
+                .then(resp => {
+                    if (!resp.ok) {
+                        throw new Error('Unable to load feast details');
+                    }
+                    return resp.json();
+                })
+                .then(detail => {
+                    fillForm(detail);
+                })
+                .catch(err => {
+                    console.error(err);
+                    showStatus('Unable to load feast details.', true);
+                });
+        }
+        
+        function fillForm(detail) {
+            feastTypeField.value = detail.feast_type;
+            feastIdField.value = detail.display_id || detail.id || '';
+            rankNumericField.value = detail.rank_numeric ?? '';
+            rankVerboseField.value = detail.rank_verbose || '';
+            colorField.value = detail.color || '';
+            officeField.value = detail.office_type || '';
+            latinNameField.value = detail.name_latin || '';
+            toggleTypeSections();
+            
+            if (detail.feast_type === 'sanctoral') {
+                const dioceseId = detail.diocese_id != null ? String(detail.diocese_id) : '';
+                owningDioceseField.value = dioceseId;
+                updateDioceseDisplay();
+                const appears = Boolean(detail.appears_in_calendar);
+                appearsCheckbox.checked = appears;
+                const primary = detail.primary_assignment || {};
+                calendarAssignmentIdField.value = primary.assignment_id || '';
+                calendarDioceseField.value = primary.diocese_id != null ? String(primary.diocese_id) : '';
+                calendarMonthField.value = primary.month != null ? String(primary.month) : '';
+                calendarDayField.value = primary.day != null ? String(primary.day) : '';
+                updateCalendarDioceseDisplay();
+                toggleCalendarSection();
+            }
+        }
+        
+        function toggleTypeSections() {
+            const isSanctoral = feastTypeField.value === 'sanctoral';
+            sanctoralFields.style.display = isSanctoral ? 'block' : 'none';
+            sanctoralPrimaryFields.style.display = isSanctoral ? 'block' : 'none';
+            feastIdWrapper.style.display = isSanctoral ? 'none' : 'block';
+        }
+        
+        function toggleCalendarSection() {
+            const visible = appearsCheckbox.checked;
+            calendarSection.style.display = visible ? 'block' : 'none';
+        }
+        
+        function resolveDioceseById(id) {
+            if (!id) return null;
+            return (metadata.dioceses || []).find(item => String(item.id) === String(id));
+        }
+        
+        function updateDioceseDisplay() {
+            const diocese = resolveDioceseById(owningDioceseField.value);
+            if (!diocese) {
+                owningCountryLabel.textContent = 'Country: —';
+                return;
+            }
+            const label = diocese.country_code ? `${diocese.country_code}` : '—';
+            owningCountryLabel.textContent = `Country: ${label}`;
+        }
+        
+        function updateCalendarDioceseDisplay() {
+            const diocese = resolveDioceseById(calendarDioceseField.value);
+            if (!diocese) {
+                calendarCountryLabel.textContent = 'Country: —';
+                return;
+            }
+            const label = diocese.country_code ? `${diocese.country_code}` : '—';
+            calendarCountryLabel.textContent = `Country: ${label}`;
+        }
+        
+        function collectPayload() {
+            const payload = {
+                rank_numeric: rankNumericField.value,
+                rank_verbose: rankVerboseField.value.trim(),
+                color: colorField.value.trim(),
+                office_type: officeField.value.trim()
+            };
+            if (feastTypeField.value === 'temporal') {
+                payload.id = feastIdField.value.trim();
+            } else {
+                payload.diocese_id = owningDioceseField.value ? owningDioceseField.value : null;
+                payload.appears_in_calendar = appearsCheckbox.checked;
+                payload.assignment = {
+                    assignment_id: calendarAssignmentIdField.value || null,
+                    month: calendarMonthField.value,
+                    day: calendarDayField.value,
+                    diocese_id: calendarDioceseField.value ? calendarDioceseField.value : null
+                };
+            }
+            return payload;
+        }
+        
+        function submitForm(event) {
+            event.preventDefault();
+            clearStatus();
+            const payload = collectPayload();
+            const type = feastTypeField.value;
+            const isTemporal = type === 'temporal';
+            
+            if (!payload.rank_numeric) {
+                showStatus('Rank numeric is required.', true);
+                return;
+            }
+            const numericRank = parseInt(payload.rank_numeric, 10);
+            if (Number.isNaN(numericRank)) {
+                showStatus('Rank numeric must be an integer.', true);
+                return;
+            }
+            payload.rank_numeric = numericRank;
+            
+            if (isTemporal) {
+                if (!payload.id) {
+                    showStatus('Feast ID is required.', true);
+                    return;
+                }
+            } else {
+                payload.diocese_id = payload.diocese_id ? parseInt(payload.diocese_id, 10) : null;
+                const assignment = payload.assignment || {};
+                assignment.assignment_id = assignment.assignment_id ? parseInt(assignment.assignment_id, 10) : null;
+                assignment.diocese_id = assignment.diocese_id ? parseInt(assignment.diocese_id, 10) : null;
+                if (payload.appears_in_calendar) {
+                    const month = parseInt(assignment.month, 10);
+                    const day = parseInt(assignment.day, 10);
+                    if (Number.isNaN(month) || Number.isNaN(day)) {
+                        showStatus('Calendar month/day must be integers.', true);
+                        return;
+                    }
+                    assignment.month = month;
+                    assignment.day = day;
+                } else {
+                    assignment.month = null;
+                    assignment.day = null;
+                    assignment.diocese_id = null;
+                    assignment.assignment_id = assignment.assignment_id || null;
+                }
+                payload.assignment = assignment;
+            }
+            
+            const submitButton = document.getElementById('save-feast');
+            submitButton.disabled = true;
+            submitButton.classList.add('pure-button-disabled');
+            
+            const url = currentMode === 'edit'
+                ? `/api/feasts/${type}/${currentId}`
+                : (type === 'temporal' ? '/api/temporal/feasts' : '/api/sanctoral/feasts');
+            const method = currentMode === 'edit' ? 'PUT' : 'POST';
+            
+            let requestPayload = payload;
+            if (currentMode !== 'edit' && type === 'sanctoral') {
+                requestPayload = {
+                    rank_numeric: payload.rank_numeric,
+                    rank_verbose: payload.rank_verbose,
+                    color: payload.color,
+                    office_type: payload.office_type,
+                    diocese_id: payload.diocese_id,
+                    month: payload.appears_in_calendar ? payload.assignment.month : null,
+                    day: payload.appears_in_calendar ? payload.assignment.day : null,
+                    assignment_diocese_id: payload.appears_in_calendar ? payload.assignment.diocese_id : null
+                };
+            } else if (currentMode !== 'edit' && isTemporal) {
+                requestPayload = {
+                    id: payload.id,
+                    rank_numeric: payload.rank_numeric,
+                    rank_verbose: payload.rank_verbose,
+                    color: payload.color,
+                    office_type: payload.office_type
+                };
+            }
+            const body = JSON.stringify(requestPayload);
+            
+            fetch(url, {
+                method,
+                headers: { 'Content-Type': 'application/json' },
+                body
+            })
+                .then(async resp => {
+                    const data = await resp.json().catch(() => ({}));
+                    if (!resp.ok) {
+                        throw new Error(data.error || 'Request failed');
+                    }
+                    showStatus('Saved successfully.');
+                    return data;
+                })
+                .then(() => {
+                    refreshMetadata();
+                    loadOverview();
+                    setTimeout(() => closeModal(), 450);
+                })
+                .catch(err => {
+                    console.error(err);
+                    showStatus(err.message || 'Unable to save changes.', true);
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('pure-button-disabled');
+                });
+        }
+        
+        function submitNewCountry(event) {
+            event.preventDefault();
+            countryFormStatus.className = 'form-status';
+            countryFormStatus.textContent = '';
+            const code = document.getElementById('new-country-code').value.trim().toUpperCase();
+            const nameLatin = document.getElementById('new-country-name-latin').value.trim();
+            const nameEnglish = document.getElementById('new-country-name-english').value.trim();
+            if (!code || !nameLatin) {
+                countryFormStatus.className = 'form-status error';
+                countryFormStatus.textContent = 'Code and Latin name are required.';
+                return;
+            }
+            fetch('/api/countries', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    code,
+                    name_latin: nameLatin,
+                    name_english: nameEnglish
+                })
+            })
+                .then(async resp => {
+                    const data = await resp.json().catch(() => ({}));
+                    if (!resp.ok) {
+                        throw new Error(data.error || 'Unable to add country.');
+                    }
+                    countryFormStatus.className = 'form-status success';
+                    countryFormStatus.textContent = 'Country added.';
+                    newCountryForm.reset();
+                    refreshMetadata();
+                })
+                .catch(err => {
+                    countryFormStatus.className = 'form-status error';
+                    countryFormStatus.textContent = err.message;
+                });
+        }
+        
+        function submitNewDiocese(event) {
+            event.preventDefault();
+            dioceseFormStatus.className = 'form-status';
+            dioceseFormStatus.textContent = '';
+            const code = document.getElementById('new-diocese-code').value.trim();
+            const nameLatin = document.getElementById('new-diocese-name-latin').value.trim();
+            const nameEnglish = document.getElementById('new-diocese-name-english').value.trim();
+            const countryId = document.getElementById('new-diocese-country').value || null;
+            if (!code || !nameLatin) {
+                dioceseFormStatus.className = 'form-status error';
+                dioceseFormStatus.textContent = 'Code and Latin name are required.';
+                return;
+            }
+            fetch('/api/dioceses', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    code,
+                    name_latin: nameLatin,
+                    name_english: nameEnglish,
+                    country_id: countryId
+                })
+            })
+                .then(async resp => {
+                    const data = await resp.json().catch(() => ({}));
+                    if (!resp.ok) {
+                        throw new Error(data.error || 'Unable to add diocese.');
+                    }
+                    dioceseFormStatus.className = 'form-status success';
+                    dioceseFormStatus.textContent = 'Diocese added.';
+                    newDioceseForm.reset();
+                    refreshMetadata();
+                })
+                .catch(err => {
+                    dioceseFormStatus.className = 'form-status error';
+                    dioceseFormStatus.textContent = err.message;
+                });
+        }
+        
+        document.getElementById('new-feast').addEventListener('click', () => openFeastForm('temporal', null, 'create'));
+        document.getElementById('refresh-overview').addEventListener('click', () => loadOverview());
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        document.getElementById('cancel-feast').addEventListener('click', closeModal);
+        form.addEventListener('submit', submitForm);
+        newCountryForm.addEventListener('submit', submitNewCountry);
+        newDioceseForm.addEventListener('submit', submitNewDiocese);
+        feastTypeField.addEventListener('change', () => {
+            toggleTypeSections();
+            toggleCalendarSection();
+            if (feastTypeField.value === 'sanctoral') {
+                feastIdField.value = '';
+                latinNameField.value = '';
+                calendarMonthField.value = '';
+                calendarDayField.value = '';
+                updateCalendarDioceseDisplay();
+                updateDioceseDisplay();
+            }
+        });
+        owningDioceseField.addEventListener('change', updateDioceseDisplay);
+        calendarDioceseField.addEventListener('change', updateCalendarDioceseDisplay);
+        appearsCheckbox.addEventListener('change', toggleCalendarSection);
+        searchInput.addEventListener('input', event => filterOverview(event.target.value));
+        document.getElementById('show-diocese-form').addEventListener('click', () => {
+            document.getElementById('new-diocese-details').open = true;
+        });
+        document.getElementById('show-calendar-diocese-form').addEventListener('click', () => {
+            document.getElementById('new-diocese-details').open = true;
+        });
+        
+        updateMetadataControls();
+        loadOverview();
+    </script>
+</body>
+</html>
+        .table-wrapper thead th {
+            position: sticky;
+            top: 56px;
+            background: #f7f9fb;
+            z-index: 10;
+            box-shadow: inset 0 -1px 0 #d8d8d8;
+        }

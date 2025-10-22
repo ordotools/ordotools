@@ -3,292 +3,439 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordotools Database Manager</title>
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <title>Ordotools Data Entry</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/grids-responsive-min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 2rem;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .header {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 2rem;
-        }
-        
-        h1 {
-            color: #667eea;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .subtitle {
-            color: #666;
-            font-size: 1.1rem;
-        }
-        
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 1.5rem;
-        }
-        
-        .card h2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            background: #f4f5f7;
             color: #333;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #667eea;
         }
-        
-        .status {
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
+        header {
+            background: #1f4b99;
+            color: #fff;
+            padding: 1.5rem 1rem;
         }
-        
-        .status.loading {
-            background: #e3f2fd;
-            color: #1976d2;
+        header .pure-button {
+            background: #fff;
+            color: #1f4b99;
         }
-        
-        .status.success {
-            background: #e8f5e9;
-            color: #2e7d32;
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
         }
-        
-        .status.error {
-            background: #ffebee;
-            color: #c62828;
-        }
-        
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
-        }
-        
-        .btn:active {
-            transform: translateY(0);
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-        
-        .stat-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .sample-list {
-            list-style: none;
-            margin-top: 1rem;
-        }
-        
-        .sample-item {
-            background: #f5f5f5;
-            padding: 0.75rem 1rem;
-            margin: 0.5rem 0;
+        .form-section {
+            background: #fff;
+            border: 1px solid #d8d8d8;
             border-radius: 6px;
-            border-left: 4px solid #667eea;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
         }
-        
-        .sample-item span {
+        .form-section h2 {
+            margin-top: 0;
+            font-size: 1.35rem;
+        }
+        .form-footnote {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
             color: #666;
         }
-        
-        .badge {
-            background: #667eea;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .form-status {
+            margin-top: 0.75rem;
+            padding: 0.6rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: none;
         }
-        
-        .filter-section {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
+        .form-status.success {
+            display: block;
+            background: #e6f4ea;
+            color: #1f7a39;
         }
-        
-        .filter-section select {
-            padding: 0.5rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            margin-right: 0.5rem;
-            font-size: 1rem;
+        .form-status.error {
+            display: block;
+            background: #fdecef;
+            color: #a4243b;
         }
-        
-        .info-banner {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 4px solid #667eea;
+        .pure-button-primary {
+            background: #1f4b99;
         }
-        
-        .htmx-indicator {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #667eea;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-left: 0.5rem;
+        .form-grid {
+            gap: 0.75rem;
         }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .pure-control-group {
+            margin-bottom: 0.6rem;
+        }
+        @media (min-width: 48em) {
+            .form-grid .pure-u-1-2 {
+                padding-right: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>⛪ Ordotools Database Manager</h1>
-            <p class="subtitle">Manage liturgical feasts and sanctoral data</p>
+    <header>
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-3-4">
+                <h1 style="margin: 0 0 0.35rem;">Ordotools Data Entry</h1>
+                <p style="margin: 0; max-width: 38em;">
+                    Use these forms to add records to the core tables. For a complete overview or filtering,
+                    switch to the master list.
+                </p>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-4" style="text-align: right; align-self: center; margin-top: 1rem; display:flex; gap:0.5rem; justify-content:flex-end; flex-wrap:wrap;">
+                <a class="pure-button pure-button-primary" href="/feasts">Feast Manager</a>
+                <a class="pure-button pure-button-primary" href="/browse">Master List</a>
+            </div>
         </div>
-        
-        <div class="card">
-            <h2>📊 Database Connection Status</h2>
-            <button 
-                class="btn" 
-                hx-get="/api/test-connection" 
-                hx-target="#connection-status"
-                hx-indicator="#connection-spinner">
-                Test Connection
-                <span id="connection-spinner" class="htmx-indicator" style="display: none;"></span>
-            </button>
-            <div id="connection-status">
-                <div class="info-banner" style="margin-top: 1rem;">
-                    Click "Test Connection" to verify database connectivity and view statistics.
+    </header>
+    <main>
+        <section class="form-section" id="countries-form">
+            <h2>Countries</h2>
+            <form class="pure-form pure-form-stacked ajax-form" data-endpoint="/api/countries">
+                <div class="pure-g form-grid">
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="country-code">Code</label>
+                        <input id="country-code" name="code" maxlength="6" required placeholder="e.g. ITA">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="country-name-latin">Name (Latin)</label>
+                        <input id="country-name-latin" name="name_latin" required placeholder="Italia">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="country-name-english">Name (English)</label>
+                        <input id="country-name-english" name="name_english" placeholder="Italy">
+                    </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>📚 Database Overview</h2>
-            <div class="info-banner">
-                The database stores liturgical feast information in separate tables for temporal and sanctoral feasts.
-                Data is organized by countries, dioceses, and includes translations in multiple languages.
-            </div>
-            <h3 style="margin-top: 1.5rem; color: #333;">Quick Links</h3>
-            <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="/browse?type=temporal" class="btn" style="text-decoration: none; display: inline-block;">
-                    📅 Browse Temporal Feasts
-                </a>
-                <a href="/browse?type=sanctoral" class="btn" style="text-decoration: none; display: inline-block;">
-                    ⛪ Browse Sanctoral Feasts
-                </a>
-            </div>
-        </div>
-    </div>
-    
+                <button type="submit" class="pure-button pure-button-primary">Add Country</button>
+                <div class="form-status" role="status"></div>
+            </form>
+        </section>
+
+        <section class="form-section" id="dioceses-form">
+            <h2>Dioceses</h2>
+            <form class="pure-form pure-form-stacked ajax-form" data-endpoint="/api/dioceses">
+                <div class="pure-g form-grid">
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="diocese-code">Code</label>
+                        <input id="diocese-code" name="code" maxlength="50" required placeholder="roman">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="diocese-name-latin">Name (Latin)</label>
+                        <input id="diocese-name-latin" name="name_latin" required placeholder="Dioecesis Romana">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="diocese-name-english">Name (English)</label>
+                        <input id="diocese-name-english" name="name_english" placeholder="Diocese of Rome">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="diocese-country">Country</label>
+                        <select id="diocese-country" name="country_id" data-cast="int" data-source="countries">
+                            <option value="">Universal / Not linked</option>
+                            {% for country in countries %}
+                                <option value="{{ country.id }}">
+                                    {{ country.code }} — {{ country.name_english or country.name_latin }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="pure-button pure-button-primary">Add Diocese</button>
+                <div class="form-status" role="status"></div>
+            </form>
+        </section>
+
+        <section class="form-section" id="temporal-form">
+            <h2>Temporal Feasts</h2>
+            <form class="pure-form pure-form-stacked ajax-form" data-endpoint="/api/temporal/feasts">
+                <div class="pure-g form-grid">
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="temporal-id">Feast ID</label>
+                        <input id="temporal-id" name="id" required placeholder="advent_1_sunday">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="temporal-rank-numeric">Rank (numeric)</label>
+                        <input id="temporal-rank-numeric" name="rank_numeric" type="number" min="1" max="10" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="temporal-rank-verbose">Rank (text)</label>
+                        <input id="temporal-rank-verbose" name="rank_verbose" required placeholder="I classis">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="temporal-color">Color</label>
+                        <input id="temporal-color" name="color" required placeholder="white">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="temporal-office">Office Type</label>
+                        <input id="temporal-office" name="office_type" placeholder="Duplex">
+                    </div>
+                </div>
+                <button type="submit" class="pure-button pure-button-primary">Add Temporal Feast</button>
+                <div class="form-status" role="status"></div>
+                <p class="form-footnote">
+                    Additional properties can be attached later via direct SQL or by extending the form.
+                </p>
+            </form>
+        </section>
+
+        <section class="form-section" id="sanctoral-form">
+            <h2>Sanctoral Feasts</h2>
+            <form class="pure-form pure-form-stacked ajax-form" data-endpoint="/api/sanctoral/feasts">
+                <div class="pure-g form-grid">
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="sanctoral-id">Feast ID (optional)</label>
+                        <input id="sanctoral-id" name="id" type="number" min="1" placeholder="Leave blank for auto">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="sanctoral-rank-numeric">Rank (numeric)</label>
+                        <input id="sanctoral-rank-numeric" name="rank_numeric" type="number" min="1" max="10" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="sanctoral-rank-verbose">Rank (text)</label>
+                        <input id="sanctoral-rank-verbose" name="rank_verbose" required placeholder="III classis">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="sanctoral-color">Color</label>
+                        <input id="sanctoral-color" name="color" required placeholder="red">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="sanctoral-office">Office Type</label>
+                        <input id="sanctoral-office" name="office_type" placeholder="Duplex">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="sanctoral-diocese">Owning Diocese</label>
+                        <select id="sanctoral-diocese" name="diocese_id" data-cast="int" data-source="dioceses">
+                            <option value="">Roman / universal source</option>
+                            {% for diocese in dioceses %}
+                                <option value="{{ diocese.id }}">
+                                    {{ diocese.code }} — {{ diocese.name_english or diocese.name_latin }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-6">
+                        <label for="sanctoral-month">Month</label>
+                        <input id="sanctoral-month" name="month" type="number" min="1" max="12" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-6">
+                        <label for="sanctoral-day">Day</label>
+                        <input id="sanctoral-day" name="day" type="number" min="1" max="31" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="sanctoral-assignment-diocese">Appears In Diocese</label>
+                        <select id="sanctoral-assignment-diocese" name="assignment_diocese_id" data-cast="int" data-source="dioceses">
+                            <option value="">Roman calendar</option>
+                            {% for diocese in dioceses %}
+                                <option value="{{ diocese.id }}">
+                                    {{ diocese.code }} — {{ diocese.name_english or diocese.name_latin }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="pure-button pure-button-primary">Add Sanctoral Feast</button>
+                <div class="form-status" role="status"></div>
+                <p class="form-footnote">
+                    When you add a feast, a matching date assignment is created immediately. Use the assignment form
+                    below to attach additional dioceses or dates.
+                </p>
+            </form>
+        </section>
+
+        <section class="form-section" id="assignments-form">
+            <h2>Feast Date Assignments</h2>
+            <form class="pure-form pure-form-stacked ajax-form" data-endpoint="/api/feast-dates">
+                <div class="pure-g form-grid">
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="assignment-feast-id">Feast ID</label>
+                        <input id="assignment-feast-id" name="feast_id" type="number" min="1" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-6">
+                        <label for="assignment-month">Month</label>
+                        <input id="assignment-month" name="month" type="number" min="1" max="12" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-6">
+                        <label for="assignment-day">Day</label>
+                        <input id="assignment-day" name="day" type="number" min="1" max="31" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="assignment-diocese">Diocese</label>
+                        <select id="assignment-diocese" name="diocese_id" data-cast="int" data-source="dioceses">
+                            <option value="">Roman calendar</option>
+                            {% for diocese in dioceses %}
+                                <option value="{{ diocese.id }}">
+                                    {{ diocese.code }} — {{ diocese.name_english or diocese.name_latin }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="pure-button pure-button-primary">Link Feast to Date</button>
+                <div class="form-status" role="status"></div>
+            </form>
+        </section>
+
+        <section class="form-section" id="translations-form">
+            <h2>Translations</h2>
+            <form class="pure-form pure-form-stacked ajax-form" data-endpoint="/api/translations">
+                <div class="pure-g form-grid">
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="translation-feast-id">Feast ID</label>
+                        <input id="translation-feast-id" name="feast_id" required placeholder="advent_1_sunday or 123">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="translation-feast-type">Type</label>
+                        <select id="translation-feast-type" name="feast_type" required>
+                            <option value="temporal">Temporal</option>
+                            <option value="sanctoral">Sanctoral</option>
+                        </select>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="translation-language">Language</label>
+                        <select id="translation-language" name="language_code">
+                            {% if languages %}
+                                {% for lang in languages %}
+                                    <option value="{{ lang }}">{{ lang }}</option>
+                                {% endfor %}
+                            {% else %}
+                                <option value="la">la</option>
+                            {% endif %}
+                        </select>
+                    </div>
+                    <div class="pure-u-1">
+                        <label for="translation-text">Translation</label>
+                        <textarea id="translation-text" name="translation" rows="3" required></textarea>
+                    </div>
+                    <div class="pure-u-1">
+                        <label class="pure-checkbox" style="margin-top: 0.4rem;">
+                            <input type="checkbox" name="is_default">
+                            Mark as default translation for this language
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="pure-button pure-button-primary">Add Translation</button>
+                <div class="form-status" role="status"></div>
+            </form>
+        </section>
+    </main>
+
     <script>
-        // Handle the connection test response
-        document.body.addEventListener('htmx:afterSwap', function(evt) {
-            if (evt.detail.target.id === 'connection-status') {
-                const response = JSON.parse(evt.detail.xhr.response);
-                
-                let html = '';
-                if (response.status === 'success') {
-                    const stats = response.stats;
-                    html = `
-                        <div class="status success" style="margin-top: 1rem;">
-                            ✅ Database connection successful!
-                        </div>
-                        <div class="stats-grid">
-                            <div class="stat-box">
-                                <div class="stat-number">${stats.total_feasts}</div>
-                                <div class="stat-label">Total Feasts</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-number">${stats.temporal_feasts}</div>
-                                <div class="stat-label">Temporal Feasts</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-number">${stats.sanctoral_feasts}</div>
-                                <div class="stat-label">Sanctoral Feasts</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-number">${stats.dioceses}</div>
-                                <div class="stat-label">Dioceses</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-number">${stats.countries}</div>
-                                <div class="stat-label">Countries</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-number">${stats.translations}</div>
-                                <div class="stat-label">Translations</div>
-                            </div>
-                        </div>
-                    `;
-                } else {
-                    html = `
-                        <div class="status error" style="margin-top: 1rem;">
-                            ❌ Error: ${response.message}
-                        </div>
-                    `;
+        (function() {
+            const forms = document.querySelectorAll('.ajax-form');
+            
+            forms.forEach(form => {
+                form.addEventListener('submit', async (event) => {
+                    event.preventDefault();
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    const statusBox = form.querySelector('.form-status');
+                    if (statusBox) {
+                        statusBox.className = 'form-status';
+                        statusBox.style.display = 'none';
+                        statusBox.textContent = '';
+                    }
+                    
+                    const payload = {};
+                    const formData = new FormData(form);
+                    
+                    for (const [key, value] of formData.entries()) {
+                        const field = form.elements[key];
+                        if (!field) {
+                            payload[key] = value;
+                            continue;
+                        }
+                        
+                        if (field.type === 'checkbox') {
+                            payload[key] = field.checked;
+                            continue;
+                        }
+                        
+                        if (field.type === 'number' || field.dataset.cast === 'int') {
+                            if (value === '') {
+                                payload[key] = null;
+                            } else {
+                                const parsed = parseInt(value, 10);
+                                payload[key] = Number.isNaN(parsed) ? value : parsed;
+                            }
+                            continue;
+                        }
+                        
+                        payload[key] = value;
+                    }
+                    
+                    submitButton.disabled = true;
+                    submitButton.classList.add('pure-button-disabled');
+                    
+                    try {
+                        const response = await fetch(form.dataset.endpoint, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        const result = await response.json();
+                        
+                        if (!response.ok) {
+                            throw new Error(result.error || 'Request failed');
+                        }
+                        
+                        form.reset();
+                        showStatus(statusBox, 'Saved successfully.', false);
+                        refreshSelects(result, form.dataset.endpoint);
+                    } catch (error) {
+                        showStatus(statusBox, error.message, true);
+                    } finally {
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('pure-button-disabled');
+                    }
+                });
+            });
+            
+            function showStatus(node, message, isError) {
+                if (!node) return;
+                node.textContent = message;
+                node.className = 'form-status ' + (isError ? 'error' : 'success');
+            }
+            
+            function refreshSelects(result, endpoint) {
+                if (!result || !result.id) {
+                    return;
                 }
                 
-                document.getElementById('connection-status').innerHTML = html;
+                if (endpoint === '/api/countries') {
+                    const label = result.name_english || result.name_latin || result.code;
+                    document.querySelectorAll('select[data-source="countries"]').forEach((select) => {
+                        const exists = Array.from(select.options).some(
+                            option => option.value === String(result.id)
+                        );
+                        if (!exists) {
+                            const option = new Option(
+                                `${result.code} — ${label}`,
+                                result.id
+                            );
+                            select.appendChild(option);
+                        }
+                    });
+                }
+                
+                if (endpoint === '/api/dioceses') {
+                    const label = result.name_english || result.name_latin || result.code;
+                    document.querySelectorAll('select[data-source="dioceses"]').forEach((select) => {
+                        const exists = Array.from(select.options).some(
+                            option => option.value === String(result.id)
+                        );
+                        if (!exists) {
+                            const option = new Option(
+                                `${result.code} — ${label}`,
+                                result.id
+                            );
+                            select.appendChild(option);
+                        }
+                    });
+                }
             }
-        });
+        })();
     </script>
 </body>
 </html>
-
