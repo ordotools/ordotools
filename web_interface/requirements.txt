@@ -1,2 +1,4 @@
 Flask==3.0.0
+Flask-WTF==1.2.1
+python-dateutil==2.9.0.post0
 

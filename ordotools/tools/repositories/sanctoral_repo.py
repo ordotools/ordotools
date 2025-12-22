@@ -151,6 +151,108 @@ class SanctoralRepository:
             'com_3': com_3,
         }
     
+    def save_feast(self, feast_data: Dict):
+        """Save a sanctoral feast (insert or update)."""
+        # Prepare JSON fields
+        mass = json.dumps(feast_data.get('mass', {}))
+        vespers = json.dumps(feast_data.get('vespers', {}))
+        matins = json.dumps(feast_data.get('matins', {}))
+        lauds = json.dumps(feast_data.get('lauds', {}))
+        prime = json.dumps(feast_data.get('prime', {}))
+        little_hours = json.dumps(feast_data.get('little_hours', {}))
+        compline = json.dumps(feast_data.get('compline', {}))
+        com_1 = json.dumps(feast_data.get('com_1', {}))
+        com_2 = json.dumps(feast_data.get('com_2', {}))
+        com_3 = json.dumps(feast_data.get('com_3', {}))
+        
+        # Handle office_type boolean/None
+        office_type = feast_data.get('office_type')
+        if office_type is False:
+            office_type = None
+            
+        nobility = feast_data.get('nobility', (None, None, None, None, None, None))
+        
+        # Check if exists (by ID) - Note: This assumes ID is provided for updates
+        # For new feasts, we might need to handle ID generation or let DB handle it if autoincrement
+        # But the schema seems to use integer IDs.
+        
+        is_update = False
+        if 'id' in feast_data and feast_data['id']:
+            # Check if it exists
+            cursor = self.conn.execute("SELECT 1 FROM sanctoral_feasts_new WHERE id = ?", (feast_data['id'],))
+            if cursor.fetchone():
+                is_update = True
+        
+        if is_update:
+            self.conn.execute(
+                """
+                UPDATE sanctoral_feasts_new SET
+                    rank_numeric = ?, rank_verbose = ?, color = ?, office_type = ?,
+                    nobility_1 = ?, nobility_2 = ?, nobility_3 = ?,
+                    nobility_4 = ?, nobility_5 = ?, nobility_6 = ?,
+                    mass_properties = ?, vespers_properties = ?, matins_properties = ?,
+                    lauds_properties = ?, prime_properties = ?, little_hours_properties = ?,
+                    compline_properties = ?, com_1_properties = ?, com_2_properties = ?,
+                    com_3_properties = ?
+                WHERE id = ?
+                """,
+                (
+                    feast_data['rank'][0], feast_data['rank'][1], feast_data['color'], office_type,
+                    nobility[0], nobility[1], nobility[2], nobility[3], nobility[4], nobility[5],
+                    mass, vespers, matins, lauds, prime, little_hours, compline,
+                    com_1, com_2, com_3,
+                    feast_data['id']
+                )
+            )
+            feast_id = feast_data['id']
+        else:
+            cursor = self.conn.execute(
+                """
+                INSERT INTO sanctoral_feasts_new (
+                    rank_numeric, rank_verbose, color, office_type,
+                    nobility_1, nobility_2, nobility_3, nobility_4, nobility_5, nobility_6,
+                    mass_properties, vespers_properties, matins_properties,
+                    lauds_properties, prime_properties, little_hours_properties,
+                    compline_properties, com_1_properties, com_2_properties, com_3_properties
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    feast_data['rank'][0], feast_data['rank'][1], feast_data['color'], office_type,
+                    nobility[0], nobility[1], nobility[2], nobility[3], nobility[4], nobility[5],
+                    mass, vespers, matins, lauds, prime, little_hours, compline,
+                    com_1, com_2, com_3
+                )
+            )
+            feast_id = cursor.lastrowid
+
+        # Handle Date Assignment
+        # First, remove existing assignment for this feast
+        self.conn.execute("DELETE FROM feast_date_assignments WHERE feast_id = ?", (feast_id,))
+        
+        # Add new assignment
+        diocese_id = None
+        if feast_data.get('diocese_source') and feast_data['diocese_source'] != 'roman':
+             # Look up diocese ID
+             cursor = self.conn.execute("SELECT id FROM dioceses WHERE code = ?", (feast_data['diocese_source'],))
+             row = cursor.fetchone()
+             if row:
+                 diocese_id = row[0]
+        
+        self.conn.execute(
+            "INSERT INTO feast_date_assignments (feast_id, month, day, diocese_id) VALUES (?, ?, ?, ?)",
+            (feast_id, feast_data['month'], feast_data['day'], diocese_id)
+        )
+        
+        self.conn.commit()
+        return feast_id
+
+    def delete_feast(self, feast_id: int):
+        """Delete a sanctoral feast."""
+        # Delete assignments first (FK should handle this but to be safe/explicit)
+        self.conn.execute("DELETE FROM feast_date_assignments WHERE feast_id = ?", (feast_id,))
+        self.conn.execute("DELETE FROM sanctoral_feasts_new WHERE id = ?", (feast_id,))
+        self.conn.commit()
+
     def close(self):
         """Close database connection."""
         if self.conn:

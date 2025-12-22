@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,183 +8,376 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/pure-min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/grids-responsive-min.css">
     <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        * {
             margin: 0;
-            background: #f4f5f7;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2rem;
+        }
+
+        .nav-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            background: none;
+            border: none;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            cursor: pointer;
+            color: #666;
+            font-weight: 600;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            background: #f5f5f5;
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            align-items: end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            font-weight: 600;
             color: #333;
         }
-        header {
-            background: #1f4b99;
-            color: #fff;
-            padding: 1.5rem 1rem;
-        }
-        header .pure-button {
-            background: #fff;
-            color: #1f4b99;
-        }
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem 3rem;
-        }
-        .controls {
-            background: #fff;
-            border: 1px solid #d8d8d8;
+        .filter-group select,
+        .filter-group input[type="text"] {
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
             border-radius: 6px;
             padding: 1.25rem;
             margin-bottom: 1.5rem;
         }
-        .controls h2 {
-            margin-top: 0;
-            font-size: 1.2rem;
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        .filters {
-            margin-top: 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0.75rem;
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
         }
-        .filters label {
-            font-weight: 600;
-            display: block;
-            margin-bottom: 0.3rem;
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
         }
-        .filters select, .filters input {
-            width: 100%;
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
         }
-        .results {
-            background: #fff;
-            border: 1px solid #d8d8d8;
-            border-radius: 6px;
-            padding: 1.25rem;
+
+        .btn-secondary {
+            background: #6c757d;
+            box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4);
         }
-        .results h2 {
-            margin: 0 0 1rem;
-            font-size: 1.2rem;
-        }
-        .table-wrapper {
+
+        .table-container {
             overflow-x: auto;
         }
+
         table {
             width: 100%;
         }
-        .placeholder {
-            padding: 2rem 0;
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pagination button {
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #667eea;
+            color: white;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .pagination .page-info {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .stats {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .loading {
             text-align: center;
             color: #666;
         }
-        .meta-bar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            font-size: 0.9rem;
-            color: #555;
+        .htmx-indicator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 0.5rem;
         }
-        .pagination {
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: 1.25rem;
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
-        .pagination button {
-            min-width: 5rem;
-        }
+
         .badge {
             display: inline-block;
-            padding: 0.1rem 0.5rem;
-            border-radius: 999px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: #667eea;
+            color: white;
+        }
+
+        .badge-source {
+            background: #28a745;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-unique {
+            background: #ff6b6b;
+        }
+
+        .rank-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
             font-size: 0.8rem;
             background: #e2e8f0;
         }
         .rank-label {
             font-weight: 600;
         }
-        .loading {
-            text-align: center;
-            padding: 2rem 0;
-            color: #666;
+
+        .rank-1 {
+            background: #ffd700;
+            color: #333;
+        }
+
+        .rank-2 {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .rank-3 {
+            background: #4ecdc4;
+            color: white;
+        }
+
+        .rank-4 {
+            background: #95e1d3;
+            color: #333;
+        }
+
+        .rank-5 {
+            background: #dfe6e9;
+            color: #333;
+        }
+
+        .color-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .color-white {
+            background: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .color-red {
+            background: #dc3545;
+            color: white;
+        }
+
+        .color-green {
+            background: #28a745;
+            color: white;
+        }
+
+        .color-violet {
+            background: #6f42c1;
+            color: white;
+        }
+
+        .color-black {
+            background: #212529;
+            color: white;
+        }
+
+        .color-rose {
+            background: #ff69b4;
+            color: white;
+        }
+
+        .feast-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .flash-messages {
+            margin-bottom: 1rem;
+        }
+
+        .flash-message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .flash-success {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .flash-error {
+            background: #ffebee;
+            color: #c62828;
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="pure-g">
-            <div class="pure-u-1 pure-u-md-3-4">
-                <h1 style="margin: 0 0 0.35rem;">Ordotools Master List</h1>
-                <p style="margin: 0; max-width: 38em;">
-                    Review records across every table. Switch the dataset and adjust the filters to focus on the data you need.
-                </p>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-4" style="text-align: right; align-self: center; margin-top: 1rem;">
-                <div style="display:flex; gap:0.5rem; justify-content:flex-end; flex-wrap:wrap;">
-                    <a class="pure-button pure-button-primary" href="/">Data Entry Forms</a>
-                    <a class="pure-button pure-button-primary" href="/feasts">Feast Manager</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="controls">
-            <h2>Filters</h2>
-            <div class="filters">
-                <div>
-                    <label for="dataset-select">Table</label>
-                    <select id="dataset-select">
-                        <option value="temporal">Temporal feasts</option>
-                        <option value="sanctoral">Sanctoral feasts</option>
-                        <option value="dioceses">Dioceses</option>
-                        <option value="countries">Countries</option>
-                        <option value="translations">Translations</option>
-                    </select>
-                </div>
-                <form id="filters-temporal" class="filter-form" data-type="temporal">
-                    <label for="temporal-language">Language</label>
-                    <select id="temporal-language" name="language" data-role="language-select">
-                        <option value="la">la</option>
-                    </select>
-                    <button type="submit" class="pure-button pure-button-primary" style="margin-top: 0.6rem;">Apply</button>
-                </form>
-                <form id="filters-sanctoral" class="filter-form" data-type="sanctoral" hidden>
-                    <label for="sanctoral-diocese">Diocese</label>
-                    <select id="sanctoral-diocese" name="diocese" data-role="diocese-select">
-                        <option value="roman">Roman</option>
-                    </select>
-                    <label for="sanctoral-language" style="margin-top: 0.6rem;">Language</label>
-                    <select id="sanctoral-language" name="language" data-role="language-select">
-                        <option value="la">la</option>
-                    </select>
-                    <label class="pure-checkbox" style="margin-top: 0.8rem;">
-                        <input type="checkbox" id="sanctoral-unique" name="unique_only">
-                        Only show feasts unique to this diocese
-                    </label>
-                    <button type="submit" class="pure-button pure-button-primary" style="margin-top: 0.6rem;">Apply</button>
-                </form>
-                <form id="filters-translations" class="filter-form" data-type="translations" hidden>
-                    <label for="trans-feast-type">Feast type</label>
-                    <select id="trans-feast-type" name="feast_type">
-                        <option value="">All</option>
-                        <option value="temporal">Temporal</option>
-                        <option value="sanctoral">Sanctoral</option>
-                    </select>
-                    <label for="trans-language" style="margin-top: 0.6rem;">Language</label>
-                    <select id="trans-language" name="language" data-role="language-select" data-include-all="true">
-                        <option value="">All</option>
-                    </select>
-                    <button type="submit" class="pure-button pure-button-primary" style="margin-top: 0.6rem;">Apply</button>
-                </form>
-                <form id="filters-dioceses" class="filter-form" data-type="dioceses" hidden>
-                    <button type="submit" class="pure-button pure-button-primary" style="margin-top: 1.8rem;">Refresh</button>
-                </form>
-                <form id="filters-countries" class="filter-form" data-type="countries" hidden>
-                    <button type="submit" class="pure-button pure-button-primary" style="margin-top: 1.8rem;">Refresh</button>
-                </form>
-            </div>
-        </section>
 
+<body>
         <section class="results">
             <div class="meta-bar" id="results-meta">
                 <span>Select a table to begin.</span>
@@ -272,6 +466,154 @@
                     select.innerHTML = '';
                     if (includeAll) {
                         select.appendChild(new Option('All', ''));
+    <div class="container">
+        <div class="header">
+            <h1>📋 Browse Database</h1>
+            <a href="/" class="nav-link">← Back to Dashboard</a>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash-message flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="card">
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('temporal')">📅 Temporal Feasts</button>
+                <button class="tab" onclick="switchTab('sanctoral')">⛪ Sanctoral Feasts</button>
+                <button class="tab" onclick="switchTab('dioceses')">🏛️ Dioceses</button>
+                <button class="tab" onclick="switchTab('countries')">🌍 Countries</button>
+                <button class="tab" onclick="switchTab('translations')">🌐 Translations</button>
+            </div>
+
+            <!-- Filters for each table type -->
+            <div id="filters-container">
+                <!-- Temporal filters -->
+                <div id="temporal-filters" class="filters">
+                    <div class="filter-group">
+                        <label for="temporal-language">Language</label>
+                        <select id="temporal-language">
+                            <option value="la">Latin (la)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Apply Filters</button>
+                        <a href="/temporal/new" class="btn" style="margin-left: 1rem; text-decoration: none;">+ New
+                            Feast</a>
+                    </div>
+                </div>
+
+                <!-- Sanctoral filters -->
+                <div id="sanctoral-filters" class="filters" style="display: none;">
+                    <div class="filter-group">
+                        <label for="sanctoral-diocese">Diocese</label>
+                        <select id="sanctoral-diocese">
+                            <option value="roman">Roman</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sanctoral-language">Language</label>
+                        <select id="sanctoral-language">
+                            <option value="la">Latin (la)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>&nbsp;</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="unique-only">
+                            <label for="unique-only">Unique to diocese only</label>
+                        </div>
+                    </div>
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Apply Filters</button>
+                        <a href="/sanctoral/new" class="btn" style="margin-left: 1rem; text-decoration: none;">+ New
+                            Feast</a>
+                    </div>
+                </div>
+
+                <!-- Translation filters -->
+                <div id="translations-filters" class="filters" style="display: none;">
+                    <div class="filter-group">
+                        <label for="trans-feast-type">Feast Type</label>
+                        <select id="trans-feast-type">
+                            <option value="">All</option>
+                            <option value="temporal">Temporal</option>
+                            <option value="sanctoral">Sanctoral</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="trans-language">Language</label>
+                        <select id="trans-language">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Apply Filters</button>
+                    </div>
+                </div>
+
+                <!-- No special filters for dioceses/countries -->
+                <div id="dioceses-filters" class="filters" style="display: none;">
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Refresh</button>
+                    </div>
+                </div>
+
+                <div id="countries-filters" class="filters" style="display: none;">
+                    <div class="filter-group" style="justify-content: flex-end;">
+                        <button class="btn" onclick="applyFilters()">Refresh</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="results-container">
+                <div class="loading">
+                    <div class="htmx-indicator" style="width: 40px; height: 40px; margin: 0 auto 1rem;"></div>
+                    <p>Loading data...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        let currentType = 'temporal';
+        let state = {
+            temporal: { language: 'la' },
+            sanctoral: { diocese: 'roman', language: 'la', uniqueOnly: false },
+            translations: { feastType: '', language: '' }
+        };
+
+        // Load data on page load
+        window.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type');
+            if (type) {
+                switchTab(type);
+            } else {
+                loadLanguages();
+                loadDioceses();
+                switchTab('temporal');
+            }
+        });
+
+        async function loadLanguages() {
+            try {
+                const response = await fetch('/api/languages');
+                const languages = await response.json();
+
+                // Populate language selectors
+                ['temporal-language', 'sanctoral-language', 'trans-language'].forEach(id => {
+                    const select = document.getElementById(id);
+                    if (id === 'trans-language') {
+                        select.innerHTML = '<option value="">All</option>';
+                    } else {
+                        select.innerHTML = '';
                     }
                     languages.forEach(lang => {
                         const option = new Option(lang, lang);
@@ -323,186 +665,209 @@
                         applyFilters(form);
                     });
                 });
-                
-                pagination.addEventListener('click', (event) => {
-                    if (event.target.tagName !== 'BUTTON') return;
-                    const action = event.target.dataset.action;
-                    const { page, total_pages } = getCurrentPagination();
-                    if (!page || !total_pages) return;
-                    let targetPage = page;
-                    if (action === 'first') targetPage = 1;
-                    if (action === 'last') targetPage = total_pages;
-                    if (action === 'prev' && page > 1) targetPage = page - 1;
-                    if (action === 'next' && page < total_pages) targetPage = page + 1;
-                    if (targetPage !== page) {
-                        setCurrentPage(targetPage);
-                        loadData();
-                    }
+            } catch (error) {
+                console.error('Error loading languages:', error);
+            }
+        }
+
+        async function loadDioceses() {
+            try {
+                const response = await fetch('/api/dioceses');
+                const dioceses = await response.json();
+                const select = document.getElementById('sanctoral-diocese');
+                select.innerHTML = '';
+                dioceses.forEach(diocese => {
+                    const option = document.createElement('option');
+                    option.value = diocese.code;
+                    option.textContent = diocese.name_english || diocese.name_latin;
+                    select.appendChild(option);
                 });
+            } catch (error) {
+                console.error('Error loading dioceses:', error);
             }
-            
-            function switchDataset(type) {
-                state.currentType = type;
-                datasetSelect.value = type;
-                filterForms.forEach(form => {
-                    form.hidden = form.dataset.type !== type;
-                });
-                loadData();
-            }
-            
-            function applyFilters(form) {
-                const type = form.dataset.type;
-                if (type === 'temporal') {
-                    state.temporal.language = form.language.value || 'la';
-                    state.temporal.page = 1;
+        }
+
+        function getLanguageName(code) {
+            const names = {
+                'la': 'Latin (la)',
+                'en': 'English (en)',
+                'fr': 'French (fr)',
+                'es': 'Spanish (es)',
+                'it': 'Italian (it)',
+                'de': 'German (de)'
+            };
+            return names[code] || code;
+        }
+
+        function switchTab(type) {
+            currentType = type;
+            currentPage = 1;
+
+            // Update tab styling
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach((tab, index) => {
+                tab.classList.remove('active');
+                const types = ['temporal', 'sanctoral', 'dioceses', 'countries', 'translations'];
+                if (types[index] === type) {
+                    tab.classList.add('active');
                 }
-                if (type === 'sanctoral') {
-                    state.sanctoral.diocese = form.diocese.value || 'roman';
-                    state.sanctoral.language = form.language.value || 'la';
-                    state.sanctoral.unique_only = form.unique_only.checked;
-                    state.sanctoral.page = 1;
+            });
+
+            // Show/hide appropriate filters
+            ['temporal', 'sanctoral', 'dioceses', 'countries', 'translations'].forEach(t => {
+                const filterEl = document.getElementById(`${t}-filters`);
+                if (filterEl) {
+                    filterEl.style.display = (t === type) ? 'flex' : 'none';
                 }
-                if (type === 'translations') {
-                    state.translations.feast_type = form.feast_type.value || '';
-                    state.translations.language = form.language.value || '';
-                    state.translations.page = 1;
+            });
+
+            // Load data
+            loadData();
+        }
+
+        function applyFilters() {
+            currentPage = 1;
+
+            // Update state based on current type
+            if (currentType === 'temporal') {
+                state.temporal.language = document.getElementById('temporal-language').value;
+            } else if (currentType === 'sanctoral') {
+                state.sanctoral.diocese = document.getElementById('sanctoral-diocese').value;
+                state.sanctoral.language = document.getElementById('sanctoral-language').value;
+                state.sanctoral.uniqueOnly = document.getElementById('unique-only').checked;
+            } else if (currentType === 'translations') {
+                state.translations.feastType = document.getElementById('trans-feast-type').value;
+                state.translations.language = document.getElementById('trans-language').value;
+            }
+
+            loadData();
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            loadData();
+        }
+
+        async function loadData() {
+            let url = `/api/browse/${currentType}?page=${currentPage}`;
+
+            if (currentType === 'temporal') {
+                url += `&language=${state.temporal.language}`;
+            } else if (currentType === 'sanctoral') {
+                url += `&diocese=${state.sanctoral.diocese}&language=${state.sanctoral.language}`;
+                if (state.sanctoral.uniqueOnly) {
+                    url += '&unique_only=true';
                 }
-                if (type === 'dioceses') {
-                    state.dioceses.page = 1;
-                }
-                if (type === 'countries') {
-                    state.countries.page = 1;
-                }
-                loadData();
+            } else if (currentType === 'translations') {
+                if (state.translations.feastType) url += `&feast_type=${state.translations.feastType}`;
+                if (state.translations.language) url += `&language=${state.translations.language}`;
             }
-            
-            function setCurrentPage(page) {
-                state[state.currentType].page = page;
-            }
-            
-            function getCurrentPagination() {
-                return state[state.currentType].pagination || { page: 1, total_pages: 1 };
-            }
-            
-            async function loadData() {
-                showLoading();
-                const { currentType } = state;
-                let url = '';
-                const perPage = 50;
-                
-                if (currentType === 'temporal') {
-                    const { language, page } = state.temporal;
-                    url = `/api/browse/temporal?page=${page || 1}&per_page=${perPage}&language=${encodeURIComponent(language)}`;
-                } else if (currentType === 'sanctoral') {
-                    const { diocese, unique_only, language, page } = state.sanctoral;
-                    url = `/api/browse/sanctoral?page=${page || 1}&per_page=${perPage}&diocese=${encodeURIComponent(diocese)}&unique_only=${unique_only}&language=${encodeURIComponent(language)}`;
-                } else if (currentType === 'dioceses') {
-                    const { page } = state.dioceses;
-                    url = `/api/browse/dioceses?page=${page || 1}&per_page=${perPage}`;
-                } else if (currentType === 'countries') {
-                    const { page } = state.countries;
-                    url = `/api/browse/countries?page=${page || 1}&per_page=${perPage}`;
-                } else if (currentType === 'translations') {
-                    const { feast_type, language, page } = state.translations;
-                    const params = new URLSearchParams({
-                        page: String(page || 1),
-                        per_page: String(perPage)
-                    });
-                    if (feast_type) params.append('feast_type', feast_type);
-                    if (language) params.append('language', language);
-                    url = `/api/browse/translations?${params.toString()}`;
-                }
-                
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) {
-                        throw new Error('Unable to fetch data');
-                    }
-                    const data = await response.json();
-                    renderResults(data);
-                } catch (error) {
-                    showError(error.message || 'Unable to load data.');
-                }
-            }
-            
-            function showLoading() {
-                resultsContainer.innerHTML = '<div class="loading">Loading…</div>';
-                pagination.hidden = true;
-                metaBar.innerHTML = '<span>Fetching data…</span><span></span>';
-            }
-            
-            function showError(message) {
-                resultsContainer.innerHTML = `<p class="placeholder">${message}</p>`;
-                pagination.hidden = true;
-                metaBar.innerHTML = `<span>${message}</span><span></span>`;
-            }
-            
-            function renderResults(data) {
-                const type = state.currentType;
-                state[type].pagination = data.pagination || { page: 1, total_pages: 1, total: data.length || 0 };
-                
-                if (type === 'temporal') {
-                    renderTemporalTable(data);
-                } else if (type === 'sanctoral') {
-                    renderSanctoralTable(data);
-                } else if (type === 'dioceses') {
-                    renderDiocesesTable(data);
-                } else if (type === 'countries') {
-                    renderCountriesTable(data);
-                } else if (type === 'translations') {
-                    renderTranslationsTable(data);
-                }
-            }
-            
-            function renderTemporalTable(data) {
-                const { feasts = [], pagination: pageInfo, language } = data;
-                updateMetaBar('Temporal feasts', pageInfo, `Language: ${language}`);
-                resultsContainer.innerHTML = generateTemporalRows(feasts);
-                updatePagination(pageInfo);
-            }
-            
-            function generateTemporalRows(feasts) {
-                if (!feasts.length) {
-                    return '<p class="placeholder">No records for these filters.</p>';
-                }
-                let html = '<table class="pure-table pure-table-horizontal"><thead><tr><th>Name</th><th>Identifier</th><th>Rank</th><th>Color</th><th>Office</th></tr></thead><tbody>';
-                feasts.forEach(feast => {
-                    const rankLabel = feast.rank ? `${feast.rank[0]} — ${feast.rank[1]}` : 'n/a';
-                    html += `
-                        <tr>
-                            <td>${escapeHtml(feast.name || '')}</td>
-                            <td><code>${escapeHtml(feast.id)}</code></td>
-                            <td><span class="badge rank-label">${rankLabel}</span></td>
-                            <td>${escapeHtml(feast.color || '')}</td>
-                            <td>${escapeHtml(feast.office_type || '')}</td>
-                        </tr>
-                    `;
-                });
-                html += '</tbody></table>';
-                return html;
-            }
-            
-            function renderSanctoralTable(data) {
-                const { feasts = [], pagination: pageInfo, diocese, unique_only, language } = data;
-                const dioceseLabel = unique_only ? `Unique to ${diocese}` : `Diocese filter: ${diocese}`;
-                updateMetaBar('Sanctoral feasts', pageInfo, `${dioceseLabel} · Language: ${language}`);
-                if (!feasts.length) {
-                    resultsContainer.innerHTML = '<p class="placeholder">No records for these filters.</p>';
-                    updatePagination(pageInfo);
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.error) {
+                    document.getElementById('results-container').innerHTML =
+                        `<div class="loading"><p style="color: red;">Error: ${data.error}</p></div>`;
                     return;
                 }
-                let html = '<table class="pure-table pure-table-horizontal"><thead><tr><th>Date</th><th>Name</th><th>Feast ID</th><th>Source</th><th>Rank</th><th>Color</th></tr></thead><tbody>';
+
+                renderTable(data);
+            } catch (error) {
+                document.getElementById('results-container').innerHTML =
+                    `<div class="loading"><p style="color: red;">Error loading data: ${error.message}</p></div>`;
+            }
+        }
+
+        function renderTable(data) {
+            if (currentType === 'temporal') {
+                renderTemporalTable(data);
+            } else if (currentType === 'sanctoral') {
+                renderSanctoralTable(data);
+            } else if (currentType === 'dioceses') {
+                renderDiocesesTable(data);
+            } else if (currentType === 'countries') {
+                renderCountriesTable(data);
+            } else if (currentType === 'translations') {
+                renderTranslationsTable(data);
+            }
+        }
+
+        function getRankBadgeClass(rank) {
+            if (rank === 1) return 'rank-1';
+            if (rank === 2) return 'rank-2';
+            if (rank === 3) return 'rank-3';
+            if (rank === 4) return 'rank-4';
+            return 'rank-5';
+        }
+
+        function getColorBadgeClass(color) {
+            const c = color.toLowerCase();
+            if (c === 'white') return 'color-white';
+            if (c === 'red') return 'color-red';
+            if (c === 'green') return 'color-green';
+            if (c === 'violet') return 'color-violet';
+            if (c === 'black') return 'color-black';
+            if (c === 'rose') return 'color-rose';
+            return 'color-white';
+        }
+
+        function renderTemporalTable(data) {
+            const { feasts, pagination, language } = data;
+
+            let html = `
+                <div class="stats">
+                    <span><strong>Language:</strong> ${getLanguageName(language)}</span>
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feast Name</th>
+                                <th>ID</th>
+                                <th>Rank</th>
+                                <th>Color</th>
+                                <th>Office Type</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            if (feasts.length === 0) {
+                html += '<tr><td colspan="5" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
+>>>>>>> c197f21 (update web interface for adding feast data)
                 feasts.forEach(feast => {
                     const date = feast.month && feast.day ? `${String(feast.month).padStart(2, '0')}-${String(feast.day).padStart(2, '0')}` : '';
                     const rankLabel = feast.rank ? feast.rank[1] : '';
                     html += `
                         <tr>
+<<<<<<< HEAD
                             <td>${date}</td>
                             <td>${escapeHtml(feast.name || '')}</td>
                             <td>${escapeHtml(String(feast.id))}</td>
                             <td><span class="badge">${escapeHtml(feast.diocese_source || '')}</span></td>
                             <td>${escapeHtml(rankLabel)}</td>
                             <td>${escapeHtml(feast.color || '')}</td>
+=======
+                            <td><span class="feast-name">${feast.name}</span></td>
+                            <td>${feast.id}</td>
+                            <td><span class="rank-badge ${getRankBadgeClass(rankNum)}">${feast.rank ? feast.rank[1] : 'N/A'}</span></td>
+                            <td><span class="color-badge ${getColorBadgeClass(feast.color)}">${feast.color}</span></td>
+                            <td>${feast.office_type || 'N/A'}</td>
+                            <td>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <a href="/temporal/${feast.id}/edit" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Edit</a>
+                                    <form action="/temporal/${feast.id}/delete" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this feast?');">
+                                        <button type="submit" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; background: #dc3545; box-shadow: none;">Delete</button>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                     `;
                 });
@@ -510,16 +875,95 @@
                 resultsContainer.innerHTML = html;
                 updatePagination(pageInfo);
             }
-            
-            function renderDiocesesTable(data) {
-                const { dioceses = [], pagination: pageInfo } = data;
-                updateMetaBar('Dioceses', pageInfo);
-                if (!dioceses.length) {
-                    resultsContainer.innerHTML = '<p class="placeholder">No dioceses found.</p>';
-                    updatePagination(pageInfo);
-                    return;
-                }
-                let html = '<table class="pure-table pure-table-horizontal"><thead><tr><th>Code</th><th>Name (Latin)</th><th>Name (English)</th><th>Country</th></tr></thead><tbody>';
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+
+        function renderSanctoralTable(data) {
+            const { feasts, pagination, diocese, unique_only, language } = data;
+
+            let html = `
+                <div class="stats">
+                    <span><strong>Diocese:</strong> ${diocese}</span>
+                    <span><strong>Language:</strong> ${getLanguageName(language)}</span>
+                    ${unique_only ? '<span><strong>Showing:</strong> Unique to diocese only</span>' : ''}
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Feast Name</th>
+                                <th>ID</th>
+                                <th>Source</th>
+                                <th>Rank</th>
+                                <th>Color</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            if (feasts.length === 0) {
+                html += '<tr><td colspan="6" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
+                feasts.forEach(feast => {
+                    const date = `${String(feast.month).padStart(2, '0')}/${String(feast.day).padStart(2, '0')}`;
+                    const rankNum = feast.rank ? feast.rank[0] : 5;
+                    const isUnique = feast.diocese_source !== 'roman';
+                    html += `
+                        <tr>
+                            <td><strong>${date}</strong></td>
+                            <td><span class="feast-name">${feast.name}</span></td>
+                            <td>${feast.id}</td>
+                            <td><span class="badge-source ${isUnique ? 'badge-unique' : ''}">${feast.diocese_source}</span></td>
+                            <td><span class="rank-badge ${getRankBadgeClass(rankNum)}">${feast.rank ? feast.rank[1] : 'N/A'}</span></td>
+                            <td><span class="color-badge ${getColorBadgeClass(feast.color)}">${feast.color}</span></td>
+                            <td>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <a href="/sanctoral/${feast.id}/edit" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Edit</a>
+                                    <form action="/sanctoral/${feast.id}/delete" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this feast?');">
+                                        <button type="submit" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; background: #dc3545; box-shadow: none;">Delete</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                });
+            }
+
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+
+        function renderDiocesesTable(data) {
+            const { dioceses, pagination } = data;
+
+            let html = `
+                <div class="stats">
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name (Latin)</th>
+                                <th>Name (English)</th>
+                                <th>Country</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            if (dioceses.length === 0) {
+                html += '<tr><td colspan="4" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
                 dioceses.forEach(diocese => {
                     html += `
                         <tr>
@@ -534,16 +978,35 @@
                 resultsContainer.innerHTML = html;
                 updatePagination(pageInfo);
             }
-            
-            function renderCountriesTable(data) {
-                const { countries = [], pagination: pageInfo } = data;
-                updateMetaBar('Countries', pageInfo);
-                if (!countries.length) {
-                    resultsContainer.innerHTML = '<p class="placeholder">No countries found.</p>';
-                    updatePagination(pageInfo);
-                    return;
-                }
-                let html = '<table class="pure-table pure-table-horizontal"><thead><tr><th>Code</th><th>Name (Latin)</th><th>Name (English)</th></tr></thead><tbody>';
+
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+
+        function renderCountriesTable(data) {
+            const { countries, pagination } = data;
+
+            let html = `
+                <div class="stats">
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name (Latin)</th>
+                                <th>Name (English)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            if (countries.length === 0) {
+                html += '<tr><td colspan="3" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
                 countries.forEach(country => {
                     html += `
                         <tr>
@@ -557,19 +1020,38 @@
                 resultsContainer.innerHTML = html;
                 updatePagination(pageInfo);
             }
-            
-            function renderTranslationsTable(data) {
-                const { translations = [], pagination: pageInfo, feast_type, language } = data;
-                const pieces = [];
-                if (feast_type) pieces.push(`Type: ${feast_type}`);
-                if (language) pieces.push(`Language: ${language}`);
-                updateMetaBar('Translations', pageInfo, pieces.join(' · '));
-                if (!translations.length) {
-                    resultsContainer.innerHTML = '<p class="placeholder">No translations match these filters.</p>';
-                    updatePagination(pageInfo);
-                    return;
-                }
-                let html = '<table class="pure-table pure-table-horizontal"><thead><tr><th>Feast ID</th><th>Type</th><th>Language</th><th>Translation</th><th>Default?</th></tr></thead><tbody>';
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+
+        function renderTranslationsTable(data) {
+            const { translations, pagination, feast_type, language } = data;
+
+            let html = `
+                <div class="stats">
+                    ${feast_type ? `<span><strong>Feast Type:</strong> ${feast_type}</span>` : ''}
+                    ${language ? `<span><strong>Language:</strong> ${getLanguageName(language)}</span>` : ''}
+                    <span><strong>Total Records:</strong> ${pagination.total}</span>
+                    <span><strong>Page:</strong> ${pagination.page} of ${pagination.total_pages}</span>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feast ID</th>
+                                <th>Type</th>
+                                <th>Language</th>
+                                <th>Translation</th>
+                                <th>Default</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            if (translations.length === 0) {
+                html += '<tr><td colspan="5" style="text-align: center; padding: 2rem;">No records found</td></tr>';
+            } else {
                 translations.forEach(trans => {
                     html += `
                         <tr>
@@ -585,44 +1067,30 @@
                 resultsContainer.innerHTML = html;
                 updatePagination(pageInfo);
             }
-            
-            function updateMetaBar(title, pageInfo, extra) {
-                const total = pageInfo ? pageInfo.total : 0;
-                const pageText = pageInfo ? `Page ${pageInfo.page} of ${Math.max(pageInfo.total_pages || 1, 1)}` : '';
-                const extraText = extra ? ` · ${extra}` : '';
-                metaBar.innerHTML = `<span>${title} — ${total} records${extraText}</span><span>${pageText}</span>`;
-            }
-            
-            function updatePagination(pageInfo) {
-                if (!pageInfo || pageInfo.total_pages <= 1) {
-                    pagination.hidden = true;
-                    paginationInfo.textContent = '';
-                    return;
-                }
-                pagination.hidden = false;
-                paginationInfo.textContent = `Page ${pageInfo.page} of ${pageInfo.total_pages}`;
-                const buttons = pagination.querySelectorAll('button');
-                buttons.forEach(button => {
-                    const action = button.dataset.action;
-                    button.disabled = false;
-                    if (action === 'first' || action === 'prev') {
-                        button.disabled = pageInfo.page <= 1;
-                    }
-                    if (action === 'next' || action === 'last') {
-                        button.disabled = pageInfo.page >= pageInfo.total_pages;
-                    }
-                });
-            }
-            
-            function escapeHtml(input) {
-                if (input === null || input === undefined) return '';
-                return String(input)
-                    .replace(/&/g, '&amp;')
-                    .replace(/</g, '&lt;')
-                    .replace(/>/g, '&gt;')
-                    .replace(/"/g, '&quot;');
-            }
-        })();
+            html += '</tbody></table></div>' + renderPagination(pagination);
+            document.getElementById('results-container').innerHTML = html;
+        }
+
+        function renderPagination(pagination) {
+            return `
+                <div class="pagination">
+                    <button onclick="changePage(1)" ${pagination.page === 1 ? 'disabled' : ''}>
+                        ⏮ First
+                    </button>
+                    <button onclick="changePage(${pagination.page - 1})" ${pagination.page === 1 ? 'disabled' : ''}>
+                        ← Previous
+                    </button>
+                    <span class="page-info">Page ${pagination.page} of ${pagination.total_pages || 1}</span>
+                    <button onclick="changePage(${pagination.page + 1})" ${pagination.page >= pagination.total_pages ? 'disabled' : ''}>
+                        Next →
+                    </button>
+                    <button onclick="changePage(${pagination.total_pages || 1})" ${pagination.page >= pagination.total_pages ? 'disabled' : ''}>
+                        Last ⏭
+                    </button>
+                </div>
+            `;
+        }
     </script>
 </body>
+
 </html>

@@ -73,6 +73,76 @@ class TemporalRepository:
             'com_3': com_3,
         }
     
+    def save_feast(self, feast_data: Dict):
+        """Save a temporal feast (insert or update)."""
+        # Prepare JSON fields
+        mass = json.dumps(feast_data.get('mass', {}))
+        vespers = json.dumps(feast_data.get('vespers', {}))
+        matins = json.dumps(feast_data.get('matins', {}))
+        lauds = json.dumps(feast_data.get('lauds', {}))
+        prime = json.dumps(feast_data.get('prime', {}))
+        little_hours = json.dumps(feast_data.get('little_hours', {}))
+        compline = json.dumps(feast_data.get('compline', {}))
+        com_1 = json.dumps(feast_data.get('com_1', {}))
+        com_2 = json.dumps(feast_data.get('com_2', {}))
+        com_3 = json.dumps(feast_data.get('com_3', {}))
+        
+        # Handle office_type boolean/None
+        office_type = feast_data.get('office_type')
+        if office_type is False:
+            office_type = None
+            
+        nobility = feast_data.get('nobility', (None, None, None, None, None, None))
+        
+        # Check if exists
+        exists = self.get_feast(feast_data['id'])
+        
+        if exists:
+            self.conn.execute(
+                """
+                UPDATE temporal_feasts SET
+                    rank_numeric = ?, rank_verbose = ?, color = ?, office_type = ?,
+                    nobility_1 = ?, nobility_2 = ?, nobility_3 = ?,
+                    nobility_4 = ?, nobility_5 = ?, nobility_6 = ?,
+                    mass_properties = ?, vespers_properties = ?, matins_properties = ?,
+                    lauds_properties = ?, prime_properties = ?, little_hours_properties = ?,
+                    compline_properties = ?, com_1_properties = ?, com_2_properties = ?,
+                    com_3_properties = ?
+                WHERE id = ?
+                """,
+                (
+                    feast_data['rank'][0], feast_data['rank'][1], feast_data['color'], office_type,
+                    nobility[0], nobility[1], nobility[2], nobility[3], nobility[4], nobility[5],
+                    mass, vespers, matins, lauds, prime, little_hours, compline,
+                    com_1, com_2, com_3,
+                    feast_data['id']
+                )
+            )
+        else:
+            self.conn.execute(
+                """
+                INSERT INTO temporal_feasts (
+                    id, rank_numeric, rank_verbose, color, office_type,
+                    nobility_1, nobility_2, nobility_3, nobility_4, nobility_5, nobility_6,
+                    mass_properties, vespers_properties, matins_properties,
+                    lauds_properties, prime_properties, little_hours_properties,
+                    compline_properties, com_1_properties, com_2_properties, com_3_properties
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    feast_data['id'], feast_data['rank'][0], feast_data['rank'][1], feast_data['color'], office_type,
+                    nobility[0], nobility[1], nobility[2], nobility[3], nobility[4], nobility[5],
+                    mass, vespers, matins, lauds, prime, little_hours, compline,
+                    com_1, com_2, com_3
+                )
+            )
+        self.conn.commit()
+
+    def delete_feast(self, feast_id: str):
+        """Delete a temporal feast."""
+        self.conn.execute("DELETE FROM temporal_feasts WHERE id = ?", (feast_id,))
+        self.conn.commit()
+
     def close(self):
         """Close database connection."""
         if self.conn:

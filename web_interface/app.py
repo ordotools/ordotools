@@ -10,14 +10,17 @@ from typing import Optional, List, Dict, Any
 # Add parent directory to path to import ordotools
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from flask import Flask, render_template, jsonify, request, g
+from flask import Flask, render_template, jsonify, request, g, redirect, url_for, flash
 from ordotools.tools.db import get_connection
 from ordotools.tools.repositories.dioceses_repo import DiocesesRepository
 from ordotools.tools.repositories.temporal_repo import TemporalRepository
 from ordotools.tools.repositories.sanctoral_repo import SanctoralRepository
 from ordotools.tools.repositories.translations_repo import TranslationsRepository
+from forms import TemporalFeastForm, SanctoralFeastForm
+import json
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'dev-key-please-change-in-production'
 
 
 def get_db():
@@ -275,7 +278,113 @@ def get_temporal_feasts():
         return jsonify({'error': str(e)}), 500
 
 
-@app.route('/api/sanctoral/feasts', methods=['GET', 'POST'])
+@app.route('/temporal/new', methods=['GET', 'POST'])
+def new_temporal_feast():
+    """Create a new temporal feast."""
+    form = TemporalFeastForm()
+    if form.validate_on_submit():
+        repos = get_repositories()
+        feast_data = {
+            'id': form.id.data,
+            'rank': [form.rank_numeric.data, form.rank_verbose.data],
+            'color': form.color.data,
+            'office_type': form.office_type.data,
+            'nobility': (
+                form.nobility_1.data, form.nobility_2.data, form.nobility_3.data,
+                form.nobility_4.data, form.nobility_5.data, form.nobility_6.data
+            ),
+            'mass': json.loads(form.mass_properties.data) if form.mass_properties.data else {},
+            'vespers': json.loads(form.vespers_properties.data) if form.vespers_properties.data else {},
+            'matins': json.loads(form.matins_properties.data) if form.matins_properties.data else {},
+            'lauds': json.loads(form.lauds_properties.data) if form.lauds_properties.data else {},
+            'prime': json.loads(form.prime_properties.data) if form.prime_properties.data else {},
+            'little_hours': json.loads(form.little_hours_properties.data) if form.little_hours_properties.data else {},
+            'compline': json.loads(form.compline_properties.data) if form.compline_properties.data else {},
+            'com_1': json.loads(form.com_1_properties.data) if form.com_1_properties.data else {},
+            'com_2': json.loads(form.com_2_properties.data) if form.com_2_properties.data else {},
+            'com_3': json.loads(form.com_3_properties.data) if form.com_3_properties.data else {},
+        }
+        try:
+            repos['temporal'].save_feast(feast_data)
+            flash('Temporal feast created successfully.', 'success')
+            return redirect(url_for('browse_data'))
+        except Exception as e:
+            flash(f'Error saving feast: {str(e)}', 'error')
+    
+    return render_template('forms/temporal_form.html', form=form, title="New Temporal Feast")
+
+
+@app.route('/temporal/<feast_id>/edit', methods=['GET', 'POST'])
+def edit_temporal_feast(feast_id):
+    """Edit an existing temporal feast."""
+    repos = get_repositories()
+    feast = repos['temporal'].get_feast(feast_id)
+    
+    if not feast:
+        flash('Feast not found.', 'error')
+        return redirect(url_for('browse_data'))
+    
+    form = TemporalFeastForm()
+    
+    if request.method == 'GET':
+        # Populate form
+        form.id.data = feast['id']
+        form.rank_numeric.data = feast['rank'][0]
+        form.rank_verbose.data = feast['rank'][1]
+        form.color.data = feast['color']
+        form.office_type.data = feast['office_type']
+        
+        nobility = feast.get('nobility', (None,)*6)
+        form.nobility_1.data = nobility[0]
+        form.nobility_2.data = nobility[1]
+        form.nobility_3.data = nobility[2]
+        form.nobility_4.data = nobility[3]
+        form.nobility_5.data = nobility[4]
+        form.nobility_6.data = nobility[5]
+        
+        form.mass_properties.data = json.dumps(feast.get('mass', {}), indent=2)
+        form.vespers_properties.data = json.dumps(feast.get('vespers', {}), indent=2)
+        form.matins_properties.data = json.dumps(feast.get('matins', {}), indent=2)
+        form.lauds_properties.data = json.dumps(feast.get('lauds', {}), indent=2)
+        form.prime_properties.data = json.dumps(feast.get('prime', {}), indent=2)
+        form.little_hours_properties.data = json.dumps(feast.get('little_hours', {}), indent=2)
+        form.compline_properties.data = json.dumps(feast.get('compline', {}), indent=2)
+        form.com_1_properties.data = json.dumps(feast.get('com_1', {}), indent=2)
+        form.com_2_properties.data = json.dumps(feast.get('com_2', {}), indent=2)
+        form.com_3_properties.data = json.dumps(feast.get('com_3', {}), indent=2)
+
+    if form.validate_on_submit():
+        feast_data = {
+            'id': form.id.data,
+            'rank': [form.rank_numeric.data, form.rank_verbose.data],
+            'color': form.color.data,
+            'office_type': form.office_type.data,
+            'nobility': (
+                form.nobility_1.data, form.nobility_2.data, form.nobility_3.data,
+                form.nobility_4.data, form.nobility_5.data, form.nobility_6.data
+            ),
+            'mass': json.loads(form.mass_properties.data) if form.mass_properties.data else {},
+            'vespers': json.loads(form.vespers_properties.data) if form.vespers_properties.data else {},
+            'matins': json.loads(form.matins_properties.data) if form.matins_properties.data else {},
+            'lauds': json.loads(form.lauds_properties.data) if form.lauds_properties.data else {},
+            'prime': json.loads(form.prime_properties.data) if form.prime_properties.data else {},
+            'little_hours': json.loads(form.little_hours_properties.data) if form.little_hours_properties.data else {},
+            'compline': json.loads(form.compline_properties.data) if form.compline_properties.data else {},
+            'com_1': json.loads(form.com_1_properties.data) if form.com_1_properties.data else {},
+            'com_2': json.loads(form.com_2_properties.data) if form.com_2_properties.data else {},
+            'com_3': json.loads(form.com_3_properties.data) if form.com_3_properties.data else {},
+        }
+        try:
+            repos['temporal'].save_feast(feast_data)
+            flash('Temporal feast updated successfully.', 'success')
+            return redirect(url_for('browse_data'))
+        except Exception as e:
+            flash(f'Error saving feast: {str(e)}', 'error')
+
+    return render_template('forms/temporal_form.html', form=form, title="Edit Temporal Feast")
+
+
+@app.route('/api/sanctoral/feasts')
 def get_sanctoral_feasts():
     """Get sanctoral feasts for a diocese and date or create new ones."""
     if request.method == 'POST':
@@ -375,617 +484,167 @@ def get_sanctoral_feasts():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-
-@app.route('/api/feast-dates', methods=['POST'])
-def create_feast_date():
-    """Create feast date assignments."""
-    data = request.get_json(silent=True) or {}
-    feast_id_raw = data.get('feast_id')
-    month_raw = data.get('month')
-    day_raw = data.get('day')
-    diocese_id_raw = data.get('diocese_id')
-    
-    try:
-        feast_id = int(feast_id_raw)
-        month = int(month_raw)
-        day = int(day_raw)
-    except (TypeError, ValueError):
-        return jsonify({'error': 'Feast ID, month, and day must be integers.'}), 400
-    
-    if not (1 <= month <= 12 and 1 <= day <= 31):
-        return jsonify({'error': 'Month must be 1-12 and day 1-31.'}), 400
-    
-    try:
-        diocese_id = int(diocese_id_raw) if diocese_id_raw else None
-    except (TypeError, ValueError):
-        return jsonify({'error': 'Diocese ID must be an integer.'}), 400
-    
-    try:
-        db = get_db()
-        with db:
-            cursor = db.execute(
-                """
-                INSERT INTO feast_date_assignments (feast_id, month, day, diocese_id)
-                VALUES (?, ?, ?, ?)
-                """,
-                (feast_id, month, day, diocese_id)
-            )
-        return jsonify({
-            'status': 'success',
-            'id': cursor.lastrowid
-        }), 201
-    except sqlite3.IntegrityError as exc:
-        return jsonify({'error': f'Unable to add date assignment: {exc}'}), 400
-
-
-@app.route('/api/translations', methods=['POST'])
-def create_translation():
-    """Create a translation record."""
-    data = request.get_json(silent=True) or {}
-    feast_id = (data.get('feast_id') or '').strip()
-    feast_type = (data.get('feast_type') or '').strip().lower()
-    language_code = (data.get('language_code') or '').strip().lower()
-    translation = (data.get('translation') or '').strip()
-    is_default = 1 if str(data.get('is_default', '')).lower() in {'1', 'true', 'on', 'yes'} else 0
-    
-    if not feast_id or not feast_type or not language_code or not translation:
-        return jsonify({'error': 'Feast, type, language, and translation are required.'}), 400
-    
-    if feast_type not in {'temporal', 'sanctoral'}:
-        return jsonify({'error': 'Feast type must be "temporal" or "sanctoral".'}), 400
-    
-    try:
-        db = get_db()
-        with db:
-            cursor = db.execute(
-                """
-                INSERT INTO translations (feast_id, feast_type, language_code, translation, is_default)
-                VALUES (?, ?, ?, ?, ?)
-                """,
-                (feast_id, feast_type, language_code, translation, is_default)
-            )
-        return jsonify({
-            'status': 'success',
-            'id': cursor.lastrowid
-        }), 201
-    except sqlite3.IntegrityError as exc:
-        return jsonify({'error': f'Unable to add translation: {exc}'}), 400
-
-
-def _fetch_feasts_overview() -> List[Dict[str, Any]]:
-    """Return combined overview of temporal and sanctoral feasts."""
-    db = get_db()
-    overview: List[Dict[str, Any]] = []
-    
-    temporal_rows = db.execute(
-        """
-        SELECT f.id, f.rank_numeric, f.rank_verbose, f.color, f.office_type,
-               COALESCE(t.translation, f.id) AS name_latin
-        FROM temporal_feasts f
-        LEFT JOIN translations t
-            ON t.feast_id = f.id
-           AND t.feast_type = 'temporal'
-           AND t.language_code = 'la'
-        ORDER BY f.id
-        """
-    ).fetchall()
-    for row in temporal_rows:
-        overview.append({
-            'feast_type': 'temporal',
-            'id': row['id'],
-            'display_id': str(row['id']),
-            'rank_numeric': row['rank_numeric'],
-            'rank_verbose': row['rank_verbose'],
-            'color': row['color'],
-            'office_type': row['office_type'] or '',
-            'name_latin': row['name_latin'] or row['id'],
-            'appears_in_calendar': False,
-            'month': None,
-            'day': None,
-            'calendar_diocese_code': None,
-            'calendar_country_code': None,
-            'owning_diocese_code': None,
-            'owning_country_code': None,
-            'assignment_summary': ''
-        })
-    
-    sanctoral_rows = db.execute(
-        """
-        SELECT sf.id,
-               sf.rank_numeric,
-               sf.rank_verbose,
-               sf.color,
-               sf.office_type,
-               COALESCE(ts.translation, 'Feast ' || sf.id) AS name_latin,
-               owner.code AS owning_diocese_code,
-               owner_country.code AS owning_country_code,
-               fda.id AS assignment_id,
-               fda.month,
-               fda.day,
-               assign_diocese.code AS assignment_diocese_code,
-               assign_country.code AS assignment_country_code
-        FROM sanctoral_feasts_new sf
-        LEFT JOIN translations ts
-            ON ts.feast_id = CAST(sf.id AS TEXT)
-           AND ts.feast_type = 'sanctoral'
-           AND ts.language_code = 'la'
-        LEFT JOIN dioceses owner ON sf.diocese_id = owner.id
-        LEFT JOIN countries owner_country ON owner.country_id = owner_country.id
-        LEFT JOIN feast_date_assignments fda ON sf.id = fda.feast_id
-        LEFT JOIN dioceses assign_diocese ON fda.diocese_id = assign_diocese.id
-        LEFT JOIN countries assign_country ON assign_diocese.country_id = assign_country.id
-        ORDER BY sf.id, fda.month, fda.day, fda.id
-        """
-    ).fetchall()
-    
-    sanctoral_map: Dict[int, Dict[str, Any]] = {}
-    for row in sanctoral_rows:
-        entry = sanctoral_map.setdefault(row['id'], {
-            'feast_type': 'sanctoral',
-            'id': row['id'],
-            'display_id': str(row['id']),
-            'rank_numeric': row['rank_numeric'],
-            'rank_verbose': row['rank_verbose'],
-            'color': row['color'],
-            'office_type': row['office_type'] or '',
-            'name_latin': row['name_latin'] or f"Feast {row['id']}",
-            'owning_diocese_code': row['owning_diocese_code'],
-            'owning_country_code': row['owning_country_code'],
-            'assignments': []
-        })
-        
-        if row['assignment_id'] is not None:
-            entry['assignments'].append({
-                'assignment_id': row['assignment_id'],
-                'month': row['month'],
-                'day': row['day'],
-                'diocese_code': row['assignment_diocese_code'] or 'roman',
-                'country_code': row['assignment_country_code'],
-            })
-    
-    for entry in sanctoral_map.values():
-        assignments = entry.pop('assignments')
-        first_assignment = assignments[0] if assignments else {}
-        entry['appears_in_calendar'] = bool(assignments)
-        entry['month'] = first_assignment.get('month')
-        entry['day'] = first_assignment.get('day')
-        entry['calendar_diocese_code'] = first_assignment.get('diocese_code')
-        entry['calendar_country_code'] = first_assignment.get('country_code')
-        entry['assignments'] = assignments
-        entry['assignment_summary'] = ", ".join(
-            f"{assignment['month']:02d}-{assignment['day']:02d} ({assignment['diocese_code']})"
-            for assignment in assignments
-        ) if assignments else ''
-        overview.append(entry)
-    
-    overview.sort(key=lambda item: str(item.get('display_id') or item.get('id')))
-    return overview
-
-
-def _get_feast_metadata() -> Dict[str, Any]:
-    """Collect metadata for feast forms and dropdowns."""
-    db = get_db()
-    metadata: Dict[str, Any] = {}
-    
-    temporal_ids = [row['id'] for row in db.execute(
-        "SELECT id FROM temporal_feasts ORDER BY id"
-    ).fetchall()]
-    sanctoral_ids = [str(row['id']) for row in db.execute(
-        "SELECT id FROM sanctoral_feasts_new ORDER BY id"
-    ).fetchall()]
-    metadata['temporal_ids'] = temporal_ids
-    metadata['sanctoral_ids'] = sanctoral_ids
-    metadata['all_ids'] = temporal_ids + sanctoral_ids
-    
-    ranks_numeric: List[Any] = []
-    ranks_verbose: List[Any] = []
-    colors: List[Any] = []
-    office_types: List[Any] = []
-    
-    for table in ('temporal_feasts', 'sanctoral_feasts_new'):
-        rows = db.execute(
-            f"SELECT rank_numeric, rank_verbose, color, office_type FROM {table}"
-        ).fetchall()
-        for row in rows:
-            ranks_numeric.append(row['rank_numeric'])
-            ranks_verbose.append(row['rank_verbose'])
-            colors.append(row['color'])
-            office_types.append(row['office_type'])
-    
-    metadata['rank_numeric_values'] = _collect_unique(ranks_numeric)
-    metadata['rank_verbose_values'] = _collect_unique(ranks_verbose)
-    metadata['color_values'] = _collect_unique(colors)
-    metadata['office_type_values'] = _collect_unique(office_types)
-    
-    months = [row['month'] for row in db.execute(
-        "SELECT DISTINCT month FROM feast_date_assignments ORDER BY month"
-    ).fetchall()]
-    days = [row['day'] for row in db.execute(
-        "SELECT DISTINCT day FROM feast_date_assignments ORDER BY day"
-    ).fetchall()]
-    metadata['month_values'] = _collect_unique(months)
-    metadata['day_values'] = _collect_unique(days)
-    
-    dioceses = db.execute(
-        """
-        SELECT d.id, d.code, d.name_latin, d.name_english, c.code AS country_code
-        FROM dioceses d
-        LEFT JOIN countries c ON d.country_id = c.id
-        ORDER BY d.code
-        """
-    ).fetchall()
-    metadata['dioceses'] = [{
-        'id': row['id'],
-        'code': row['code'],
-        'name_latin': row['name_latin'],
-        'name_english': row['name_english'],
-        'country_code': row['country_code']
-    } for row in dioceses]
-    
-    countries = db.execute(
-        "SELECT id, code, name_latin, name_english FROM countries ORDER BY code"
-    ).fetchall()
-    metadata['countries'] = [{
-        'id': row['id'],
-        'code': row['code'],
-        'name_latin': row['name_latin'],
-        'name_english': row['name_english']
-    } for row in countries]
-    
-    calendar_dioceses = set()
-    for row in db.execute(
-        "SELECT DISTINCT diocese_id FROM feast_date_assignments WHERE diocese_id IS NOT NULL"
-    ).fetchall():
-        calendar_dioceses.add(row['diocese_id'])
-    calendar_codes = []
-    if calendar_dioceses:
-        placeholders = ",".join("?" for _ in calendar_dioceses)
-        query = f"SELECT code FROM dioceses WHERE id IN ({placeholders})"
-        codes = db.execute(query, tuple(calendar_dioceses)).fetchall()
-        calendar_codes = [row['code'] for row in codes]
-    if db.execute(
-        "SELECT COUNT(*) AS cnt FROM feast_date_assignments WHERE diocese_id IS NULL"
-    ).fetchone()['cnt']:
-        calendar_codes.append('roman')
-    metadata['calendar_diocese_codes'] = sorted(set(calendar_codes))
-    
-    return metadata
-
-
-def _fetch_temporal_detail(feast_id: str) -> Optional[Dict[str, Any]]:
-    """Return full detail for a temporal feast."""
-    db = get_db()
-    row = db.execute(
-        """
-        SELECT f.id, f.rank_numeric, f.rank_verbose, f.color, f.office_type,
-               COALESCE(t.translation, f.id) AS name_latin
-        FROM temporal_feasts f
-        LEFT JOIN translations t
-            ON t.feast_id = f.id
-           AND t.feast_type = 'temporal'
-           AND t.language_code = 'la'
-        WHERE f.id = ?
-        """,
-        (feast_id,)
-    ).fetchone()
-    if not row:
-        return None
-    return {
-        'feast_type': 'temporal',
-        'id': row['id'],
-        'display_id': str(row['id']),
-        'rank_numeric': row['rank_numeric'],
-        'rank_verbose': row['rank_verbose'],
-        'color': row['color'],
-        'office_type': row['office_type'] or '',
-        'name_latin': row['name_latin'] or row['id'],
-    }
-
-
-def _fetch_sanctoral_detail(feast_id: int) -> Optional[Dict[str, Any]]:
-    """Return full detail for a sanctoral feast including assignments."""
-    db = get_db()
-    row = db.execute(
-        """
-        SELECT sf.id,
-               sf.rank_numeric,
-               sf.rank_verbose,
-               sf.color,
-               sf.office_type,
-               sf.diocese_id,
-               owner.code AS owning_diocese_code,
-               owner.name_latin AS owning_diocese_name_latin,
-               owner.name_english AS owning_diocese_name_english,
-               owner_country.code AS owning_country_code,
-               COALESCE(t.translation, 'Feast ' || sf.id) AS name_latin
-        FROM sanctoral_feasts_new sf
-        LEFT JOIN translations t
-            ON t.feast_id = CAST(sf.id AS TEXT)
-           AND t.feast_type = 'sanctoral'
-           AND t.language_code = 'la'
-        LEFT JOIN dioceses owner ON sf.diocese_id = owner.id
-        LEFT JOIN countries owner_country ON owner.country_id = owner_country.id
-        WHERE sf.id = ?
-        """,
-        (feast_id,)
-    ).fetchone()
-    if not row:
-        return None
-    
-    assignments = db.execute(
-        """
-        SELECT fda.id,
-               fda.month,
-               fda.day,
-               fda.diocese_id,
-               COALESCE(assign_diocese.code, 'roman') AS diocese_code,
-               assign_diocese.name_latin AS diocese_name_latin,
-               assign_diocese.name_english AS diocese_name_english,
-               assign_country.code AS country_code
-        FROM feast_date_assignments fda
-        LEFT JOIN dioceses assign_diocese ON fda.diocese_id = assign_diocese.id
-        LEFT JOIN countries assign_country ON assign_diocese.country_id = assign_country.id
-        WHERE fda.feast_id = ?
-        ORDER BY fda.month, fda.day, fda.id
-        """,
-        (feast_id,)
-    ).fetchall()
-    
-    assignment_list = [{
-        'assignment_id': item['id'],
-        'month': item['month'],
-        'day': item['day'],
-        'diocese_id': item['diocese_id'],
-        'diocese_code': item['diocese_code'],
-        'diocese_name_latin': item['diocese_name_latin'],
-        'diocese_name_english': item['diocese_name_english'],
-        'country_code': item['country_code'],
-    } for item in assignments]
-    
-    first_assignment = assignment_list[0] if assignment_list else None
-    return {
-        'feast_type': 'sanctoral',
-        'id': row['id'],
-        'display_id': str(row['id']),
-        'rank_numeric': row['rank_numeric'],
-        'rank_verbose': row['rank_verbose'],
-        'color': row['color'],
-        'office_type': row['office_type'] or '',
-        'diocese_id': row['diocese_id'],
-        'owning_diocese_code': row['owning_diocese_code'],
-        'owning_country_code': row['owning_country_code'],
-        'name_latin': row['name_latin'],
-        'assignments': assignment_list,
-        'appears_in_calendar': bool(assignment_list),
-        'primary_assignment': first_assignment
-    }
-
-
-def _update_temporal_feast(feast_id: str, payload: Dict[str, Any]):
-    """Update an existing temporal feast."""
-    target_id = feast_id
-    new_id = (payload.get('id') or feast_id).strip()
-    
-    try:
-        rank_numeric = int(payload.get('rank_numeric'))
-    except (TypeError, ValueError):
-        return {'error': 'Rank numeric must be an integer.'}, 400
-    
-    rank_verbose = (payload.get('rank_verbose') or '').strip()
-    color = (payload.get('color') or '').strip()
-    office_type = (payload.get('office_type') or '').strip() or None
-    
-    if not rank_verbose or not color:
-        return {'error': 'Rank verbose and color are required.'}, 400
-    
-    db = get_db()
-    try:
-        with db:
-            if new_id != feast_id:
-                existing = db.execute(
-                    "SELECT 1 FROM temporal_feasts WHERE id = ?",
-                    (new_id,)
-                ).fetchone()
-                if existing:
-                    return {'error': 'A temporal feast with that ID already exists.'}, 409
-                db.execute(
-                    """
-                    UPDATE temporal_feasts
-                    SET id = ?, rank_numeric = ?, rank_verbose = ?, color = ?, office_type = ?
-                    WHERE id = ?
-                    """,
-                    (new_id, rank_numeric, rank_verbose, color, office_type, feast_id)
-                )
-                db.execute(
-                    """
-                    UPDATE translations
-                    SET feast_id = ?
-                    WHERE feast_type = 'temporal' AND feast_id = ?
-                    """,
-                    (new_id, feast_id)
-                )
-                target_id = new_id
-            else:
-                db.execute(
-                    """
-                    UPDATE temporal_feasts
-                    SET rank_numeric = ?, rank_verbose = ?, color = ?, office_type = ?
-                    WHERE id = ?
-                    """,
-                    (rank_numeric, rank_verbose, color, office_type, feast_id)
-                )
-    except sqlite3.IntegrityError as exc:
-        return {'error': f'Unable to update temporal feast: {exc}'}, 400
-    
-    detail = _fetch_temporal_detail(target_id)
-    return {'status': 'success', 'feast': detail}, 200
-
-
-def _update_sanctoral_feast(feast_id: int, payload: Dict[str, Any]):
-    """Update an existing sanctoral feast and its primary assignment."""
-    target_id = feast_id
-    
-    if 'id' in payload and payload['id'] not in (None, '', feast_id):
+@app.route('/sanctoral/new', methods=['GET', 'POST'])
+def new_sanctoral_feast():
+    """Create a new sanctoral feast."""
+    form = SanctoralFeastForm()
+    if form.validate_on_submit():
+        repos = get_repositories()
+        feast_data = {
+            'month': form.month.data,
+            'day': form.day.data,
+            'diocese_source': form.diocese_source.data if form.diocese_source.data else 'roman',
+            'rank': [form.rank_numeric.data, form.rank_verbose.data],
+            'color': form.color.data,
+            'office_type': form.office_type.data,
+            'nobility': (
+                form.nobility_1.data, form.nobility_2.data, form.nobility_3.data,
+                form.nobility_4.data, form.nobility_5.data, form.nobility_6.data
+            ),
+            'mass': json.loads(form.mass_properties.data) if form.mass_properties.data else {},
+            'vespers': json.loads(form.vespers_properties.data) if form.vespers_properties.data else {},
+            'matins': json.loads(form.matins_properties.data) if form.matins_properties.data else {},
+            'lauds': json.loads(form.lauds_properties.data) if form.lauds_properties.data else {},
+            'prime': json.loads(form.prime_properties.data) if form.prime_properties.data else {},
+            'little_hours': json.loads(form.little_hours_properties.data) if form.little_hours_properties.data else {},
+            'compline': json.loads(form.compline_properties.data) if form.compline_properties.data else {},
+            'com_1': json.loads(form.com_1_properties.data) if form.com_1_properties.data else {},
+            'com_2': json.loads(form.com_2_properties.data) if form.com_2_properties.data else {},
+            'com_3': json.loads(form.com_3_properties.data) if form.com_3_properties.data else {},
+        }
         try:
-            requested_id = int(payload['id'])
-        except (TypeError, ValueError):
-            return {'error': 'Sanctoral feast ID must be an integer.'}, 400
-        if requested_id != feast_id:
-            return {'error': 'Sanctoral feast IDs are immutable.'}, 409
+            repos['sanctoral'].save_feast(feast_data)
+            flash('Sanctoral feast created successfully.', 'success')
+            return redirect(url_for('browse_data'))
+        except Exception as e:
+            flash(f'Error saving feast: {str(e)}', 'error')
     
-    try:
-        rank_numeric = int(payload.get('rank_numeric'))
-    except (TypeError, ValueError):
-        return {'error': 'Rank numeric must be an integer.'}, 400
+    return render_template('forms/sanctoral_form.html', form=form, title="New Sanctoral Feast")
+
+
+@app.route('/sanctoral/<int:feast_id>/edit', methods=['GET', 'POST'])
+def edit_sanctoral_feast(feast_id):
+    """Edit an existing sanctoral feast."""
+    repos = get_repositories()
     
-    rank_verbose = (payload.get('rank_verbose') or '').strip()
-    color = (payload.get('color') or '').strip()
-    office_type = (payload.get('office_type') or '').strip() or None
-    
-    diocese_id_raw = payload.get('diocese_id')
-    if diocese_id_raw in (None, '', 'null'):
-        diocese_id = None
-    else:
-        try:
-            diocese_id = int(diocese_id_raw)
-        except (TypeError, ValueError):
-            return {'error': 'Owning diocese must be an integer ID or empty.'}, 400
-    
-    appears_in_calendar = bool(payload.get('appears_in_calendar'))
-    assignment_payload = payload.get('assignment') or {}
-    
-    if appears_in_calendar:
-        try:
-            month = int(assignment_payload.get('month'))
-            day = int(assignment_payload.get('day'))
-        except (TypeError, ValueError):
-            return {'error': 'Month and day must be integers when the feast appears in the calendar.'}, 400
-        if not (1 <= month <= 12 and 1 <= day <= 31):
-            return {'error': 'Month must be 1-12 and day 1-31.'}, 400
-        
-        assignment_diocese_raw = assignment_payload.get('diocese_id')
-        if assignment_diocese_raw in (None, '', 'roman', 'null'):
-            assignment_diocese_id = None
-        else:
-            try:
-                assignment_diocese_id = int(assignment_diocese_raw)
-            except (TypeError, ValueError):
-                return {'error': 'Assignment diocese must be an integer ID or blank for Roman calendar.'}, 400
-        
-        assignment_id_raw = assignment_payload.get('assignment_id')
-        try:
-            assignment_id = int(assignment_id_raw) if assignment_id_raw else None
-        except (TypeError, ValueError):
-            return {'error': 'Assignment ID must be an integer when provided.'}, 400
-    else:
-        month = day = None
-        assignment_diocese_id = None
-        assignment_id = None
-    
-    if not rank_verbose or not color:
-        return {'error': 'Rank verbose and color are required.'}, 400
-    
+    # Try to find the feast (we need to know the diocese to look it up properly if it's unique)
     db = get_db()
-    try:
-        with db:
-            db.execute(
-                """
-                UPDATE sanctoral_feasts_new
-                SET rank_numeric = ?, rank_verbose = ?, color = ?, office_type = ?, diocese_id = ?
-                WHERE id = ?
-                """,
-                (rank_numeric, rank_verbose, color, office_type, diocese_id, feast_id)
-            )
-            target_id = feast_id
+    cursor = db.execute("SELECT diocese_id FROM feast_date_assignments WHERE feast_id = ?", (feast_id,))
+    assignment = cursor.fetchone()
+    
+    diocese_code = 'roman'
+    if assignment and assignment['diocese_id']:
+        d_cursor = db.execute("SELECT code FROM dioceses WHERE id = ?", (assignment['diocese_id'],))
+        d_row = d_cursor.fetchone()
+        if d_row:
+            diocese_code = d_row['code']
             
-            if appears_in_calendar:
-                if assignment_id:
-                    db.execute(
-                        """
-                        UPDATE feast_date_assignments
-                        SET month = ?, day = ?, diocese_id = ?
-                        WHERE id = ? AND feast_id = ?
-                        """,
-                        (month, day, assignment_diocese_id, assignment_id, target_id)
-                    )
-                else:
-                    db.execute(
-                        """
-                        INSERT INTO feast_date_assignments (feast_id, month, day, diocese_id)
-                        VALUES (?, ?, ?, ?)
-                        """,
-                        (target_id, month, day, assignment_diocese_id)
-                    )
-            else:
-                db.execute(
-                    "DELETE FROM feast_date_assignments WHERE feast_id = ?",
-                    (target_id,)
-                )
-    except sqlite3.IntegrityError as exc:
-        return {'error': f'Unable to update sanctoral feast: {exc}'}, 400
+    feast = repos['sanctoral'].get_feast(feast_id, diocese_code if diocese_code != 'roman' else None)
     
-    detail = _fetch_sanctoral_detail(target_id)
-    return {'status': 'success', 'feast': detail}, 200
-
-
-@app.route('/feasts')
-def feasts_view():
-    """Spreadsheet-style feast management view."""
-    metadata = _get_feast_metadata()
-    languages = get_languages_list()
-    return render_template(
-        'feasts.html',
-        metadata=metadata,
-        languages=languages or ['la']
-    )
-
-
-@app.route('/api/feasts/overview')
-def api_feasts_overview():
-    """Return combined overview for temporal and sanctoral feasts."""
-    try:
-        return jsonify({'feasts': _fetch_feasts_overview()})
-    except Exception as exc:
-        return jsonify({'error': str(exc)}), 500
-
-
-@app.route('/api/feasts/metadata')
-def api_feasts_metadata():
-    """Return metadata for feast-related dropdowns."""
-    try:
-        return jsonify(_get_feast_metadata())
-    except Exception as exc:
-        return jsonify({'error': str(exc)}), 500
-
-
-@app.route('/api/feasts/<feast_type>/<feast_id>', methods=['GET', 'PUT'])
-def api_feast_detail(feast_type: str, feast_id: str):
-    """Fetch or update a feast by type."""
-    feast_type = feast_type.lower()
-    if feast_type not in {'temporal', 'sanctoral'}:
-        return jsonify({'error': 'Feast type must be "temporal" or "sanctoral".'}), 400
+    if not feast:
+        flash('Feast not found.', 'error')
+        return redirect(url_for('browse_data'))
+        
+    # Get date assignment
+    cursor = db.execute("SELECT month, day FROM feast_date_assignments WHERE feast_id = ?", (feast_id,))
+    date_row = cursor.fetchone()
+    
+    form = SanctoralFeastForm()
     
     if request.method == 'GET':
-        if feast_type == 'temporal':
-            detail = _fetch_temporal_detail(feast_id)
-        else:
-            try:
-                detail = _fetch_sanctoral_detail(int(feast_id))
-            except ValueError:
-                return jsonify({'error': 'Sanctoral feast ID must be numeric.'}), 400
-        if not detail:
-            return jsonify({'error': 'Feast not found.'}), 404
-        return jsonify(detail)
-    
-    # PUT/update
-    payload = request.get_json(silent=True) or {}
-    if feast_type == 'temporal':
-        return _update_temporal_feast(feast_id, payload)
+        # Populate form
+        form.id.data = feast['id']
+        form.month.data = date_row['month'] if date_row else None
+        form.day.data = date_row['day'] if date_row else None
+        form.diocese_source.data = diocese_code
+        
+        form.rank_numeric.data = feast['rank'][0]
+        form.rank_verbose.data = feast['rank'][1]
+        form.color.data = feast['color']
+        form.office_type.data = feast['office_type']
+        
+        nobility = feast.get('nobility', (None,)*6)
+        form.nobility_1.data = nobility[0]
+        form.nobility_2.data = nobility[1]
+        form.nobility_3.data = nobility[2]
+        form.nobility_4.data = nobility[3]
+        form.nobility_5.data = nobility[4]
+        form.nobility_6.data = nobility[5]
+        
+        form.mass_properties.data = json.dumps(feast.get('mass', {}), indent=2)
+        form.vespers_properties.data = json.dumps(feast.get('vespers', {}), indent=2)
+        form.matins_properties.data = json.dumps(feast.get('matins', {}), indent=2)
+        form.lauds_properties.data = json.dumps(feast.get('lauds', {}), indent=2)
+        form.prime_properties.data = json.dumps(feast.get('prime', {}), indent=2)
+        form.little_hours_properties.data = json.dumps(feast.get('little_hours', {}), indent=2)
+        form.compline_properties.data = json.dumps(feast.get('compline', {}), indent=2)
+        form.com_1_properties.data = json.dumps(feast.get('com_1', {}), indent=2)
+        form.com_2_properties.data = json.dumps(feast.get('com_2', {}), indent=2)
+        form.com_3_properties.data = json.dumps(feast.get('com_3', {}), indent=2)
+
+    if form.validate_on_submit():
+        feast_data = {
+            'id': feast_id,
+            'month': form.month.data,
+            'day': form.day.data,
+            'diocese_source': form.diocese_source.data if form.diocese_source.data else 'roman',
+            'rank': [form.rank_numeric.data, form.rank_verbose.data],
+            'color': form.color.data,
+            'office_type': form.office_type.data,
+            'nobility': (
+                form.nobility_1.data, form.nobility_2.data, form.nobility_3.data,
+                form.nobility_4.data, form.nobility_5.data, form.nobility_6.data
+            ),
+            'mass': json.loads(form.mass_properties.data) if form.mass_properties.data else {},
+            'vespers': json.loads(form.vespers_properties.data) if form.vespers_properties.data else {},
+            'matins': json.loads(form.matins_properties.data) if form.matins_properties.data else {},
+            'lauds': json.loads(form.lauds_properties.data) if form.lauds_properties.data else {},
+            'prime': json.loads(form.prime_properties.data) if form.prime_properties.data else {},
+            'little_hours': json.loads(form.little_hours_properties.data) if form.little_hours_properties.data else {},
+            'compline': json.loads(form.compline_properties.data) if form.compline_properties.data else {},
+            'com_1': json.loads(form.com_1_properties.data) if form.com_1_properties.data else {},
+            'com_2': json.loads(form.com_2_properties.data) if form.com_2_properties.data else {},
+            'com_3': json.loads(form.com_3_properties.data) if form.com_3_properties.data else {},
+        }
+        try:
+            repos['sanctoral'].save_feast(feast_data)
+            flash('Sanctoral feast updated successfully.', 'success')
+            return redirect(url_for('browse_data'))
+        except Exception as e:
+            flash(f'Error saving feast: {str(e)}', 'error')
+
+    return render_template('forms/sanctoral_form.html', form=form, title="Edit Sanctoral Feast")
+
+
+
+@app.route('/temporal/<feast_id>/delete', methods=['POST'])
+def delete_temporal_feast(feast_id):
+    """Delete a temporal feast."""
+    repos = get_repositories()
     try:
-        numeric_id = int(feast_id)
-    except ValueError:
-        return jsonify({'error': 'Sanctoral feast ID must be numeric.'}), 400
-    return _update_sanctoral_feast(numeric_id, payload)
+        repos['temporal'].delete_feast(feast_id)
+        flash('Temporal feast deleted successfully.', 'success')
+    except Exception as e:
+        flash(f'Error deleting feast: {str(e)}', 'error')
+    return redirect(url_for('browse_data'))
+
+
+@app.route('/sanctoral/<int:feast_id>/delete', methods=['POST'])
+def delete_sanctoral_feast(feast_id):
+    """Delete a sanctoral feast."""
+    repos = get_repositories()
+    try:
+        repos['sanctoral'].delete_feast(feast_id)
+        flash('Sanctoral feast deleted successfully.', 'success')
+    except Exception as e:
+        flash(f'Error deleting feast: {str(e)}', 'error')
+    return redirect(url_for('browse_data'))
+
+
+@app.route('/browse')
+def browse_data():
+    """Browse all data in the database."""
+    return render_template('browse.html')
 
 
 @app.route('/api/browse/temporal')
