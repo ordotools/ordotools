@@ -4,8 +4,8 @@ This file demonstrates performance improvements that could be applied to tempora
 """
 
 import functools
-from datetime import datetime  # , timedelta
-from typing import Dict  # , List, Tuple, Set, Optional
+from datetime import datetime #, timedelta
+from typing import Dict #, List, Tuple, Set, Optional
 
 from ordotools.tools.helpers import day, days, easter, findsunday, weekday, weeks, last_sunday
 from ordotools.tools.temporal_data import TemporalData
@@ -246,9 +246,9 @@ class OptimizedTemporal:
                 # Create a new dict with default values
                 entry = template_dict.copy()
                 entry["id"] = value
-                entry["color"] = "blue"
-
+                entry["color"] = "blue" # use blue because it is an impossible liturgical color
+            
             # Add to result
             big_data[key] = entry
-
+        
         return big_data

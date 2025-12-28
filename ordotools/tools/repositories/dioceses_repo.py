@@ -3,12 +3,27 @@ import sqlite3
 from typing import Dict, Optional, List
 from ordotools.tools.db import get_connection
 
+# TODO: we have to reorganize this...
+
 
 class DiocesesRepository:
     """Repository for accessing dioceses and countries data from database."""
-    
+
     def __init__(self, db_path: Optional[str] = None):
         self.conn = get_connection(db_path)
+    
+    def get_diocese_by_name(self, name: str) -> Optional[Dict]:
+        """Lookup using the new long-form name_english column."""
+        cursor = self.conn.execute(
+            "SELECT * FROM dioceses WHERE name_english = ?", (name,)
+        )
+        row = cursor.fetchone()
+        return dict(row) if row else None
+
+    def get_all_dioceses(self) -> List[Dict]:
+        cursor = self.conn.execute("SELECT * FROM dioceses ORDER BY name_english")
+        return [dict(row) for row in cursor.fetchall()]
+    
     
     def get_country(self, code: str) -> Optional[Dict]:
         """Get country by code."""
@@ -59,10 +74,10 @@ class DiocesesRepository:
             return None
         return dict(row)
     
-    def get_all_dioceses(self) -> List[Dict]:
-        """Get all dioceses."""
-        cursor = self.conn.execute("SELECT * FROM dioceses")
-        return [dict(row) for row in cursor.fetchall()]
+    # def get_all_dioceses(self) -> List[Dict]:
+    #     """Get all dioceses."""
+    #     cursor = self.conn.execute("SELECT * FROM dioceses")
+    #     return [dict(row) for row in cursor.fetchall()]
     
     def get_dioceses_by_country(self, country_code: str) -> List[Dict]:
         """Get all dioceses in a country."""

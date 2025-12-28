@@ -1,0 +1,20 @@
+diocese_name: Australiae
+country: Universal
+feasts:
+
+- id: 3200
+  name_translations: {}
+  date: 07-31
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: null
+  mass_properties:
+    int: ''
+    glo: false
+    cre: false
+    pre: ''
+  alt_mass_properties: null
+  commemorations: []
+  nobility:
+  - 0

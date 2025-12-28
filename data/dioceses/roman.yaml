@@ -1,0 +1,5964 @@
+diocese_name: Roman
+country: Universal
+feasts:
+
+- id: 100000
+  name_translations:
+    la: S Telesphori PM
+  date: 01-05
+  rank_verbose: s
+  rank_numeric: 22
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 100
+  name_translations:
+    la: S Hilarii Episcopi ECD
+    en: St. Hilary, BpCD
+  date: 01-14
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 200
+  name_translations:
+    la: S Pauli Primi Eremitæ C
+    en: St. Paul the First Hermit, C
+  date: 01-15
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus ut palma
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 300
+  name_translations:
+    la: S Marcelli PM
+    en: St. Marcellus, PM
+  date: 01-16
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 400
+  name_translations:
+    la: S Antonii Abb
+    en: St. Anthony, Abbot
+  date: 01-17
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 500
+  name_translations:
+    la: Cathedræ S Petri Ap Romæ
+    en: St. Peter's Chair in Rome
+  date: 01-18
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit ei
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 600
+  name_translations:
+    la: Ss Marii, Marthæ, Audifacis & Abachum Mm
+  date: 01-19
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Justi epulentur
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 700
+  name_translations:
+    la: Ss Fabiani P et Sebastiani Mm
+    en: St.s Fabian, Priest, and Sebastian, Mm
+  date: 01-20
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Intret in conspectu
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 800
+  name_translations:
+    la: S Agnetis VM
+    en: St. Agnes, VM
+  date: 01-21
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Me expectaverunt
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 900
+  name_translations:
+    la: Ss Vincentii & Anastasii Mm
+  date: 01-22
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Intret
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 1000
+  name_translations:
+    la: S Raymundi de Peñafort C
+    en: St. Raymond of Penafort, C
+  date: 01-23
+  rank_verbose: sd, mtv
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 1100
+  name_translations:
+    la: S Timothei EM
+    en: St. Timothy, BpM
+  date: 01-24
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 1200
+  name_translations:
+    la: Conversio S Pauli Ap
+    en: Conversion of St. Paul, Ap
+  date: 01-25
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Scio, cui credidi
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 1300
+  name_translations:
+    la: S Polycarpi EM
+    en: St. Polycarp, BpM
+  date: 01-26
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Sacerdotes Dei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 1400
+  name_translations:
+    la: S Joannis Chrysostomi ECD
+    en: St. John Chrysostom, BpCD
+  date: 01-27
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 1500
+  name_translations:
+    la: S Petri Nolasci C
+    en: St. Peter Nolasco, C
+  date: 01-28
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 1600
+  name_translations:
+    la: S Francisci Salesii ECD
+    en: St. Francis de Sales, BpCD
+  date: 01-29
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 1700
+  name_translations:
+    la: S Martinæ VM
+    en: St. Martina, VM
+  date: 01-30
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Loquebar
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 1800
+  name_translations:
+    la: S Joannis Bosco C
+    en: St. John Bosco, C
+  date: 01-31
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dedit illi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 1900
+  name_translations:
+    la: S Ignatii EM
+    en: St. Ignatius, BpM
+  date: 02-01
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 2000
+  name_translations:
+    la: In Purificatione BMV
+    en: Purification of the Blessed Virgin Mary
+  date: 02-02
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Suscepisimus
+    gloria: true
+    credo: true
+    preface: de Nativitate
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 2100
+  name_translations:
+    la: S Blasii EM
+    en: St. Blaise, BpM
+  date: 02-03
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Sacerdotes Dei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 8
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 2200
+  name_translations:
+    la: S Andreæ Corsini EC
+    en: St. Andrew Corsini, BpC
+  date: 02-04
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 2300
+  name_translations:
+    la: S Agathæ VM
+    en: St. Agatha, VM
+  date: 02-05
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Gaudeamus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 2400
+  name_translations:
+    la: S Titi EC
+    en: St. Titus, BpC
+  date: 02-06
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit ei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 2500
+  name_translations:
+    la: S Romualdi Abb
+    en: St. Romuald, Abbot
+  date: 02-07
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 2600
+  name_translations:
+    la: S Joannis de Matha C
+    en: St. John of Matha, C
+  date: 02-08
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 2700
+  name_translations:
+    la: S Cyrilli Alexandrini ECD
+    en: St. Cyril of Alexandria, BpCD
+  date: 02-09
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 2800
+  name_translations:
+    la: S Scholasticæ V
+    en: St. Scholastica, V
+  date: 02-10
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 2900
+  name_translations:
+    la: In Apparitione BVM Immaculatæ
+    en: Apparation of Our Lady at Lourdes
+  date: 02-11
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Vidi civitatem
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 3000
+  name_translations:
+    la: Ss Septem Fundatores Ordinis Servorum BMV C
+    en: Seven Holy Founders
+  date: 02-12
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justi decantaverunt
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 3100
+  name_translations:
+    la: S Valentini PM
+    en: St. Valentine, PM
+  date: 02-14
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: In virtute
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 8
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 3200
+  name_translations: {}
+  date: 02-15
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Salus autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 8
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 3300
+  name_translations:
+    la: S Simeonis EM
+    en: St. Simeon, BpM
+  date: 02-18
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 8
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 3400
+  name_translations:
+    la: In Cathedra S Petri Ap
+    en: St. Peter's Chair in Rome
+  date: 02-22
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit ei Dominus
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 3500
+  name_translations:
+    la: S Petri Damiani ECD
+    en: St. Peter Damian, BpCD
+  date: 02-23
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 3600
+  name_translations:
+    la: S Matthiæ Ap
+    en: St. Matthew, Ap
+  date: 02-24
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 3700
+  name_translations:
+    la: S Gabrielis a Virgine Perdolente C
+  date: 02-27
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Oculus Dei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 3800
+  name_translations:
+    la: S Casimiri C
+    en: St. Casmir, C
+  date: 03-04
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os iusti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 3900
+  name_translations:
+    la: Ss Perpetuæ et Felicitatiis Mm
+    en: Sts. Perpetua and Felicity, Mm
+  date: 03-06
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Me expectaverunt
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 4000
+  name_translations:
+    la: S Thomæ de Aquino CD
+    en: St. Thomas Aquinas, CD
+  date: 03-07
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio ecclesiae
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 4100
+  name_translations:
+    la: S Joannis a Deo C
+    en: St. John of God, C
+  date: 03-08
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os iusti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 4200
+  name_translations:
+    la: S Franciscæ Romanæ V
+    en: St. Frances of Rome, V
+  date: 03-09
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Cognovi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 4300
+  name_translations:
+    la: Ss Quadragintarum Mm
+    en: Forty Holy Martyrs
+  date: 03-10
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Clamaverunt iusti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 4400
+  name_translations:
+    la: S Gregorii I PCD
+    en: St. Gregory I, PCD
+  date: 03-12
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 4500
+  name_translations:
+    la: S Patricii EC
+    en: St. Patrick, BpC
+  date: 03-17
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 4600
+  name_translations:
+    la: S Cyrilii Hierosolymitani ECD
+    en: St. Cyril of Jerusalem, BCD
+  date: 03-18
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio ecclesiae
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 4700
+  name_translations:
+    la: S Josephi Sponsi BMV C
+    en: St. Joseph, Spouse of the BVM, C
+  date: 03-19
+  rank_verbose: d I cl
+  rank_numeric: 2
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus ut palma
+    gloria: true
+    credo: true
+    preface: De Sancto Ioseph
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 4800
+  name_translations:
+    la: S Benedicti Abb
+    en: St. Benedict, Abb
+  date: 03-21
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os iusti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 4900
+  name_translations:
+    la: S Gabrielis Arch
+    en: St. Gabriel, Archangel
+  date: 03-24
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Benedicite Dominum
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 5000
+  name_translations:
+    la: In Annuntiatione BMV
+    en: Annuntiation of the BVM
+  date: 03-25
+  rank_verbose: d I cl
+  rank_numeric: 2
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Vultum tuum
+    gloria: true
+    credo: true
+    preface: De B Maria Virg
+  commemorations: []
+  nobility:
+  - 1
+  - 2
+  - 6
+  - 2
+  - 1
+  - 0
+
+- id: 5100
+  name_translations:
+    la: S Joannis Damasceni CD
+    en: St. John Damascene, CD
+  date: 03-27
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Tenuisti manum
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 5200
+  name_translations:
+    la: S Joannis a Capistrano C
+  date: 03-28
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Ego autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 5300
+  name_translations:
+    la: S Francisci de Paula C
+  date: 04-02
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus ut palma
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 5400
+  name_translations:
+    la: S Isidori ECD
+    en: St. Isidore, ECD
+  date: 04-04
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio ecclesiae
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 5500
+  name_translations:
+    la: S Vincentii Ferrerii C
+    en: St. Vincent Ferrier, C
+  date: 04-05
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os iusti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 5600
+  name_translations:
+    la: S Leonis PCD
+    en: St. Leo, PCD
+  date: 04-11
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 5700
+  name_translations:
+    la: S Hermenegildi M
+    en: St. Hermenegild, M
+  date: 04-13
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In virtute
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 5800
+  name_translations:
+    la: S Justini M
+    en: St. Justin, M
+  date: 04-14
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Narraverunt mihi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 5900
+  name_translations:
+    la: S Aniceti PM
+  date: 04-17
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 6000
+  name_translations:
+    la: S Anselmi ECD
+    en: St. Anselm, ECD
+  date: 04-21
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio ecclesiae
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 6100
+  name_translations:
+    la: Ss Soteris et Caii PpMm
+  date: 04-22
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 6200
+  name_translations:
+    la: S Georgii M
+    en: St. George, M
+  date: 04-23
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Protexisti me
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 6300
+  name_translations:
+    la: S Fidelis a Sigmaringa M
+  date: 04-24
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Protexisti me
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 6400
+  name_translations:
+    la: S Marci Ev
+    en: St. Mark, Ev
+  date: 04-25
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Protexisti me
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 6500
+  name_translations:
+    la: Ss Cleti et Marcellini PpMm
+  date: 04-26
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 6600
+  name_translations:
+    la: S Petri Canisii CD
+  date: 04-27
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio ecclesiae
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 6700
+  name_translations:
+    la: S Pauli a Cruce C
+    en: St. Paul of the Cross, C
+  date: 04-28
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Christo confixus sum
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 6800
+  name_translations:
+    la: S Petri M
+    en: St. Peter M
+  date: 04-29
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Protexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 6900
+  name_translations:
+    la: S Catharinæ Senensis V
+    en: St. Catherine of Siena, V
+  date: 04-30
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 7000
+  name_translations:
+    la: Ss Philippi et Jacobi App
+    en: Sts. Philip and Jacob, App
+  date: 05-01
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Clamaverunt ad te
+    gloria: true
+    credo: true
+    preface: De Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 7100
+  name_translations:
+    la: S Athanasii ECD
+    en: St. Athanasius, ECD
+  date: 05-02
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio ecclesiae
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 7200
+  name_translations:
+    la: In Inventione S Crucis
+    en: Finding of the Holy Cross
+  date: 05-03
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Nos autem gloriari
+    gloria: true
+    credo: true
+    preface: De Cruce
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 7300
+  name_translations:
+    la: S Monicæ V
+    en: St. Monica, V
+  date: 05-04
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Cognovi, Domine
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 7400
+  name_translations:
+    la: S Pii V PC
+    en: St. Pius V, PC
+  date: 05-05
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 7500
+  name_translations:
+    la: S Joannis ApEv ante Portam Latinam
+    en: St. John ApEv before the Latin Gate
+  date: 05-06
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Protexisti me
+    gloria: true
+    credo: true
+    preface: De Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 7600
+  name_translations:
+    la: S Stanislai EM
+    en: St. Stanislaus, EM
+  date: 05-07
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Protexisti me
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 7700
+  name_translations:
+    la: In Apparitione S Michaelis Arch
+    en: Apparition of St. Michael Archangel
+  date: 05-08
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Benedicite Dominum
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 7800
+  name_translations:
+    la: S Gregorii Nanzanzeni ECD
+  date: 05-09
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In media
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 7900
+  name_translations:
+    la: S Antonini EC
+    en: St. Anthony, EC
+  date: 05-10
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit ei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 8000
+  name_translations:
+    la: Ss Nerei, Achillei at Domitialæ V atque Pancratii Mm
+  date: 05-12
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Ecce, oculi Domini
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 5
+  - 2
+  - 6
+  - 7
+  - 3
+  - 0
+
+- id: 8100
+  name_translations:
+    la: S Roberti Bellarmino ECD
+    en: St. Robert Ballarmine, ECD
+  date: 05-13
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 8200
+  name_translations:
+    la: S Bonifatii M
+    en: St. Boniface, M
+  date: 05-14
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Protexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 8300
+  name_translations:
+    la: S Joannis Baptistæ de la Salle C
+    en: St. John Baptist de la Salle, C
+  date: 05-15
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os iusti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 8400
+  name_translations:
+    la: S Ubaldi EC
+    en: St. Ubald, EC
+  date: 05-16
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 8500
+  name_translations:
+    la: S Paschalis Baylon C
+    en: St. Paschal Baylon, C
+  date: 05-17
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 8600
+  name_translations:
+    la: S Venantii M
+  date: 05-18
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Protexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 8700
+  name_translations:
+    la: S Petri Cælestini PC
+  date: 05-19
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 8800
+  name_translations:
+    la: S Bernardini Senensis C
+  date: 05-20
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 8900
+  name_translations:
+    la: S Gregorii VII PC
+    en: St. Gregory VII, PC
+  date: 05-25
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 9000
+  name_translations:
+    la: S Philippi Nerii C
+    en: St. Philip Neri, C
+  date: 05-26
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Caritas Dei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 9100
+  name_translations:
+    la: S Bedæ Venerabilis CD
+    en: St. Bede the Venerable, CD
+  date: 05-27
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 9200
+  name_translations:
+    la: S Augustini EC
+    en: St. Augustine, EC
+  date: 05-28
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Sacerdotes
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 9300
+  name_translations:
+    la: S Mariæ Magdalenæ de Pazzis V
+    en: St. Mary Madgalene de Pazzi, V
+  date: 05-29
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 9400
+  name_translations:
+    la: S Felix I PM
+    en: St. Felix I, PM
+  date: 05-30
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 9500
+  name_translations:
+    la: B Mariæ Virginis Reginæ
+    en: Queenship of the Blessed Virgin Mary
+  date: 05-31
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Gaudeamus
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 9600
+  name_translations:
+    la: S Angelæ Mariciæ V
+  date: 06-01
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 9700
+  name_translations:
+    la: Ss Marcellini, Petri atque Erasmi E Mm
+  date: 06-02
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Clamaverunt
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 9800
+  name_translations:
+    la: S Francisci Caracciolo C
+  date: 06-04
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Factum est
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 9900
+  name_translations:
+    la: S Bonifatii EM
+    en: St. Boniface, EM
+  date: 06-05
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Exsultabo
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 10000
+  name_translations:
+    la: S Norberti EC
+    en: St. Norbert, BpC
+  date: 06-06
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 10100
+  name_translations:
+    la: Ss Primi et Feliciani Mm
+  date: 06-09
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Sapientiam
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 10200
+  name_translations:
+    la: S Margaritæ R V
+    en: St. Margaret, Queen V
+  date: 06-10
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Cognovi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 10300
+  name_translations:
+    la: S Barnabæ Ap
+    en: St. Barnabas, Ap
+  date: 06-11
+  rank_verbose: dm
+  rank_numeric: 14
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: true
+    preface: de Apostlis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 10400
+  name_translations:
+    la: S Joannis a S Facundo C
+  date: 06-12
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 10500
+  name_translations:
+    la: S Antonii de Padua CD
+    en: St. Anthony of Padua, CD
+  date: 06-13
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 10600
+  name_translations:
+    la: S Basilii Magni ECD
+    en: St. Basil the Great, ECD
+  date: 06-14
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 10700
+  name_translations:
+    la: Ss Viti, Modesti atque Crescentiæ Mm
+  date: 06-15
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Multæ tribulationes
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 10800
+  name_translations:
+    la: S Ephræm Syri Diaconi CD
+  date: 06-18
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 10900
+  name_translations:
+    la: S Julianæ de Falconeriis V
+  date: 06-19
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 11000
+  name_translations:
+    la: S Silverii PM
+  date: 06-20
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 11100
+  name_translations:
+    la: S Aloisii Gonzagæ C
+    en: St. Aloysius Gonzaga, C
+  date: 06-21
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Minuisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 11200
+  name_translations:
+    la: S Paulini EC
+    en: St. Paulinus, EC
+  date: 06-22
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Sacerdotes tui
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 11300
+  name_translations:
+    la: In Vigilia Nativitatis S Joannis Baptistæ
+    en: Vigil of the Nativity of St. John the Baptist
+  date: 06-23
+  rank_verbose: v
+  rank_numeric: 19
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Ne timeas
+    gloria: false
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 11400
+  name_translations:
+    la: In Nativitate S Joannis Baptistæ
+    en: Nativity of St. John the Baptist
+  date: 06-24
+  rank_verbose: d I cl cum Oct communi
+  rank_numeric: 2
+  color: white
+  office_type: false
+  mass_properties:
+    introit: De ventre
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 1
+  - 0
+  - 4
+  - 4
+  - 1
+  - 0
+
+- id: 11500
+  name_translations:
+    la: S Gulielmi Abb
+  date: 06-25
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 11600
+  name_translations:
+    la: Ss Joannis et Pauli Mm
+    en: Sts. John and Paul, Mm
+  date: 06-26
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Multæ tribulationes
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 11800
+  name_translations:
+    la: S Irinæi EM
+  date: 06-28
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Lex veritatis
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 11900
+  name_translations:
+    la: Ss Petri et Pauli App
+    en: Sts. Peter and Paul, App.
+  date: 06-29
+  rank_verbose: d I cl cum Oct communi
+  rank_numeric: 2
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Nunc scio
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 1
+  - 0
+
+- id: 12000
+  name_translations:
+    la: In Commemoratione S Pauli Apostoli
+    en: Commemoration of St. Paul, Ap
+  date: 06-30
+  rank_verbose: dm
+  rank_numeric: 14
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Scio, cui credidi
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 12100
+  name_translations:
+    la: In Festo Pretiosissimi Sanguinis DNJC
+    en: Feast of the Most Precious Blood
+  date: 07-01
+  rank_verbose: d I cl
+  rank_numeric: 2
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Redemisti nos
+    gloria: true
+    credo: true
+    preface: de Cruce
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 12200
+  name_translations:
+    la: In Visitatione BMV
+    en: Visitation of the Blessed Virgin Mary
+  date: 07-02
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Salve, sancta Parens
+    gloria: true
+    credo: true
+    preface: de BMV
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 12300
+  name_translations:
+    la: S Leonis II PC
+    en: St. Leo II, PC
+  date: 07-03
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 12500
+  name_translations:
+    la: S Antonii Mariæ Zaccaria C
+  date: 07-05
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Sermo meus
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 12700
+  name_translations:
+    la: Ss Cyrilli et Methodii EeCc
+    en: Sts. Cyril and Methodius, BppCc
+  date: 07-07
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Sacerdotes tui
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 12800
+  name_translations:
+    la: S Elisabeth R Vid
+    en: St. Elizabeth, Queen W
+  date: 07-08
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Cognovi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 12900
+  name_translations:
+    la: Ss Septem Fratrum Mm ac Rufinæ et Secundæ VvMm
+  date: 07-10
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Laudate, pueri
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 13000
+  name_translations:
+    la: S Pii I PM
+    en: St. Pius I, PM
+  date: 07-11
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 8
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 13100
+  name_translations:
+    la: S Joannis Gualberti Abb
+    en: St. John Gualbert, Abb
+  date: 07-12
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 13200
+  name_translations:
+    la: S Anacleti PM
+  date: 07-13
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 13300
+  name_translations:
+    la: S Bonaventuræ ECD
+    en: St. Bonaventure, BpCD
+  date: 07-14
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 13400
+  name_translations:
+    la: S Henrici Imp C
+    en: St. Henry, Emperor C
+  date: 07-15
+  rank_verbose: sd, mtv
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 13500
+  name_translations:
+    la: In Commemoratione BMV de Monte Carmelo
+    en: Our Lady of Mount Carmel
+  date: 07-16
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Gaudeamus
+    gloria: true
+    credo: true
+    preface: ' de B Maria Virg'
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 13600
+  name_translations:
+    la: S Alexii C
+  date: 07-17
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 13700
+  name_translations:
+    la: S Camilli de Lellis C
+    en: St. Camillus of Lellis, C
+  date: 07-18
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Majorem hac
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 13800
+  name_translations:
+    la: S Vincentii a Paulo C
+    en: St. Vincent de Paul, C
+  date: 07-19
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus ut palma
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 13900
+  name_translations:
+    la: S Hieronymi Æmiliani C
+  date: 07-20
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Effusum est
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 14000
+  name_translations:
+    la: S Praxedis V
+  date: 07-21
+  rank_verbose: s
+  rank_numeric: 22
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Loquebar
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 14100
+  name_translations:
+    la: S Mariæ Magdalenæ Pænitentis
+  date: 07-22
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Me expectaverunt
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 14200
+  name_translations:
+    la: S Apollinaris EM
+  date: 07-23
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Sacerdotes Dei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 14300
+  name_translations:
+    la: In Vigilia S Jacobi Ap
+  date: 07-24
+  rank_verbose: v
+  rank_numeric: 19
+  color: purple
+  office_type: false
+  mass_properties:
+    introit: Ego autem
+    gloria: false
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 14400
+  name_translations:
+    la: S Jacobi Ap
+  date: 07-25
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 14500
+  name_translations:
+    la: S Annæ Matris BMV
+  date: 07-26
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Gaudeamus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 14600
+  name_translations:
+    la: S Pantaleonis M
+  date: 07-27
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Lætabitur
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 14700
+  name_translations:
+    la: Ss Nazarii et Celsi Mm, Victoris I PM, ac Innocentii I PC
+  date: 07-28
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Intret in conspectu
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 14800
+  name_translations:
+    la: S Marthæ V
+  date: 07-29
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 14900
+  name_translations:
+    la: Ss Abdon et Sennen Mm
+  date: 07-30
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Intret in conspectu
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 15000
+  name_translations:
+    la: S Ignatii C
+  date: 07-31
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In nomine Jesu
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 15100
+  name_translations:
+    la: S Petri Ap ad Vincula
+  date: 08-01
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Nunc scio vere
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 15200
+  name_translations:
+    la: S Alphonsi Mariæ de Ligorio ECD
+  date: 08-02
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Spiritus Domini
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 15300
+  name_translations:
+    la: In Inventione S Stephani Protomartyris
+  date: 08-03
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Sederunt
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 15400
+  name_translations:
+    la: S Dominici C
+  date: 08-04
+  rank_verbose: dm, mtv
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 15500
+  name_translations:
+    la: In Dedicatione S Mariæ ad Nives
+  date: 08-05
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Salve, sancta parens
+    gloria: true
+    credo: true
+    preface: De B Mariae Virginis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 15600
+  name_translations:
+    la: In Transfiguratione DNJC
+  date: 08-06
+  rank_verbose: d II cl
+  rank_numeric: 11
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Illuxerunt
+    gloria: true
+    credo: true
+    preface: de Nativitate
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 15700
+  name_translations:
+    la: S Cajetani C
+  date: 08-07
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 15800
+  name_translations:
+    la: Ss Cyriaci, Largi atque Smaragdi Mm
+  date: 08-08
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Timete Dominum
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 15900
+  name_translations:
+    la: S Joannis Mariæ Vianney C
+  date: 08-09
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 16000
+  name_translations:
+    la: S Laurentii M
+  date: 08-10
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Confessio
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility: []
+
+- id: 16100
+  name_translations:
+    la: Ss Tiburtii et Susannæ V, Mm
+  date: 08-11
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Salus autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 16200
+  name_translations:
+    la: S Claræ V
+  date: 08-12
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 16300
+  name_translations:
+    la: Ss Hippolyti et Cassiani Mm
+  date: 08-13
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Salus autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 16400
+  name_translations:
+    la: In Vigilia Assumptionis BMV
+  date: 08-14
+  rank_verbose: v
+  rank_numeric: 19
+  color: purple
+  office_type: false
+  mass_properties:
+    introit: Vultum tuum
+    gloria: false
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 16500
+  name_translations:
+    la: In Assumptione BMV
+    en: Assumption of the BVM
+  date: 08-15
+  rank_verbose: d I cl cum Oct communi
+  rank_numeric: 2
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Signum magnum
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 1
+  - 1
+  - 4
+  - 2
+  - 1
+  - 0
+
+- id: 16600
+  name_translations:
+    la: S Joachim C, Patris BMV
+  date: 08-16
+  rank_verbose: d II cl, mtv
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dispersit
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 16700
+  name_translations:
+    la: S Hyacinthi C
+  date: 08-17
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 16800
+  name_translations:
+    la: S Agapiti M
+  date: 08-18
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Lætabitur
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 16900
+  name_translations:
+    la: S Joannis Eudes C
+  date: 08-19
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 17000
+  name_translations:
+    la: S Bernardi AbbD
+  date: 08-20
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 17100
+  name_translations:
+    la: S Joannæ Franciscæ Fremiot de Chantal V
+  date: 08-21
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Cognovi
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 17200
+  name_translations:
+    la: In Festo Immaculati Cordis BMV
+  date: 08-22
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Adeamus
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 17300
+  name_translations:
+    la: S Philippi Benitii C
+  date: 08-23
+  rank_verbose: d, mtv
+  rank_numeric: 19
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 17400
+  name_translations:
+    la: S Bartholomæi Ap
+  date: 08-24
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 17500
+  name_translations:
+    la: S Ludovici RC
+  date: 08-25
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 17600
+  name_translations:
+    la: S Zephrini PM
+  date: 08-26
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 17700
+  name_translations:
+    la: S Josephi Calasanctii C
+  date: 08-27
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Venite, filii
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 17800
+  name_translations:
+    la: S Augustini ECD
+  date: 08-28
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 17900
+  name_translations:
+    la: In Decollatione S Joannis Baptistæ
+  date: 08-29
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Loquebar
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 18000
+  name_translations:
+    la: S Rosæ a S Maria Limanæ V
+  date: 08-30
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 18100
+  name_translations:
+    la: S Raymundi Nonnati C
+  date: 08-31
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 18200
+  name_translations:
+    la: S Ægidii Abb
+  date: 09-01
+  rank_verbose: s
+  rank_numeric: 22
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 18300
+  name_translations:
+    la: S Stephani R C
+  date: 09-02
+  rank_verbose: sd, mtv
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 18400
+  name_translations:
+    la: S Pii X PC
+  date: 09-03
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Extuli
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 18500
+  name_translations:
+    la: S Laurentii Justiniani EC
+  date: 09-05
+  rank_verbose: sd, mtv
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit ei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 18600
+  name_translations:
+    la: In Nativitate BMV
+  date: 09-08
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Salve, sancta Parens
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 18700
+  name_translations:
+    la: S Gorgonii M
+  date: 09-09
+  rank_verbose: s
+  rank_numeric: 22
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Lætabitur
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 18800
+  name_translations:
+    la: S Nicolai de Tolentino C
+  date: 09-10
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 18900
+  name_translations:
+    la: Ss Proti et Hycinthi Mm
+  date: 09-11
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Salus autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 19000
+  name_translations:
+    la: Ssmi Nominis BMV
+  date: 09-12
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Vultum tuum
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 19100
+  name_translations:
+    la: In Exaltatione S Crucis
+  date: 09-14
+  rank_verbose: dm
+  rank_numeric: 14
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Nos autem
+    gloria: true
+    credo: true
+    preface: de Cruce
+  commemorations: []
+  nobility: []
+
+- id: 19200
+  name_translations:
+    la: Septem Dolorum BMV
+  date: 09-15
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Stabant
+    gloria: true
+    seq: Stabat Mater
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 19300
+  name_translations:
+    la: Ss Cornelii P et Cypriani E Mm
+  date: 09-16
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Intret
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 19400
+  name_translations:
+    la: In Impressione Ss Stigmatum S Francisci C
+  date: 09-17
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 19500
+  name_translations:
+    la: S Josephi a Cupertino C
+  date: 09-18
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilectio
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 19600
+  name_translations:
+    la: Ss Januarii E et Sociorum Mm
+  date: 09-19
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Salus autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 19700
+  name_translations:
+    la: Ss Eustachii et Sociorum Mm
+  date: 09-20
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Sapientiam
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 19800
+  name_translations:
+    la: S Matthæi ApEv
+  date: 09-21
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 19900
+  name_translations:
+    la: S Thomæ de Villanova EC
+  date: 09-22
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 20000
+  name_translations:
+    la: S Lini PM
+  date: 09-23
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 20100
+  name_translations:
+    la: BMV de Merdece
+  date: 09-24
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Salve
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 20200
+  name_translations:
+    la: Ss Cypriani et Justinæ Mm
+  date: 09-26
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Salus autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 20300
+  name_translations:
+    la: Ss Cosmæ et Damiani Mm
+  date: 09-27
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Sapientiam
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 20400
+  name_translations:
+    la: S Wenceslai Ducis M
+  date: 09-28
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: In virtute
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 20500
+  name_translations:
+    la: In Dedicatione S Michælis Arch
+  date: 09-29
+  rank_verbose: d I cl
+  rank_numeric: 2
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Benedicite
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 20600
+  name_translations:
+    la: S Hieronymi SCD
+  date: 09-30
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 20700
+  name_translations:
+    la: S Remigii EC
+  date: 10-01
+  rank_verbose: s
+  rank_numeric: 22
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 20800
+  name_translations:
+    la: Ss Angelorum Custodum
+  date: 10-02
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Benedicite
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 20900
+  name_translations:
+    la: S Teresiæ a Jesu Infante V
+  date: 10-03
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Veni de Libano
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 21000
+  name_translations:
+    la: S Francisci C
+  date: 10-04
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 21100
+  name_translations:
+    la: Ss Placidi et Sociorum Mm
+  date: 10-05
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Salus autem
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 21200
+  name_translations:
+    la: S Brunonis C
+  date: 10-06
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 21300
+  name_translations:
+    la: Sacratissimi Rosarii BMV
+  date: 10-07
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Gaudeamus
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 21400
+  name_translations:
+    la: S Birgittæ V
+  date: 10-08
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Cognovi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 21500
+  name_translations:
+    la: S Joannis Leonardi C
+  date: 10-09
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In sermonibus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 21600
+  name_translations:
+    la: S Francisci Borgiæ C
+  date: 10-10
+  rank_verbose: sd, mtv
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 21700
+  name_translations:
+    la: In Maternitate BMV
+  date: 10-11
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Ecce Virgo
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 21800
+  name_translations:
+    la: S Eduardi R C
+  date: 10-13
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 21900
+  name_translations:
+    la: S Callisti I PM
+  date: 10-14
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 22000
+  name_translations:
+    la: S Teresiæ V
+  date: 10-15
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 22100
+  name_translations:
+    la: S Hedwigis V
+  date: 10-16
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Cognovi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 22200
+  name_translations:
+    la: S Margaritæ Mariæ Alacoque V
+  date: 10-17
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Sub umbra
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 22300
+  name_translations:
+    la: S Lucæ Ev
+  date: 10-18
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 22400
+  name_translations:
+    la: S Petri de Alacantara C
+  date: 10-19
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus ut palma
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 22500
+  name_translations:
+    la: S Joannis Cantii C
+  date: 10-20
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Miseratio hominis
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 22600
+  name_translations:
+    la: S Hilarionis Abb
+  date: 10-21
+  rank_verbose: s
+  rank_numeric: 22
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 22700
+  name_translations:
+    la: S Raphaelis Arch
+  date: 10-24
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Benedicite
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 22800
+  name_translations:
+    la: Ss Chrysanthi et Dariæ Mm
+  date: 10-25
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Intret
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 22900
+  name_translations:
+    la: S Evaristi PM
+  date: 10-26
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 23000
+  name_translations:
+    la: In Vigilia Ss Simonis et Judæ App
+  date: 10-27
+  rank_verbose: v
+  rank_numeric: 19
+  color: purple
+  office_type: false
+  mass_properties:
+    introit: Intret
+    gloria: false
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 23100
+  name_translations:
+    la: Ss Simonis et Judæ App
+  date: 10-28
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 23200
+  name_translations:
+    la: In Vigilia Omnium Sanctorum
+  date: 10-31
+  rank_verbose: v
+  rank_numeric: 19
+  color: purple
+  office_type: false
+  mass_properties:
+    introit: Judicant
+    gloria: false
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 23300
+  name_translations:
+    la: In Festo Omnium Sanctorum
+    en: Feast of All Saints
+  date: 11-01
+  rank_verbose: d I cl cum Oct communi
+  rank_numeric: 2
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Gaudeamus
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 1
+  - 1
+  - 4
+  - 3
+  - 1
+  - 0
+
+- id: 23400
+  name_translations:
+    la: In Commemoratione Omnium Fidelium Defunctorum
+  date: 11-02
+  rank_verbose: d
+  rank_numeric: 15
+  color: black
+  office_type: false
+  mass_properties:
+    Ad Primam Missam:
+      introit: Requiem
+      gloria: false
+      seq: Dies Iræ
+      credo: false
+      preface: Defunctorum
+    Ad Secundam Missam:
+      introit: Requiem
+      gloria: false
+      seq: Dies Iræ
+      credo: false
+      preface: Defunctorum
+    Ad Tertiam Missam:
+      introit: Requiem
+      gloria: false
+      seq: Dies Iræ
+      credo: false
+      preface: Defunctorum
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 23500
+  name_translations:
+    la: S Caroli EC
+  date: 11-04
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit ei
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 23700
+  name_translations:
+    la: In Dedicatione Archibasilicæ Ssmi Salvatoris
+  date: 11-09
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Terribilis
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 23800
+  name_translations:
+    la: S Andreæ Avellini C
+  date: 11-10
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 23900
+  name_translations:
+    la: S Martini EC
+  date: 11-11
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit ei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 24000
+  name_translations:
+    la: S Martini I PM
+  date: 11-12
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 24100
+  name_translations:
+    la: S Didaci C
+  date: 11-13
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 24200
+  name_translations:
+    la: S Josaphat EM
+  date: 11-14
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Gaudeamus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 24300
+  name_translations:
+    la: S Alberti Magni ECD
+  date: 11-15
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 24400
+  name_translations:
+    la: S Gertrudis V
+  date: 11-16
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 24500
+  name_translations:
+    la: S Gregorii Thaumaturgi EC
+  date: 11-17
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 24600
+  name_translations:
+    la: In Dedicatione Basilicarum Ss Petri et Pauli App
+  date: 11-18
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Terribilis
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 24700
+  name_translations:
+    la: S Elisabeth V
+  date: 11-19
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Cognovi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 24800
+  name_translations:
+    la: S Felicis de Valois C
+  date: 11-20
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Justus
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 24900
+  name_translations:
+    la: In Præsentatione BMV
+  date: 11-21
+  rank_verbose: dm
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Salve
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 25000
+  name_translations:
+    la: S Cæciliæ VM
+  date: 11-22
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Loquebar
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 25100
+  name_translations:
+    la: S Clementis I PM
+  date: 11-23
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Dicit Dóminus
+    gloria: true
+    credo: false
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 25200
+  name_translations:
+    la: S Joannis a Cruce CD
+  date: 11-24
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 25300
+  name_translations:
+    la: S Catharinæ VM
+  date: 11-25
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Loquebar
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 25400
+  name_translations:
+    la: S Sylvestri Abb
+  date: 11-26
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 25500
+  name_translations:
+    la: In Vigilia S Andreæ Ap
+  date: 11-29
+  rank_verbose: v
+  rank_numeric: 22
+  color: purple
+  office_type: false
+  mass_properties:
+    introit: Dominus secus
+    gloria: false
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 25600
+  name_translations:
+    la: S Andreæ Ap
+  date: 11-30
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 25800
+  name_translations:
+    la: S Bibianæ VM
+  date: 12-02
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Me expectaverunt
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 25900
+  name_translations:
+    la: S Francisci Xaverii C
+  date: 12-03
+  rank_verbose: dm, mtv
+  rank_numeric: 14
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Loquebar
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 26000
+  name_translations:
+    la: S Petri Chrysologi ECD
+  date: 12-04
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 26100
+  name_translations:
+    la: S Sabbæ Abb
+  date: 12-05
+  rank_verbose: s
+  rank_numeric: 22
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Os justi
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 26200
+  name_translations:
+    la: S Nicolai EC
+  date: 12-06
+  rank_verbose: d
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Statuit ei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 26300
+  name_translations:
+    la: S Ambrosii ECD
+  date: 12-07
+  rank_verbose: d, mtv
+  rank_numeric: 15
+  color: white
+  office_type: false
+  mass_properties:
+    introit: In medio
+    gloria: true
+    credo: true
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 26400
+  name_translations:
+    la: In Conceptione Immaculata BMV
+    en: Feast of the Immaculate Conception
+  date: 12-08
+  rank_verbose: d I cl cum Oct communi
+  rank_numeric: 2
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Gaudens gaudebo
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 26600
+  name_translations:
+    la: S Melchidi PM
+  date: 12-10
+  rank_verbose: s
+  rank_numeric: 22
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 26700
+  name_translations:
+    la: S Damasi I PC
+  date: 12-11
+  rank_verbose: sd
+  rank_numeric: 16
+  color: white
+  office_type: false
+  mass_properties:
+    introit: Si diligis me
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 4
+  - 2
+  - 6
+  - 8
+  - 3
+  - 0
+
+- id: 26900
+  name_translations:
+    la: S Luciæ VM
+  date: 12-13
+  rank_verbose: d
+  rank_numeric: 15
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Dilexisti
+    gloria: true
+    credo: true
+    preface: de B Maria Virg
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 27000
+  name_translations:
+    la: S Eusebii EM
+  date: 12-16
+  rank_verbose: sd
+  rank_numeric: 16
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Sacerdotes Dei
+    gloria: true
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+
+- id: 27100
+  name_translations:
+    la: In Vigilia S Thomæ Ap
+  date: 12-20
+  rank_verbose: v
+  rank_numeric: 22
+  color: purple
+  office_type: false
+  mass_properties:
+    introit: Ego autem
+    gloria: false
+    credo: false
+    preface: Communis
+  commemorations: []
+  nobility:
+  - 8
+  - 2
+  - 6
+  - 5
+  - 3
+  - 0
+
+- id: 27200
+  name_translations:
+    la: S Thomæ Ap
+  date: 12-21
+  rank_verbose: d II cl
+  rank_numeric: 10
+  color: red
+  office_type: false
+  mass_properties:
+    introit: Mihi autem
+    gloria: true
+    credo: true
+    preface: de Apostolis
+  commemorations: []
+  nobility:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

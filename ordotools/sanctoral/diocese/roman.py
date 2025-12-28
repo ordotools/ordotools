@@ -1263,7 +1263,7 @@ class Sanctoral:
                 "nobility": (5, 2, 6, 7, 3, 0,),
                 "office_type": False,
                 "color": "white",
-                "mass": {"int": ["In virtute", "Protexisti"], "glo": True, "cre": False, "pre": "Communis"},
+                "mass": {"int": "In virtute", "glo": True, "cre": False, "pre": "Communis"},
                 "com_1": {},
                 "com_2": {},
                 "com_3": {},
@@ -1287,7 +1287,7 @@ class Sanctoral:
                 "mass": {"int": "Narraverunt mihi", "glo": True, "cre": False, "pre": "Communis"},
                 "com_1": {
                     "id": 28500,
-                    "mass": {"int": ["Sapientiam", "Sancti tui"], "glo": True, "cre": False, "pre": "Communis"}
+                    "mass": {"int": "Sapientiam", "glo": True, "cre": False, "pre": "Communis"}
                 },
                 "com_2": {},
                 "com_3": {},
@@ -1479,7 +1479,7 @@ class Sanctoral:
                 "mass": {"int": "Christo confixus sum", "glo": True, "cre": False, "pre": "Communis"},
                 "com_1": {
                     "id": 28600,
-                    "mass": {"int": ["Protexisti", "In virtute"], "glo": True, "cre": False, "pre": "Communis"}
+                    "mass": {"int": "In virtute", "glo": True, "cre": False, "pre": "Communis"}
                 },
                 "com_2": {},
                 "com_3": {},
@@ -1885,7 +1885,7 @@ class Sanctoral:
                 "nobility": (0, 0, 0, 0, 0, 0,),
                 "office_type": False,
                 "color": "red",
-                "mass": {"int": ["Protexisti", "In virtute"], "glo": True, "cre": False, "pre": "Communis"},
+                "mass": {"int": "Protexisti", "glo": True, "cre": False, "pre": "Communis"},
                 "com_1": {},
                 "com_2": {},
                 "com_3": {},
@@ -2217,7 +2217,7 @@ class Sanctoral:
                 "nobility": (0, 0, 0, 0, 0, 0,),
                 "office_type": False,
                 "color": "red",
-                "mass": {"int": ["Sapientiam", "Sancti tui"], "glo": True, "cre": False, "pre": "Communis"},
+                "mass": {"int": "Sapientiam", "glo": True, "cre": False, "pre": "Communis"},
                 "com_1": {},
                 "com_2": {},
                 "com_3": {},

@@ -180,16 +180,21 @@ class LiturgicalCalendar:
         """
         Finds the translation for each feast id
         """
+        # TODO: import the translations table from the database
+        repo = TranslationsRepository()
+
         year = []
-        translations = Translations()
+        # translations = Translations()
+        translations = repo.get_all_translations(self.language)
         for feast in compiled_calendar:
+            # NOTE: I don't even know what is going on here anymore
             if isinstance(feast.id, int):
                 if feast.id % 10 == 1:
-                    feast.name = translations.octave(self.language, feast.day_in_octave, feast.id)
+                    feast.name = translations.octave(lang, feast.day_in_octave, feast.id)
                 else:
-                    feast.name = translations.translations()[feast.id][self.language]
+                    feast.name = translations[feast.id]
             else:
-                feast.name = translations.translations()[feast.id][self.language]
+                feast.name = translations[feast.id]
 
             # NOTE: just for the commemorations
             if "id" in feast.com_1.keys() and feast.com_1["id"] is not None:
@@ -221,29 +226,29 @@ class LiturgicalCalendar:
         sanctoral = sanctoral_updated
         repo.close()
         
-        logging.info('Initializing...')
+        # logging.info('Initializing...')
         initialized = self.initialize([self.temporal, sanctoral])
-        logging.info('Adding the calendars together...')
+        # logging.info('Adding the calendars together...')
         full_calendar = self.add_feasts(initialized["temporal"], initialized["sanctoral"])
-        logging.info('Building octaves...')
+        # logging.info('Building octaves...')
         full_calendar = self.find_octave(year=full_calendar)
-        logging.info("Adding Our Lady's Saturday...")
+        # logging.info("Adding Our Lady's Saturday...")
         full_calendar = self.our_ladys_saturday(full_calendar)
-        logging.info('Building seasonal commemorations...')
+        # logging.info('Building seasonal commemorations...')
         full_calendar = seasonal_commemorations(feasts=full_calendar, year=self.year)
-        logging.info('Translating...')
+        # logging.info('Translating...')
         full_calendar = self.add_translation(full_calendar)
 
         # set the fasting rules
         # OPTIM: add this in on initiation, perhaps
-        logging.info('Adding Friday abstinence...')
+        # logging.info('Adding Friday abstinence...')
         for feast in full_calendar:
             friday_abstinence(feast)  # this might be better in Feast
 
-        logging.info('Adding the Lenten fast...')
+        # logging.info('Adding the Lenten fast...')
         fasting_rules = Fasting(self.year)
         for feast in full_calendar:
             fasting_rules.fasting_day_lent(feast)
 
-        logging.info('Complete!')
+        # logging.info('Complete!')
         return list(full_calendar)

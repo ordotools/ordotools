@@ -477,7 +477,6 @@ class Temporal:
         dates with keys.
         """
         y = {}
-        # Use dict.update() instead of |= for better performance
         y.update(self.advent)
         y.update(self.christmas_time)
         y.update(self.start_year)

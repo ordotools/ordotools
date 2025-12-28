@@ -1,0 +1,20 @@
+diocese_name: D. Lismoren
+country: australiae
+feasts:
+
+- id: null
+  name_translations: {}
+  date: 03-17
+  rank_verbose: d I cl
+  rank_numeric: 5
+  color: white
+  office_type: null
+  mass_properties:
+    int: Statuit
+    glo: true
+    cre: true
+    pre: Communis
+  alt_mass_properties: null
+  commemorations: []
+  nobility:
+  - 0

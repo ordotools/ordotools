@@ -841,20 +841,11 @@
             if (feasts.length === 0) {
                 html += '<tr><td colspan="5" style="text-align: center; padding: 2rem;">No records found</td></tr>';
             } else {
->>>>>>> c197f21 (update web interface for adding feast data)
                 feasts.forEach(feast => {
                     const date = feast.month && feast.day ? `${String(feast.month).padStart(2, '0')}-${String(feast.day).padStart(2, '0')}` : '';
                     const rankLabel = feast.rank ? feast.rank[1] : '';
                     html += `
                         <tr>
-<<<<<<< HEAD
-                            <td>${date}</td>
-                            <td>${escapeHtml(feast.name || '')}</td>
-                            <td>${escapeHtml(String(feast.id))}</td>
-                            <td><span class="badge">${escapeHtml(feast.diocese_source || '')}</span></td>
-                            <td>${escapeHtml(rankLabel)}</td>
-                            <td>${escapeHtml(feast.color || '')}</td>
-=======
                             <td><span class="feast-name">${feast.name}</span></td>
                             <td>${feast.id}</td>
                             <td><span class="rank-badge ${getRankBadgeClass(rankNum)}">${feast.rank ? feast.rank[1] : 'N/A'}</span></td>
