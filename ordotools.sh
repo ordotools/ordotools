@@ -110,7 +110,7 @@ print(f"\n{'Date':<12} {'Rank':<15} {'Color':<10} {'Name'}")
 print("-" * 80)
 
 for feast in calendar:
-    print(f"{feast.date.strftime('%Y-%m-%d'):<12} {feast.rank_v:<15} {feast.color:<10} {feast.name}")
+    print(f"{feast.date.strftime('%Y-%m-%d'):<12} {feast.rank_verbose:<15} {feast.color:<10} {feast.name}")
 END
     else
         # Run without detailed output - just build calendar

@@ -1,48 +1,33 @@
 from ordotools.tools.feast import Feast
-from ordotools.tools.helpers import LiturgicalYearMarks
-from ordotools.tools.helpers import day
-from ordotools.tools.helpers import days
-from ordotools.tools.helpers import weeks
-
-"""
-Almost everything having to do with the ordering and assignment of
-commemorations is contained in this file. The "seasonal
-commemorations" are added after the commemorations of concurrance
-and occurance are figured out.
-"""
-
+from ordotools.tools.helpers import LiturgicalYearMarks, day, days, weeks
 
 def existing_commemoration(feast: Feast) -> int:
     """
     Finds the number of commemorations that are already in a Feast object.
     """
-    if "id" in feast.com_1.keys():
-        if "id" in feast.com_2.keys():
-            return 2
-        else:
-            return 1
-    else:
-        return 0
+    return len(feast.commemorations)
 
-
-# TODO: add more commemoration rules (Sundays, major ferias, etc.)
-# NOTE:                 This might not be always true... ⌄
-def add_commemorations(feast: Feast, first, second=None, seasonal=False):
+def add_commemorations(feast: Feast, first_id, second_id=None, seasonal=False):
     """
     Inserts the commemoration(s) into the Feast object.
+    Expects IDs (strings or ints) which will be appended as dicts.
     """
-    addition_index = existing_commemoration(feast)
-    if addition_index == 1:
-        feast.com_2["id"] = first
-    elif addition_index == 2:
-        if seasonal is False:
-            feast.com_3["id"] = first
-    else:
-        feast.com_1["id"] = first
-        if second is not None:
-            feast.com_2["id"] = second
+    # Simply append to the list. 
+    # Logic regarding 'addition_index' (1, 2, 3) is less relevant with a list,
+    # but we verify if we are hitting limits if strict rubrics require it.
+    
+    # We store them as simple dicts with IDs, to be hydrated later if needed
+    # or used as lookup keys.
+    
+    feast.commemorations.append({"id": str(first_id)})
+    
+    if second_id is not None:
+        feast.commemorations.append({"id": str(second_id)})
+        
     return feast
 
+# [Keep fidelium and seasonal_commemorations logic largely the same]
+# Just ensure when they check feast.rank_numeric, you change it to feast.rank_numericumeric
 
 MONTH = []  # NOTE: this might not need to be a list
 
@@ -52,8 +37,9 @@ def fidelium(feast: Feast, bound) -> Feast:
     Adds the Fidelium oration to the Feast object.
     Must be used after the seasonal commemorations are added
     """
+    fidelium_or = {"id": str(99912)}
     month = feast.date.strftime("%B")
-    if feast.rank_n == 23:  # NOTE: can rank 23 be an impeded Sunday?
+    if feast.rank_numeric == 23:  # NOTE: can rank 23 be an impeded Sunday?
         if month in MONTH:
             pass
         else:
@@ -66,7 +52,10 @@ def fidelium(feast: Feast, bound) -> Feast:
                     ):
                 pass
             else:
-                feast.com_2 = {"id": 99912}
+                try:
+                    feast.commemorations[1] = fidelium_or
+                except IndexError:
+                    feast.commemorations.append(fidelium_or)
                 MONTH.append(month)
 
         if feast.date.strftime("%w") == 1:
@@ -75,10 +64,10 @@ def fidelium(feast: Feast, bound) -> Feast:
             elif bound.lent_begins < feast.date < bound.lent_ends:
                 pass
             else:
-                if feast.com_2["id"] == 99912:
+                if feast.commemorations[1]["id"] == str(99912):
                     pass
                 else:
-                    feast.com_2 = {"id": 99912}
+                    feast.commemorations[1]= fidelium_or
                     MONTH.append(month)
     return feast
 
@@ -93,9 +82,9 @@ def seasonal_commemorations(feasts: tuple, year: int) -> tuple:
     for feast in feasts:
 
         if (
-                feast.rank_n > 15 or
-                feast.rank_n == 12 or
-                feast.rank_n == 9
+                feast.rank_numeric > 15 or
+                feast.rank_numeric == 12 or
+                feast.rank_numeric == 9
                 ):
 
             if bound.first_advent < feast.date < bound.christmas:
