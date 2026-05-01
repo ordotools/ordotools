@@ -225,7 +225,7 @@ class LiturgicalCalendar:
             sanctoral_updated[new_date] = feast_data
         sanctoral = sanctoral_updated
         repo.close()
-        
+
         # logging.info('Initializing...')
         initialized = self.initialize([self.temporal, sanctoral])
         # logging.info('Adding the calendars together...')
