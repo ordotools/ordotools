@@ -1,65 +1,33 @@
 from functools import cached_property
 import functools
-
-from ordotools.tools.helpers import day
-from ordotools.tools.helpers import days
-from ordotools.tools.helpers import easter
-from ordotools.tools.helpers import findsunday
-from ordotools.tools.helpers import last_sunday
-from ordotools.tools.helpers import weekday
-from ordotools.tools.helpers import weeks
-from ordotools.tools.repositories.temporal_repo import TemporalRepository
-
+from ordotools.tools.helpers import (
+    day, days, easter, findsunday, last_sunday, 
+    weekday, weeks
+)
 
 class Temporal:
     """
-    This class will enable us to explore parts of the liturgical year, rather
-    than having to calulate the entire year. The exact implementation process
-    is still being worked out, but this class will be much easier to debug and
-    develop rather than the previous idea.
-
-    For the various parts of the year that require more advanced
-    configurations, (e.g. the O-antiphons) this modular approach will allow the
-    parts of the year to be self-calculated, which will be more efficient in
-    the long run, and allow for much easier debugging. Having already tried the
-    "figure it out in one go" approach, I can tell you that this is the way to
-    go.
-
-    Some of the f-strings and dictionary comprehensions might be too cumbersome
-    for some tastes, but in this case they save quite a bit of time and
-    debugging.
-
-    The lack of verboseness in some of the naming conventions is intentional
-    (e.g., not mentioning "Holy Saturday" explicitly, but naming it the
-    Saturday feria in "Palm Sunday" week). The job is accomplished sufficiently
-    with the current naming system, and to try to give the most appropriate
-    name to everything would result in a file that is overly long and
-    complicated.
+    Calculates the liturgical calendar structure.
+    Returns a map of {datetime: feast_id_string}.
+    Decoupled from data fetching.
     """
-    # Class-level cache to avoid recreating Temporal instances
     _instances = {}
 
     def __new__(cls, year):
-        # Return cached instance if available
         if year in cls._instances:
             return cls._instances[year]
-            
-        # Create new instance
         instance = super(Temporal, cls).__new__(cls)
         cls._instances[year] = instance
         return instance
 
     def __init__(self, year):
-        # Skip initialization if already initialized
         if hasattr(self, 'year') and self.year == year:
             return
-            
         self.year = year
         self._easter_date = easter(self.year)
         self._christmas_date = day(year=self.year, month=12, day=25)
         self._epiphany_date = day(self.year, 1, 6)
         
-        # Pre-calculate commonly used date values
         self.easter = self._easter_date
         self.septuagesima = self._easter_date - weeks(9)
         self.christmas = self._christmas_date
@@ -471,10 +439,9 @@ class Temporal:
         return y
 
     @cached_property
-    def build_entire_year(self) -> dict:
+    def get_temporal_calendar(self) -> dict:
         """
-        Returns a dictionary of the entire temporal cycle, but only the
-        dates with keys.
+        Returns a dictionary of the entire temporal cycle: {date: feast_id}
         """
         y = {}
         y.update(self.advent)
@@ -487,48 +454,6 @@ class Temporal:
         y.update(self.paschaltime)
         y.update(self.post_easter)
         y.update(self.pentecost)
-        return dict(sorted(y.items()))
-
-    @cached_property
-    def _temporal_data(self):
-        """Cache the temporal data to avoid creating it multiple times"""
-        repo = TemporalRepository()
-        data = repo.get_all_feasts()
-        repo.close()
-        return data
         
-    def return_temporal(self) -> dict:
-        big_data = {}
-        data = self._temporal_data
-        compiled = self.build_entire_year
-        
-        # Pre-calculate data keys for faster lookups
-        data_keys = set(data.keys())
-        
-        # TODO: use a loop for this after the data is settled
-        for key, value in compiled.items():
-            value_in_data = value in data_keys
-            
-            # Prepare field values outside the dictionary creation
-            id_value = data[value]["id"] if value_in_data else value
-            color_value = data[value]["color"] if value_in_data else "blue"
-            
-            # Use update instead of |= for better performance
-            big_data[key] = {
-                "id": id_value,
-                "rank": data[value]["rank"],
-                "color": color_value,
-                "mass": data[value]["mass"],
-                "com_1": data[value]["com_1"],
-                "com_2": data[value]["com_2"],
-                "com_3": data[value]["com_3"],
-                "matins": data[value]["matins"],
-                "lauds": data[value]["lauds"],
-                "prime": data[value]["prime"],
-                "little_hours": data[value]["little_hours"],
-                "vespers": data[value]["vespers"],
-                "compline": data[value]["compline"],
-                "office_type": data[value]["office_type"],
-                "nobility": data[value]["nobility"],
-            }
-        return big_data
+        # Ensure ID values are strings for the new DB schema
+        return {k: str(v) for k, v in sorted(y.items())}

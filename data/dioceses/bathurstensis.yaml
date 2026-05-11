@@ -2,20 +2,17 @@ diocese_name: D. Bathursten
 country: australiae
 feasts:
 
-- id: null
-  name_translations:
-    la: S. Patritii E.C. Patroni Hiberniae
+- name_translations: {}
   date: 03-17
   rank_verbose: d I cl cum Oct communis
   rank_numeric: 5
   color: white
-  office_type: null
+  office_type: false
   mass_properties:
-    int: Statuit
-    glo: true
-    cre: true
-    pre: Communis
-  alt_mass_properties: null
+    introit: Statuit
+    gloria: true
+    credo: true
+    preface: Communis
   commemorations: []
   nobility:
   - 0

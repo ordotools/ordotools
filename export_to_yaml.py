@@ -33,6 +33,7 @@ def migrate_propers(input_dir, output_dir):
                     break
             if not instance: continue
 
+
             feasts_list = []
             for date_obj, details in instance.data.items():
                 # 1. ATTEMPT ID LOOKUP:
@@ -42,6 +43,9 @@ def migrate_propers(input_dir, output_dir):
                     clean_name = str(details.get("feast", "")).lower().replace('.', '')
                     raw_id = NAME_TO_ID.get(clean_name)
 
+                nobility_raw = details.get("nobility", [])
+                nobility_ints = [int(x) if isinstance(x, (int, bool)) else 0 for x in nobility_raw]
+
                 feast = Feast(
                     id=raw_id, # Can be None if lookup fails
                     name_translations={k: v for k, v in trans_data.get(raw_id, {}).items() if v} if raw_id else {},
@@ -50,7 +54,7 @@ def migrate_propers(input_dir, output_dir):
                     rank_numeric=details.get("rank", [0, "s"])[0],
                     color=details.get("color", "white"),
                     mass_properties={k: v for k, v in details.get("mass", {}).items()},
-                    nobility=[int(x) for x in details.get("nobility", []) if isinstance(x, (int, bool))]
+                    nobility=nobility_ints  # [int(x) for x in details.get("nobility", []) if isinstance(x, (int, bool))]
                 )
                 # FIX: We NO LONGER use exclude_none=True so the 'id' key always exists
                 feasts_list.append(feast.model_dump())
