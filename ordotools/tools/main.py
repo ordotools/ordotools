@@ -133,6 +133,7 @@ class LiturgicalCalendar:
         trans_repo = TranslationsRepository()
 
         # TODO: add the translations for the commemorations
+        # TODO: call all the translations and then pull from a dictionary
         for feast in calendar_list:
             t = trans_repo.get_translation(feast.id, self.language)
             if t:
